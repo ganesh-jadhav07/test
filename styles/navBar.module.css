@@ -1,6 +1,6 @@
 .mainNav {
   display: grid;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(205, 176, 176);
   color: black;
   width: 100%;
   height: 4rem;
@@ -43,6 +43,9 @@
     height: 4rem;
     grid-template-columns: 2rem 2fr 2fr 2rem;
   }
+  .logo{
+    height: 4rem;
+  }
   .menuLink {
     display: none;
   }
@@ -50,6 +53,21 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+  .mobileMenuLink{
+    grid-column: 2/4;
+    position: relative;
+    height: 20rem;
+    display: grid;
+    align-items: center;
+    padding: 1rem;
+    z-index: 99;
+  }
+  .mobileMenuLinkUl{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media (max-width: 798px) {

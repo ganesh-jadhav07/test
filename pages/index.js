@@ -1,3 +1,4 @@
+import home from './home'
 export default function Home() {
-  return <h1>Bluepineapple</h1>;
+    <home/>
 }
