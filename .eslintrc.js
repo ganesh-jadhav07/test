@@ -16,12 +16,12 @@ module.exports = {
   rules: {
     indent: ['error', 2],
     'jsx-quotes': ['warn', 'prefer-single'],
-    'max-len': [
-      'warn',
-      {
-        code: 80,
-      },
-    ],
+    // 'max-len': [
+    //   'warn',
+    //   {
+    //     code: 80,
+    //   },
+    // ],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
