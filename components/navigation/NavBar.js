@@ -9,6 +9,7 @@ function NavBar() {
   const [opacity, setOpacity] = useState("1");
   const handleNav = () => {
     console.log(nav);
+
     setNav(!nav);
   };
 
@@ -32,6 +33,7 @@ function NavBar() {
       className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
       style={{ backgroundColor: `${color}`,opacity:`${opacity}` }}
     >
+
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <Link href="/">
           <h1 style={{ color: `${textColor}` }} className="text-4xl font-bold">
@@ -39,6 +41,7 @@ function NavBar() {
           </h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className="hidden lg:flex">
+
           <li className="p-4">
             <Link href="/">Home</Link>
           </li>
@@ -59,6 +62,7 @@ function NavBar() {
           </li>
           <li className="p-4">
             <Link href="/Contact">Contact</Link>
+
           </li>
         </ul>
 
@@ -84,6 +88,7 @@ function NavBar() {
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
             >
+
               <Link href="/">Home</Link>
             </li>
             <li
@@ -96,12 +101,14 @@ function NavBar() {
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
             >
+
               <Link href="/work">Work</Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
             >
+
               <Link href="/contact">Contact</Link>
             </li>
           </ul>
