@@ -15,7 +15,7 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     indent: ['error', 2],
-    'jsx-quotes': ['warn', 'prefer-single'],
+    'jsx-quotes': ['warn', 'prefer-double'],
     // 'max-len': [
     //   'warn',
     //   {
@@ -35,5 +35,6 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     ],
+    'jsx-a11y/click-events-have-key-events': 'off'
   },
 };
