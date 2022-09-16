@@ -1,4 +1,4 @@
-import home from './home'
-export default function Home() {
-    <home/>
+import Home from './Home'
+export default function Home1() {
+    return <Home/>
 }
