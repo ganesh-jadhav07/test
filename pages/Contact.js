@@ -7,23 +7,23 @@ function Contact() {
       <div className="relative w-screen bg-auto">
         <img
           src="https://s3-alpha-sig.figma.com/img/09dd/72a8/71326e2675aef7698b40697340b3f664?Expires=1664150400&Signature=alPUDoP9rqzZBMbWIx~OptanTXLIugPI9Z8PuFscbhfF6D0Njw0tR4qo07~u1i99TfkfggcEIC1BCstrnEsWfZ3CWp4pK-IRJwQLm8t4JD8kcQWRddTsLUxf3LP550Se-Nba4HgcxttFQhp4xXzb1438o9kWcVOJtD8i0tssbPavQgfzxwzLsw9yhKvWBjudWhYNB7dILxnVLSWnzxPy-TXcOgW61f1-fZur0syP49tARLZA~57YrP3wzXbxn0frWddWjt~9Hgdzrx-oXjDfdfhkB7I8d~CEHbxgOdBCp9tAt033HoiZYT5sKS6erFm4sultuF2o1A8ZC36ELtffWA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-          className="w-screen h-[50vh] contrast-50 object-cover"
+          className="w-screen h-[100vh] contrast-50 object-cover xl:h-[80vh] 2xl:h-[80vh]"
         />
-        <h1 className="absolute text-2xl font-bold text-black top-24 left-10 ">
+        <h1 className="absolute text-2xl font-bold text-black top-24 left-10 xl:text-4xl ">
           Drop a line
         </h1>
-        <h3 className="absolute text-xl text-black top-32 left-10">
+        <h3 className="absolute text-xl text-black top-32 left-10 xl:top-36 xl:text-2xl">
           We're happy to answer questions.
         </h3>
-        <div className="absolute text-xl text-black top-[180px] left-10">
+        <div className="absolute text-xl text-black top-[180px] left-10 xl:text-2xl">
           <CheckIcon className="inline w-5 h-5" />{" "}
           <span>Learn how to increase tea</span>
         </div>
-        <div className="absolute text-xl text-black top-[210px] left-10">
+        <div className="absolute text-xl text-black top-[210px] left-10 xl:text-2xl">
           <CheckIcon className="inline w-5 h-5" />{" "}
           <span>Learn how to increase tea</span>
         </div>
-        <div className="absolute text-xl text-black top-[240px] left-10">
+        <div className="absolute text-xl text-black top-[240px] left-10 xl:text-2xl">
           <CheckIcon className="inline w-5 h-5" />{" "}
           <span>Learn how to increase tea</span>
         </div>
@@ -96,7 +96,7 @@ function Contact() {
         </div>
       </div>
       <div className="w-full p-4 mb-10">
-        <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+        <button className="flex px-8 py-2 mx-auto text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">
           Button
         </button>
       </div>
