@@ -1,10 +1,16 @@
 import React from "react";
 import CloudServices from "../components/Home/CloudServices";
+import InnovationServicesScreen from "../components/Home/InnovationServicesScreen";
+import Products from "../components/Home/Products";
+import CustomerReviews from "../components/Home/CustomerReviews";
 
 function Home() {
   return (
     <div>
-      <CloudServices />
+      {/* <CloudServices /> */}
+      <InnovationServicesScreen />
+      <Products />
+      <CustomerReviews />
       {/* <img
         src="https://images.unsplash.com/photo-1475070929565-c985b496cb9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
         className="w-screen h-screen"

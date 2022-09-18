@@ -1,6 +1,6 @@
 .bgImage {
-  background: url('https://s3-alpha-sig.figma.com/img/94f5/5b29/850a1d34fe433ad0d65970d5a829c7ea?Expires=1664150400&Signature=Qx3MjIqc0sLUbCQxPQp3rEK3UIRrSAIV0OLmM2NHLktVz5hPRcwbIMJom7cHT3Q9EUtfw-hzczoBuz~f-Rs5-Skb6Acd6Dqyes8kXOkShd71DypIOXZBjlTVlKdZOarUiNkDRn9~rLH59bkPwUl8ZndheqnUPjo8bJKD7zHc-MV29OboggF2J4tdKIPOg54WzWzRf9LE9B1dIqeDmyaZ1LM0JEAi14VU2sfCUzuZbrCw~HLLm6MSTA8Ayi7QSyhEQQWEcu647mJ2NPdMBIGQms4CC2NLIGUsnmawIepHTD9bOGZrr2EEciJ7T3xop35NegU0O5T4Epwt4Uiy6bUvbw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA')
-    center center fixed;
+  background: url("https://s3-alpha-sig.figma.com/img/94f5/5b29/850a1d34fe433ad0d65970d5a829c7ea?Expires=1664150400&Signature=Qx3MjIqc0sLUbCQxPQp3rEK3UIRrSAIV0OLmM2NHLktVz5hPRcwbIMJom7cHT3Q9EUtfw-hzczoBuz~f-Rs5-Skb6Acd6Dqyes8kXOkShd71DypIOXZBjlTVlKdZOarUiNkDRn9~rLH59bkPwUl8ZndheqnUPjo8bJKD7zHc-MV29OboggF2J4tdKIPOg54WzWzRf9LE9B1dIqeDmyaZ1LM0JEAi14VU2sfCUzuZbrCw~HLLm6MSTA8Ayi7QSyhEQQWEcu647mJ2NPdMBIGQms4CC2NLIGUsnmawIepHTD9bOGZrr2EEciJ7T3xop35NegU0O5T4Epwt4Uiy6bUvbw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")
+    center center;
   background-size: cover;
 }
 .headerTopContent {
@@ -14,7 +14,7 @@
 }
 .title {
   font-size: xx-large;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 .discription {
   line-height: 20px;
@@ -40,7 +40,7 @@
 .secondBody {
   width: auto;
   padding-left: 8em;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-size: 24.0667px;
   line-height: 30px;

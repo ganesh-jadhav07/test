@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
-import style from '../../styles/screen4.module.css';
+import React, { useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import style from "./screen4.module.css";
 
 let count = 0;
-function Screen4() {
+function CustomerReviews() {
   const [currentReview, setReview] = useState(0);
 
   const review = [
     {
       id: 1,
       title:
-        'Bluepineapple has been a trusted partner for us. They are very professional, taking a consultative approach to all development requests. We look forward to our continued partnership with Bluepineapple.',
+        "Bluepineapple has been a trusted partner for us. They are very professional, taking a consultative approach to all development requests. We look forward to our continued partnership with Bluepineapple.",
     },
     {
       id: 2,
       title:
-        'Very proactive and responsive. Always willing to go the extra mile to support the end customer.',
+        "Very proactive and responsive. Always willing to go the extra mile to support the end customer.",
     },
     {
       id: 3,
       title:
-        ' What I really liked was their flexibility especially when we ran into unexpected issues. They were meticulous in following up on feedback.',
+        " What I really liked was their flexibility especially when we ran into unexpected issues. They were meticulous in following up on feedback.",
     },
     {
       id: 4,
       title:
-        'Quick to onboard and embed with the team. I hope we get to work together in the future.',
+        "Quick to onboard and embed with the team. I hope we get to work together in the future.",
     },
   ];
 
@@ -57,27 +57,27 @@ function Screen4() {
             <ul>
               <li
                 className={style.rec1}
-                style={{ left: '40%', top: '0.4rem' }}
+                style={{ left: "40%", top: "0.4rem" }}
               />
               <li
                 className={style.rec2}
-                style={{ left: '42.5%', top: '0.1rem' }}
+                style={{ left: "42.5%", top: "0.1rem" }}
               />
               <li
                 className={style.rec2}
-                style={{ left: '45%', bottom: '0.3rem' }}
+                style={{ left: "45%", bottom: "0.3rem" }}
               />
               <li
                 className={style.rec2}
-                style={{ left: '48%', bottom: '0.7rem' }}
+                style={{ left: "48%", bottom: "0.7rem" }}
               />
               <li
                 className={style.rec2}
-                style={{ left: '50.5%', bottom: '1.7rem' }}
+                style={{ left: "50.5%", bottom: "1.7rem" }}
               />
               <li
                 className={style.rec2}
-                style={{ left: '53%', bottom: '2.7rem' }}
+                style={{ left: "53%", bottom: "2.7rem" }}
               />
             </ul>
           </div>
@@ -87,4 +87,4 @@ function Screen4() {
   );
 }
 
-export default Screen4;
+export default CustomerReviews;

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import styles from './Products.module.css';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
-import Diamond from '../../public/Diamond.svg';
+import React, { useState } from "react";
+import Image from "next/image";
+import styles from "./Products.module.css";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import Diamond from "../../public/Diamond.svg";
 
 const count = 0;
 function Products() {
@@ -10,12 +10,12 @@ function Products() {
     {
       id: 1,
       title:
-        'Green Folder helps organisations template, version, automate as aimed at providing solutions for critical industry demands and new document related processes.',
+        "Green Folder helps organisations template, version, automate as aimed at providing solutions for critical industry demands and new document related processes.",
     },
     {
       id: 2,
       title:
-        'Green Verifi is a video based compliance solution for KYC processes. It helps onboard customers with proper identity verification within minutes.',
+        "Green Verifi is a video based compliance solution for KYC processes. It helps onboard customers with proper identity verification within minutes.",
     },
   ];
 
@@ -48,8 +48,9 @@ function Products() {
   );
 
   return (
-    <div className={`h-screen w-full ${styles.bgImage} `}>
-      <div className={`${styles.headerTopContent}  flex justify-center w-full`}>
+    <div className={`h-1/2 w-full ${styles.bgImage} `}>
+      <div
+        className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}>
         <div className={`${styles.titleContent}  flex flex-col items-center `}>
           <span className={`${styles.title} flex flex-row items-center`}>
             {diamondLogo}
