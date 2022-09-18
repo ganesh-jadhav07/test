@@ -109,8 +109,7 @@ function NavBar() {
           role="button"
           tabIndex={-1}
           onClick={handleNav}
-          className="z-10 block lg:hidden"
-        >
+          className="z-10 block lg:hidden">
           {nav ? (
             <XMarkIcon className="w-10 text-black bg-white" fill />
           ) : (
@@ -126,6 +125,7 @@ function NavBar() {
               : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 "
           }
         >
+
           <ul>
             <li
               role="presentation"
@@ -135,7 +135,7 @@ function NavBar() {
                 route.pathname === "/" ? "text-blue-700" : "text-white"
               }`}
             >
-              <Link href="/">Home</Link>
+            <Link href="/">Home</Link>
             </li>
             <li
               role="presentation"
