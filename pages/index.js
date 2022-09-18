@@ -1,3 +1,6 @@
-export default function Home() {
-  return <h1>Bluepineapple</h1>;
+import Home from "./home";
+
+export default function Home1() {
+  return <Home />;
+
 }
