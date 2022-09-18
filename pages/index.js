@@ -1,10 +1,6 @@
-import InnovationServicesScreen from '../components/InnovationServicesScreen';
+import Home from "./Home";
 
-export default function Home() {
-  return (
-    <div>
-      <InnovationServicesScreen />
-     
-    </div>
-  );
+export default function Home1() {
+  return <Home />;
+
 }
