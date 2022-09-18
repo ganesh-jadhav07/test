@@ -1,14 +1,13 @@
 import '../styles/globals.css';
-import NavBar from '../components/navigation/NavBar';
-import Screen4 from '../components/HomePage/Screen4';
+import Layout from '../components/navigation/Layout';
+
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <NavBar />
+    <Layout>
       <Component {...pageProps} />
-      <Screen4 />
-    </>
+    </Layout>
+
   );
 }
 
