@@ -1,3 +1,10 @@
+import InnovationServicesScreen from '../components/InnovationServicesScreen';
+
 export default function Home() {
-  return <h1>Bluepineapple</h1>;
+  return (
+    <div>
+      <InnovationServicesScreen />
+     
+    </div>
+  );
 }
