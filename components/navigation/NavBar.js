@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../../public/images/bp.png";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
@@ -42,9 +43,9 @@ function NavBar() {
         <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
-            className="text-3xl flex m-[-5]">
+            className={"text-3xl flex m-[-5]"}>
             <Image src={logo} alt="logo" height={40} width={40} />
-            <span>Bluepineapple</span>
+            <sapn>Bluepineapple</sapn>
           </h1>
         </Link>
 
