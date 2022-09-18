@@ -1,3 +1,5 @@
+import Products from '../components/home/Products';
+
 export default function Home() {
-  return <h1>Bluepineapple</h1>;
+  return <Products />;
 }
