@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import style from "./screen4.module.css";
+import style from "./CustomerReviews.module.css";
 
 let count = 0;
 function CustomerReviews() {
