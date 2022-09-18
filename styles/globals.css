@@ -2,13 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @media screen and (min-width: 320px) and (max-width: 480px) {
-  body {
-    position: absolute;
-  }
-} */
-
-body {
-  min-width: 100vw;
-  overflow-x: hidden;
-}

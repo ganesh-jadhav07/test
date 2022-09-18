@@ -1,5 +1,6 @@
-import Products from '../components/home/Products';
 
-export default function Home() {
-  return <Products />;
+import Home from "./Home";
+
+export default function Home1() {
+  return <Home />;
 }
