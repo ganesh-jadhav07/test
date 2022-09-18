@@ -31,8 +31,7 @@ function NavBar() {
   return (
     <div
       className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
-      style={{ backgroundColor: `${color}`, opacity: `${opacity}` }}
-    >
+      style={{ backgroundColor: `${color}`, opacity: `${opacity}` }}>
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <Link href="/">
           <h1 style={{ color: `${textColor}` }} className="text-4xl font-bold">
@@ -68,8 +67,7 @@ function NavBar() {
           role="button"
           tabIndex={-1}
           onClick={handleNav}
-          className="z-10 block lg:hidden"
-        >
+          className="z-10 block lg:hidden">
           {nav ? (
             <Bars3Icon className="w-10 bg-white" />
           ) : (
@@ -83,39 +81,34 @@ function NavBar() {
             nav
               ? "lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
               : "lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-          }
-        >
+          }>
           <ul>
             <li
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
+              className="p-4 text-4xl hover:text-gray-500">
               <Link href="/">Home</Link>
             </li>
             <li
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
+              className="p-4 text-4xl hover:text-gray-500">
               <Link href="/#gallery">Gallery</Link>
             </li>
             <li
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
+              className="p-4 text-4xl hover:text-gray-500">
               <Link href="/work">Work</Link>
             </li>
             <li
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
+              className="p-4 text-4xl hover:text-gray-500">
               <Link href="/contact">Contact</Link>
             </li>
           </ul>

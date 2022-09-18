@@ -1,10 +1,10 @@
-import NavBar from "../../components/navigation/NavBar";
+import NavBar from "./NavBar";
+
 export default function Layout({ children }) {
-    return (
-      <>
-        <NavBar />
-        {children}
-        
-      </>
-    );
-  }
+  return (
+    <>
+      <NavBar />
+      {children}
+    </>
+  );
+}
