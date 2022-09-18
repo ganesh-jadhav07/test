@@ -7,14 +7,13 @@ import Image from "next/image";
 
 function NavBar() {
   const route = useRouter();
-  console.log(route);
 
   const [nav, setNav] = useState(true);
-  const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("white");
-  const [opacity, setOpacity] = useState("1");
+  const [color, setColor] = useState("#black");
+  const [textColor, setTextColor] = useState("black");
+  const [opacity, setOpacity] = useState("0.9");
 
-  document.body.style.overflow = nav?"hidden":"auto";
+  // document.body.style.overflow = nav?"hidden":"auto";
 
   const handleNav = () => {
     setNav(!nav);
@@ -23,12 +22,12 @@ function NavBar() {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 500) {
-        setOpacity("0.6");
+        setOpacity("0.8");
         setColor("#000000");
         setTextColor("#ffffff");
       } else {
-        setOpacity("1");
-        setColor("transparent");
+        setOpacity("0.9");
+        setColor("#000000");
         setTextColor("#ffffff");
       }
     };
@@ -45,7 +44,7 @@ function NavBar() {
         <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
-            className={"text-3xl font-bold flex m-[-5]"}
+            className={"text-3xl flex m-[-5]"}
           >
             <Image src={logo} alt="logo" height={40} width={40} />
             <sapn>Bluepineapple</sapn>
@@ -63,17 +62,17 @@ function NavBar() {
           </li>
           <li
             className={`p-4 font-bold ${
-              route.pathname === "/services" ? "text-blue-700" : "text-white"
+              route.pathname === "/Services" ? "text-blue-700" : "text-white"
             }`}
           >
             <Link href="/Services">Services</Link>
           </li>
           <li
             className={`p-4  font-bold ${
-              route.pathname === "/innovation" ? "text-blue-700" : "text-white"
+              route.pathname === "/Innovation" ? "text-blue-700" : "text-white"
             }`}
           >
-            <Link href="/innovation">Innovation</Link>
+            <Link href="/Innovation">Innovation</Link>
           </li>
           <li
             className={`p-4  font-bold ${
@@ -132,7 +131,7 @@ function NavBar() {
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className={`p-4 font-bold text-5xl ${
+              className={`p-4 font-bold text-3xl ${
                 route.pathname === "/" ? "text-blue-700" : "text-white"
               }`}
             >
@@ -142,7 +141,7 @@ function NavBar() {
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className={`p-4 font-bold text-5xl ${
+              className={`p-4 font-bold text-3xl ${
                 route.pathname === "/Services" ? "text-blue-700" : "text-white"
               }`}
             >
@@ -152,17 +151,17 @@ function NavBar() {
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className={`p-4 font-bold text-5xl ${
-                route.pathname === "/innovation" ? "text-blue-700" : "text-white"
+              className={`p-4 font-bold text-3xl ${
+                route.pathname === "/Innovation" ? "text-blue-700" : "text-white"
               }`}
             >
-              <Link href="/innovation">Innovation</Link>
+              <Link href="/Innovation">Innovation</Link>
             </li>
             <li
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className={`p-4 font-bold text-5xl ${
+              className={`p-4 font-bold text-3xl ${
                 route.pathname === "/about" ? "text-blue-700" : "text-white"
               }`}
             >
@@ -172,7 +171,7 @@ function NavBar() {
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className={`p-4 font-bold text-5xl ${
+              className={`p-4 font-bold text-xl ${
                 route.pathname === "/careers" ? "text-blue-700" : "text-white"
               }`}
             >
@@ -182,7 +181,7 @@ function NavBar() {
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className={`p-4 font-bold text-5xl ${
+              className={`p-4 font-bold text-3xl ${
                 route.pathname === "/blog" ? "text-blue-700" : "text-white"
               }`}
             >
@@ -192,7 +191,7 @@ function NavBar() {
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className={`p-4 font-bold text-5xl ${
+              className={`p-4 font-bold text-3xl ${
                 route.pathname === "/Contact" ? "text-blue-700" : "text-white"
               }`}
             >
