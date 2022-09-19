@@ -48,7 +48,9 @@ function CustomerReviews() {
       <div className={style.card2}>
         <div className={style.innercard}>
           <h1 className={style.heading}>Customer Speak</h1>
-          <p className={style.text}>{review[currentReview].title}</p>
+          <div className={style.textblock}>
+            <p className={style.text}>{review[currentReview].title}</p>
+          </div>
           <ChevronLeftIcon className={style.next} onClick={handleNext} />
           <ChevronRightIcon className={style.prev} onClick={handlePrev} />
           <p className={style.comma}>“</p>
