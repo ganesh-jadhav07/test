@@ -29,8 +29,19 @@
   color: #293e40;
 }
 
+.innercard:hover .next {
+  height: 6%;
+  opacity: 1;
+}
+
+.innercard:hover .prev {
+  height: 6%;
+  opacity: 1;
+}
+
 .next {
   position: relative;
+  opacity: 0;
   height: 6%;
   top: 4rem;
   cursor: pointer;
@@ -41,6 +52,7 @@
   height: 6%;
   top: 1.5rem;
   left: 90%;
+  opacity: 0;
   cursor: pointer;
 }
 .text {
@@ -224,7 +236,7 @@
   }
 }
 
-@media (max-width: 615px) {
+@media (max-width: 630px) {
   .card {
     height: 4rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -290,7 +302,7 @@
   }
 }
 
-@media (max-width: 473px) {
+@media (max-width: 489px) {
   .card {
     height: 4rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -302,7 +314,7 @@
 
   .comma {
     position: relative;
-    top: 3rem;
+    top: 1rem;
     font-family: 'Jacques Francois Shadow';
     font-style: normal;
     font-size: 58px;
@@ -323,7 +335,7 @@
   .lists {
     position: relative;
     justify-content: center;
-    top: 1rem;
+    top: 0rem;
   }
   .text {
     position: relative;
@@ -347,7 +359,7 @@
 
   .foot {
     position: relative;
-    top: 1rem;
+    top: 0rem;
     font-family: 'Inter';
     font-style: normal;
     font-size: 27px;
