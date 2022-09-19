@@ -1,6 +1,6 @@
 import classes from "./CloudServices.module.css";
 import CloudCard from "../cards/CloudCard";
-import BlueBlock from "../../public/images/BlueBlock.png";
+import BlueBlock from "../../public/images/home/BlueBlock.png";
 
 function CloudServices() {
   const clouds = [
@@ -53,14 +53,11 @@ function CloudServices() {
           Learn More
         </button>
       </div>
-      {/* <div className="p-4 grid sm:grid-cols-2 md:grid-cols-4 ">
-        {clouds.map((cloud) => (
-          <CloudCard {...cloud} />
-        ))} */}
-      {/* </div> */}
+
+      {/* Cloud Services Card */}
       <div className={classes.cloudCardSection}>
         {clouds.map((cloud) => (
-          <CloudCard {...cloud} />
+          <CloudCard key={cloud.id} {...cloud} />
         ))}
       </div>
     </div>
