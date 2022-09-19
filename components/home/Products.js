@@ -55,7 +55,7 @@ function Products() {
         <div className={`${styles.titleContent}  flex flex-col items-center `}>
           <span className={`${styles.title} flex flex-row items-center`}>
             {diamondLogo}
-            <span className="ml-4">Laverage the power of our Apps</span>
+            <span className="ml-4">Leverage the power of our Apps</span>
           </span>
           <div className={`${styles.discription}  mt-2`}>
             We have a strong innovation culture at Bluepineapple. Our Apps are
