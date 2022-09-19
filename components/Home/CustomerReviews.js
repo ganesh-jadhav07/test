@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import style from "./CustomerReviews.module.css";
+import contact from "../../public/images/home/Contact.png";
 
 let count = 0;
 function CustomerReviews() {
@@ -43,7 +44,7 @@ function CustomerReviews() {
   return (
     <div className={style.card}>
       <div className={style.card1}>
-        <img src="Vector.png" className={style.img} alt="loading.png" />
+        <img src={contact.src} className={style.img} alt="loading.png" />
       </div>
       <div className={style.card2}>
         <div className={style.innercard}>

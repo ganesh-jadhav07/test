@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./InnovationServicesScreen.module.css";
-import img1 from "../../public/Screen2.jpg";
-import arrow1 from "../../public/arrow1.png";
-import arrow2 from "../../public/arrow2.png";
-import arrow3 from "../../public/arrow3.png";
-import arrow4 from "../../public/arrow4.png";
+import img1 from "../../public/images/home/fone.jpg";
+import arrow1 from "../../public/images/home/arrow1.png";
+import arrow2 from "../../public/images/home/arrow2.png";
+import arrow3 from "../../public/images/home/arrow3.png";
+import arrow4 from "../../public/images/home/arrow4.png";
 
 function InnovationServicesScreen() {
   return (
