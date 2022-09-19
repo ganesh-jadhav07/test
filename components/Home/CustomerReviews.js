@@ -10,21 +10,25 @@ function CustomerReviews() {
       id: 1,
       title:
         "Bluepineapple has been a trusted partner for us. They are very professional, taking a consultative approach to all development requests. We look forward to our continued partnership with Bluepineapple.",
+        client: 'BitSight Technologies'
     },
     {
       id: 2,
       title:
         "Very proactive and responsive. Always willing to go the extra mile to support the end customer.",
+        client: 'SLE Worldwide'
     },
     {
       id: 3,
       title:
         " What I really liked was their flexibility especially when we ran into unexpected issues. They were meticulous in following up on feedback.",
+        client: 'UK Customer'
     },
     {
       id: 4,
       title:
         "Quick to onboard and embed with the team. I hope we get to work together in the future.",
+        client: 'US Customer'
     },
   ];
 
@@ -51,8 +55,8 @@ function CustomerReviews() {
           <ChevronLeftIcon  className={style.prev} onClick={handlePrev}   />
           <ChevronRightIcon className={style.next} onClick={handleNext} />
           <p className={style.comma}>“</p>
-          <p className={style.foot}>BitSight Technologies</p>
-          <div className={style.lists}>
+          <p className={style.foot}>{review[currentReview].client}</p>
+          <div className={`${style.lists} p-2` }>
             {Array.from({ length: 4 }).map((item, index) => (
               <div
                 onClick={() => currentReview(index)}>
