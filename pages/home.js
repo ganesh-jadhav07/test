@@ -7,9 +7,9 @@ import CustomerReviews from "../components/Home/CustomerReviews";
 function Home() {
   return (
     <div>
-      {/* <CloudServices /> */}
+      <CloudServices />
       <InnovationServicesScreen />
-      <Products />
+      {/* <Products /> */}
       <CustomerReviews />
     </div>
   );
