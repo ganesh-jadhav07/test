@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import style from "./CustomerReviews.module.css";
+import Contact from "../../public/images/home/Contact.png";
 
 let count = 0;
 function CustomerReviews() {
@@ -10,25 +11,25 @@ function CustomerReviews() {
       id: 1,
       title:
         "Bluepineapple has been a trusted partner for us. They are very professional, taking a consultative approach to all development requests. We look forward to our continued partnership with Bluepineapple.",
-        client: 'BitSight Technologies'
+      client: "BitSight Technologies",
     },
     {
       id: 2,
       title:
         "Very proactive and responsive. Always willing to go the extra mile to support the end customer.",
-        client: 'SLE Worldwide'
+      client: "SLE Worldwide",
     },
     {
       id: 3,
       title:
         " What I really liked was their flexibility especially when we ran into unexpected issues. They were meticulous in following up on feedback.",
-        client: 'UK Customer'
+      client: "UK Customer",
     },
     {
       id: 4,
       title:
         "Quick to onboard and embed with the team. I hope we get to work together in the future.",
-        client: 'US Customer'
+      client: "US Customer",
     },
   ];
 
@@ -44,7 +45,7 @@ function CustomerReviews() {
   return (
     <div className={style.card}>
       <div className={style.card1}>
-        <img src="Vector.png" className={style.img} alt="loading.png" />
+        <img src={Contact.src} className={style.img} alt="loading.png" />
       </div>
       <div className={style.card2}>
         <div className={style.innercard}>
@@ -52,22 +53,18 @@ function CustomerReviews() {
           <div className={style.textblock}>
             <p className={style.text}>{review[currentReview].title}</p>
           </div>
-          <ChevronLeftIcon  className={style.prev} onClick={handlePrev}   />
+          <ChevronLeftIcon className={style.prev} onClick={handlePrev} />
           <ChevronRightIcon className={style.next} onClick={handleNext} />
           <p className={style.comma}>“</p>
           <p className={style.foot}>{review[currentReview].client}</p>
-          <div className={`${style.lists} p-2` }>
+          <div className={`${style.lists} p-2`}>
             {Array.from({ length: 4 }).map((item, index) => (
-              <div
-                onClick={() => currentReview(index)}>
-                
-                 { currentReview === index ? (
-                    <img src="images/blue.png" className={style.r1} />
-                  ) : (
-                    <img src="images/gray.png" className={style.r1} />
-                  )
-          
-               }
+              <div onClick={() => currentReview(index)}>
+                {currentReview === index ? (
+                  <img src="images/blue.png" className={style.r1} />
+                ) : (
+                  <img src="images/gray.png" className={style.r1} />
+                )}
               </div>
             ))}
           </div>
