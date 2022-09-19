@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import style from "./CustomerReviews.module.css";
-import contact from "../../public/images/home/Contact.png";
 
 let count = 0;
 function CustomerReviews() {
@@ -33,30 +32,24 @@ function CustomerReviews() {
     },
   ];
 
-  // function for next review
   const handleNext = () => {
     count = (count + 1) % review.length;
     setReview(count);
   };
-
-
-  // function for previous review
   const handlePrev = () => {
     const productLength = review.length;
     count = (currentReview + productLength - 1) % productLength;
     setReview(count);
   };
   return (
-    <div className={style.outerCard}>
-      {/* Customer Image */}
-      <div className={style.leftCard}>
-        <img src={contact.src} className={style.img} alt="loading.png" />
+    <div className={style.card}>
+      <div className={style.card1}>
+        <img src="Vector.png" className={style.img} alt="loading.png" />
       </div>
-      {/* Customer Review */}
-      <div className={style.rightCard}>
-        <div className={style.reviewContainer}>
-          <h1 className={style.reviewTitle}>Customer Speak</h1>
-          <div className={style.reviewText}>
+      <div className={style.card2}>
+        <div className={style.innercard}>
+          <h1 className={style.heading}>Customer Speak</h1>
+          <div className={style.textblock}>
             <p className={style.text}>{review[currentReview].title}</p>
           </div>
           <ChevronLeftIcon  className={style.prev} onClick={handlePrev}   />
