@@ -8,26 +8,27 @@ import Image from "next/image";
 function NavBar() {
   const route = useRouter();
 
-  const [nav, setNav] = useState(true);
-  const [color, setColor] = useState("#black");
+  const [nav, setNav] = useState(false);
+  const [color, setColor] = useState("black");
   const [textColor, setTextColor] = useState("black");
-  const [opacity, setOpacity] = useState("0.9");
+  const [opacity, setOpacity] = useState("1");
 
-  // document.body.style.overflow = nav?"hidden":"auto";
+  
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   useEffect(() => {
+    document.body.style.overflow = nav?"hidden":"auto";
     const changeColor = () => {
       if (window.scrollY >= 500) {
-        setOpacity("0.8");
+        setOpacity("1");
         setColor("#000000");
         setTextColor("#ffffff");
       } else {
-        setOpacity("0.9");
-        setColor("#000000");
+        setOpacity("1");
+        setColor("black");
         setTextColor("#ffffff");
       }
     };
@@ -45,7 +46,7 @@ function NavBar() {
             style={{ color: `${textColor}` }}
             className={"text-3xl flex m-[-5]"}>
             <Image src={logo} alt="logo" height={40} width={40} />
-            <sapn>Bluepineapple</sapn>
+            <p>Bluepineapple</p>
           </h1>
         </Link>
 
@@ -102,9 +103,9 @@ function NavBar() {
           onClick={handleNav}
           className="z-10 block lg:hidden">
           {nav ? (
-            <XMarkIcon className="w-10 text-black bg-white" fill />
+            <XMarkIcon className="w-10 text-black bg-white" />
           ) : (
-            <Bars3Icon className="w-10 text-black bg-white" fill />
+            <Bars3Icon className="w-10 text-black bg-white" />
           )}
         </div>
 

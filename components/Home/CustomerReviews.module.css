@@ -9,9 +9,6 @@
   width: 100%;
 }
 
-.card2{
-}
-
 .innercard {
   position: relative;
   margin-top: 40px;
@@ -20,7 +17,6 @@
   text-align: center;
   width: 100%;
   padding: 2rem;
-  box-sizing: border-box;
 }
 
 .comma {
@@ -141,7 +137,6 @@
     position: relative;
     top: 2rem;
     justify-content: center;
-    
   }
 
   .foot {
@@ -221,10 +216,6 @@
     color: #293e40;
   }
 
-  .prev{
-    left: 90%;
-  }
-
   .heading {
     position: relative;
     font-family: 'Inter';
@@ -270,7 +261,6 @@
     color: #293e40;
   }
 
-
   .innercard {
     position: relative;
     margin-top: 40px;
@@ -279,11 +269,6 @@
     text-align: center;
     width: 100%;
     padding: 2rem;
-  }
-  
-  .prev {
-    position: relative;
-    left: 90%;
   }
 
   .text {
