@@ -11,7 +11,7 @@ function NavBar() {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("black");
   const [textColor, setTextColor] = useState("black");
-  const [opacity, setOpacity] = useState("0.9");
+  const [opacity, setOpacity] = useState("1");
 
   
 
@@ -23,11 +23,11 @@ function NavBar() {
     document.body.style.overflow = nav?"hidden":"auto";
     const changeColor = () => {
       if (window.scrollY >= 500) {
-        setOpacity("0.8");
+        setOpacity("1");
         setColor("#000000");
         setTextColor("#ffffff");
       } else {
-        setOpacity("0.9");
+        setOpacity("1");
         setColor("black");
         setTextColor("#ffffff");
       }
@@ -46,7 +46,7 @@ function NavBar() {
             style={{ color: `${textColor}` }}
             className={"text-3xl flex m-[-5]"}>
             <Image src={logo} alt="logo" height={40} width={40} />
-            <span>Bluepineapple</span>
+            <p>Bluepineapple</p>
           </h1>
         </Link>
 

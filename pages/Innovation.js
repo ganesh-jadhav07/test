@@ -4,40 +4,7 @@ import diamond from "../public/images/diamond.svg";
 
 export default function Innovation() {
   return (
-    <div className="w-full h-screen bg-white">
-      <div className="relative grid items-center justify-center grid-cols-1 gap-y-4 top-32 left-10 md:grid-cols-2 lg:grid-cols-4">
-        <div className="w-48 h-48 rotate-45 bg-black rounded-xl">
-          <div className="ml-2 text-white -rotate-45">
-            hello world
-          </div>
-        </div>
-        <div className="w-48 h-48 rotate-45 bg-black rounded-xl">
-          <div className="ml-2 text-white -rotate-45">
-            <img src="https://toppng.com/uploads/preview/salesforce-transparent-logo-11552506310l3i696ymtl.png" className="justify-center w-10 h-10"/>
-          </div>
-        </div>
-        <div className="w-48 h-48 rotate-45 bg-black rounded-xl">
-          <div className="ml-2 text-white -rotate-45">
-            hello world
-          </div>
-        </div>
-        <div className="w-48 h-48 rotate-45 bg-black rounded-xl">
-          <div className="ml-2 text-white -rotate-45">
-            hello world
-          </div>
-        </div>
-        
-        {/* <div className="relative">
-          <Image
-            src={diamond}
-            alt="Diamond"
-            className=""
-            height={300}
-            width={300}
-          />
-        </div> */}
-      </div>
-      <div className="self-end"></div>
-    </div>
-  );
+    
+
+<iframe width='610px' height='350px' src='https://crm.zoho.com/crm/WebFormServeServlet?rid=8bc9c3c27b835e9e0b0ca5afa2ffb8912673a3c74980c571cd183a351fef4565gid22a7e76744104c1be3d76a00e7328184bdf7fc9ff7b951e9aa732dc571c638bd' className="mt-24"></iframe>  );
 }
