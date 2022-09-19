@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import styles from "./Products.module.css";
+import styles from "./Product.module.css";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const count = 0;
-function Products() {
+function Product() {
   const products = [
     {
       id: 1,
@@ -25,7 +25,7 @@ function Products() {
     setProducts(count);
   };
 
-  // view previous product
+  // View previous product
   const handlePrev = () => {
     const productLength = products.length;
     count = (currentProduct + productLength - 1) % productLength;
@@ -118,4 +118,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Product;
