@@ -9,6 +9,11 @@
   width: 100%;
 }
 
+.textblock {
+  height: 40%;
+}
+
+
 .innercard {
   position: relative;
   margin-top: 40px;
@@ -135,7 +140,7 @@
 
   .lists {
     position: relative;
-    top: 2rem;
+    top: 0rem;
     justify-content: center;
   }
 
@@ -146,7 +151,11 @@
     font-size: 30px;
     text-align: center;
     color: #293e40;
-    top: 2rem;
+    top: 0rem;
+  }
+
+  .textblock{
+    height: 60%;
   }
 
   .text {
@@ -166,7 +175,7 @@
     font-size: 90px;
     text-align: center;
     color: #293e40;
-    top: 5rem;
+    top: 2rem;
   }
 }
 
@@ -193,6 +202,10 @@
     font-size: 58px;
     text-align: center;
     color: #293e40;
+  }
+
+  .textblock{
+    height: 45%;
   }
 
   .innercard {
@@ -259,6 +272,10 @@
     font-size: 58px;
     text-align: center;
     color: #293e40;
+  }
+
+  .textblock{
+    height: 47%;
   }
 
   .innercard {
@@ -330,6 +347,10 @@
     text-align: center;
     width: 100%;
     padding: 2rem;
+  }
+
+  .textblock{
+    height: 43%;
   }
 
   .lists {
