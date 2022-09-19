@@ -19,7 +19,7 @@ function Products() {
 
   const [currentProduct, setProducts] = useState(0);
 
-  // view next product
+  // View next product
   const handleNext = () => {
     count = (count + 1) % products.length;
     setProducts(count);
