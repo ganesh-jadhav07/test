@@ -30,11 +30,13 @@ function CustomerReviews() {
     },
   ];
 
+  // function for next review
   const handleNext = () => {
     count = (count + 1) % review.length;
     setReview(count);
   };
 
+  // function for previous review
   const handlePrev = () => {
     const productLength = review.length;
     count = (currentReview + productLength - 1) % productLength;
@@ -42,20 +44,22 @@ function CustomerReviews() {
   };
 
   return (
-    <div className={style.card}>
-      <div className={style.card1}>
+    <div className={style.outerCard}>
+      {/* Customer Image */}
+      <div className={style.leftCard}>
         <img src={contact.src} className={style.img} alt="loading.png" />
       </div>
-      <div className={style.card2}>
-        <div className={style.innercard}>
-          <h1 className={style.heading}>Customer Speak</h1>
-          <div className={style.textblock}>
+      {/* Customer Review */}
+      <div className={style.rightCard}>
+        <div className={style.reviewContainer}>
+          <h1 className={style.reviewTitle}>Customer Speak</h1>
+          <div className={style.reviewText}>
             <p className={style.text}>{review[currentReview].title}</p>
           </div>
           <ChevronLeftIcon className={style.next} onClick={handleNext} />
           <ChevronRightIcon className={style.prev} onClick={handlePrev} />
-          <p className={style.comma}>“</p>
-          <p className={style.foot}>BitSight Technologies</p>
+          <p className={style.quote}>“</p>
+          <p className={style.reviewBy}>BitSight Technologies</p>
           <div className={style.lists}>
             <ul>
               <li

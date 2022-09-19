@@ -7,7 +7,6 @@ import Image from "next/image";
 
 function NavBar() {
   const route = useRouter();
-  console.log(route);
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("black");
   const [textColor, setTextColor] = useState("black");

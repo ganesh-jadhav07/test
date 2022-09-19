@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./InnovationServicesScreen.module.css";
-import img1 from "../../public/images/home/fone.jpg";
+import fone from "../../public/images/home/fone.jpg";
 import arrow1 from "../../public/images/home/arrow1.png";
 import arrow2 from "../../public/images/home/arrow2.png";
 import arrow3 from "../../public/images/home/arrow3.png";
@@ -27,14 +27,13 @@ function InnovationServicesScreen() {
           <img className={style.imageStyle5} src={arrow4.src} alt="Not Found" />
         </div>
         <button className={style.btnStyle} type="button">
-          {" "}
-          Get In Touch{" "}
+          Get In Touch
         </button>
       </div>
       <div>
         <img
           className={`${style.imageContainer} object-cover lg:h-full xl:h-full 2xl:h-full `}
-          src={img1.src}
+          src={fone.src}
           alt="Not Found"
         />
       </div>

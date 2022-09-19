@@ -32,7 +32,7 @@ function Products() {
     setProducts(count);
   };
 
-  // JSX of Diamond Logo (Reuse it anywhere you want)
+  // JSX of Diamond Logo
   const diamondLogo = (
     <div className={`flex flex-col items-center`}>
       <ul>
@@ -54,7 +54,7 @@ function Products() {
             {diamondLogo}
             <span className="ml-4">Leverage the power of our Apps</span>
           </span>
-          <div className={`${styles.discription}  mt-2`}>
+          <div className={`${styles.description}  mt-2`}>
             We have a strong innovation culture at Bluepineapple. Our Apps are
             aimed at providing solutions for critical industry demands and new
             business needs.
@@ -62,7 +62,7 @@ function Products() {
         </div>
       </div>
       <div className={`${styles.bodyContent}  px-6`}>
-        <div className={`${styles.firstContent} `}>
+        <div className={`${styles.cardContent} `}>
           <ChevronLeftIcon
             className={`${styles.chevronIcon} z-[1] text-bGreen cursor-pointer`}
             onClick={handlePrev}
