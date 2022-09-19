@@ -48,9 +48,10 @@ function Products() {
   );
 
   return (
-    <div className={`h-1/2 w-full ${styles.bgImage} `}>
+    <div className={`h-screen w-full ${styles.bgImage} `}>
       <div
-        className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}>
+        className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}
+      >
         <div className={`${styles.titleContent}  flex flex-col items-center `}>
           <span className={`${styles.title} flex flex-row items-center`}>
             {diamondLogo}
@@ -66,13 +67,15 @@ function Products() {
       <div className={`${styles.bodyContent}  px-6`}>
         <div className={`${styles.firstContent} `}>
           <ChevronLeftIcon
-            className={`${styles.chevronIcon} z-10 text-bGreen cursor-pointer`}
+            className={`${styles.chevronIcon} z-[1] text-bGreen cursor-pointer`}
             onClick={handlePrev}
           />
           <div
-            className={`${styles.squareDiamond} bg-slate-200 rotate-45 flex  items-center`}>
+            className={`${styles.squareDiamond} bg-slate-200 rotate-45 flex  items-center`}
+          >
             <div
-              className={`${styles.squareDiamondBody} -rotate-45 grid grid-cols-1 justify-evenly `}>
+              className={`${styles.squareDiamondBody} -rotate-45 grid grid-cols-1 justify-evenly `}
+            >
               <div className="flex justify-center items-center">
                 <img
                   src="https://s3-alpha-sig.figma.com/img/d306/1d86/284cb069f62e8fb441c140e46f8bcae7?Expires=1664150400&Signature=fwubHvqif68DftC7fj~06UI3TGc4VDlZx1MTccOZt48hP5Za3kfFfUu8QBz1ClYmfGUY7QyQ1GycB4Co4yLO7aNQOu99acmuanM6MsLtTd~Ro-T4aBtPWzt59ciRShWDr47w0eoAKOeR~4FMlWQ5wtGHVAF7DfLhXdciBsA60z3D51S~8K1lxqTPVQnZr2P0nW2mEFkC1I4m8GvEShOMDItu8JA208EKmSeI2Kxa5mbpYbbI-lb9RhuqAAkV-nCw4MmqZlvDLkwX10jsvRsdko1kXRrL0oNisHWPEiT5xoaRLmY1Y2sjiNANCpu1E1kvSExqhnTK0iM2j0-6wHlb5w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
@@ -80,11 +83,13 @@ function Products() {
                 />
               </div>
               <div
-                className={`${styles.diamondParagraph} text-center font-bold flex items-center overflow-hidden`}>
+                className={`${styles.diamondParagraph} text-center font-bold flex items-center overflow-hidden`}
+              >
                 {products[currentProduct].title}
               </div>
               <span
-                className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}>
+                className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}
+              >
                 <button className={`${styles.learnMoreButton}`}>
                   Know More
                 </button>
@@ -98,12 +103,13 @@ function Products() {
           </div>
 
           <ChevronRightIcon
-            className={`${styles.chevronIcon} z-10 text-bGreen cursor-pointer`}
+            className={`${styles.chevronIcon} z-[1] text-bGreen cursor-pointer`}
             onClick={handleNext}
           />
         </div>
         <div
-          className={`${styles.secondContent}  flex items-center justify-end `}>
+          className={`${styles.secondContent}  flex items-center justify-end `}
+        >
           <div className={`${styles.secondBody}  `}>
             {diamondLogo}
             <div className={`${styles.firstParagraph} mt-6`}>

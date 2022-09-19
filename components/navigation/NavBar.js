@@ -8,7 +8,7 @@ import Image from "next/image";
 function NavBar() {
   const route = useRouter();
 
-  const [nav, setNav] = useState(true);
+  const [nav, setNav] = useState(false);
   const [color, setColor] = useState("#black");
   const [textColor, setTextColor] = useState("black");
   const [opacity, setOpacity] = useState("0.9");
@@ -37,13 +37,15 @@ function NavBar() {
   return (
     <div
       className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
-      style={{ backgroundColor: `${color}`, opacity: `${opacity}` }}>
+      style={{ backgroundColor: `${color}`, opacity: `${opacity}` }}
+    >
       {/* logo section */}
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
-            className={"text-3xl flex m-[-5]"}>
+            className={"text-3xl flex m-[-5]"}
+          >
             <Image src={logo} alt="logo" height={40} width={40} />
             <sapn>Bluepineapple</sapn>
           </h1>
@@ -54,43 +56,50 @@ function NavBar() {
           <li
             className={`p-4 font-bold ${
               route.pathname === "/" ? "text-blue-700" : "text-white"
-            }`}>
+            }`}
+          >
             <Link href="/">Home</Link>
           </li>
           <li
             className={`p-4 font-bold ${
               route.pathname === "/Services" ? "text-blue-700" : "text-white"
-            }`}>
+            }`}
+          >
             <Link href="/Services">Services</Link>
           </li>
           <li
             className={`p-4  font-bold ${
               route.pathname === "/Innovation" ? "text-blue-700" : "text-white"
-            }`}>
+            }`}
+          >
             <Link href="/Innovation">Innovation</Link>
           </li>
           <li
             className={`p-4  font-bold ${
               route.pathname === "/about" ? "text-blue-700" : "text-white"
-            }`}>
+            }`}
+          >
             <Link href="/about">About</Link>
           </li>
           <li
             className={`p-4  font-bold ${
               route.pathname === "/careers" ? "text-blue-700" : "text-white"
-            }`}>
+            }`}
+          >
             <Link href="/careers">Careers</Link>
           </li>
           <li
             className={`p-4  font-bold ${
               route.pathname === "/blog" ? "text-blue-700" : "text-white"
-            }`}>
+            }`}
+          >
             <Link href="/blog">Blog</Link>
           </li>
           <li
             className={`p-4  font-bold ${
               route.pathname === "/Contact" ? "text-blue-700" : "text-white"
-            }`}>
+            }`}
+          >
             <Link href="/Contact">Contact</Link>
           </li>
         </ul>
@@ -100,7 +109,8 @@ function NavBar() {
           role="button"
           tabIndex={-1}
           onClick={handleNav}
-          className="z-10 block lg:hidden">
+          className="z-10 block lg:hidden"
+        >
           {nav ? (
             <XMarkIcon className="w-10 text-black bg-white" fill />
           ) : (
@@ -114,7 +124,8 @@ function NavBar() {
             nav
               ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
               : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 "
-          }>
+          }
+        >
           <ul>
             <li
               role="presentation"
@@ -122,7 +133,8 @@ function NavBar() {
               onClick={handleNav}
               className={`p-4 font-bold text-3xl ${
                 route.pathname === "/" ? "text-blue-700" : "text-white"
-              }`}>
+              }`}
+            >
               <Link href="/">Home</Link>
             </li>
             <li
@@ -131,7 +143,8 @@ function NavBar() {
               onClick={handleNav}
               className={`p-4 font-bold text-3xl ${
                 route.pathname === "/Services" ? "text-blue-700" : "text-white"
-              }`}>
+              }`}
+            >
               <Link href="/Services">Services</Link>
             </li>
             <li
@@ -142,7 +155,8 @@ function NavBar() {
                 route.pathname === "/Innovation"
                   ? "text-blue-700"
                   : "text-white"
-              }`}>
+              }`}
+            >
               <Link href="/Innovation">Innovation</Link>
             </li>
             <li
@@ -151,7 +165,8 @@ function NavBar() {
               onClick={handleNav}
               className={`p-4 font-bold text-3xl ${
                 route.pathname === "/about" ? "text-blue-700" : "text-white"
-              }`}>
+              }`}
+            >
               <Link href="/about">About</Link>
             </li>
             <li
@@ -160,7 +175,8 @@ function NavBar() {
               onClick={handleNav}
               className={`p-4 font-bold text-xl ${
                 route.pathname === "/careers" ? "text-blue-700" : "text-white"
-              }`}>
+              }`}
+            >
               <Link href="/careers">Careers</Link>
             </li>
             <li
@@ -169,7 +185,8 @@ function NavBar() {
               onClick={handleNav}
               className={`p-4 font-bold text-3xl ${
                 route.pathname === "/blog" ? "text-blue-700" : "text-white"
-              }`}>
+              }`}
+            >
               <Link href="/blog">Blog</Link>
             </li>
             <li
@@ -178,7 +195,8 @@ function NavBar() {
               onClick={handleNav}
               className={`p-4 font-bold text-3xl ${
                 route.pathname === "/Contact" ? "text-blue-700" : "text-white"
-              }`}>
+              }`}
+            >
               <Link href="/Contact">Contact</Link>
             </li>
           </ul>
