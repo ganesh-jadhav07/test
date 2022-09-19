@@ -13,7 +13,6 @@
   height: 40%;
 }
 
-
 .innercard {
   position: relative;
   margin-top: 40px;
@@ -27,16 +26,11 @@
 .comma {
   position: relative;
   top: 3rem;
-  font-family: 'Jacques Francois Shadow';
+  font-family: "Jacques Francois Shadow";
   font-style: normal;
   font-size: 100px;
   text-align: center;
   color: #293e40;
-}
-
-.innercard:hover .next {
-  height: 6%;
-  opacity: 1;
 }
 
 .innercard:hover .prev {
@@ -44,27 +38,33 @@
   opacity: 1;
 }
 
-.next {
-  position: relative;
-  opacity: 0;
+.innercard:hover .next {
   height: 6%;
-  top: 4rem;
-  cursor: pointer;
+  opacity: 1;
 }
 
 .prev {
   position: relative;
+  opacity: 0;
   height: 6%;
-  top: 1.5rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.next {
+  position: relative;
+  height: 6%;
+  top: -1rem;
   left: 90%;
   opacity: 0;
   cursor: pointer;
 }
+
 .text {
   position: relative;
   overflow-wrap: break-word;
   top: 2rem;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-size: 27px;
   text-align: center;
@@ -73,7 +73,7 @@
 
 .heading {
   position: relative;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-size: 38px;
   color: #293e40;
@@ -82,7 +82,7 @@
 .foot {
   position: relative;
   top: 2rem;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-size: 32px;
   text-align: center;
@@ -90,35 +90,17 @@
 }
 
 .lists {
+  display: flex;
   position: relative;
   top: 3rem;
   justify-content: center;
   height: 2rem;
 }
 
-.rec1 {
-  position: relative;
-  height: 10px;
-  width: 10px;
-
-  background: linear-gradient(0deg, #110dff, #110dff),
-    linear-gradient(0deg, #d0d1d1, #d0d1d1), #d0d1d1;
-  box-shadow: inset 0px 1.73597px 6.94386px rgba(0, 0, 0, 0.25);
-  border-radius: 1.73597px;
-  transform: rotate(46.24deg);
+.r1{
+  margin: 1%;
 }
 
-.rec2 {
-  position: relative;
-  height: 10px;
-  width: 10px;
-
-  background: linear-gradient(0deg, #b8bbbc, #b8bbbc),
-    linear-gradient(0deg, #d0d1d1, #d0d1d1), #d0d1d1;
-  box-shadow: inset 0px 1.73597px 6.94386px rgba(0, 0, 0, 0.25);
-  border-radius: 1.73597px;
-  transform: rotate(46.24deg);
-}
 
 /* media queries for responsive design*/
 
@@ -144,9 +126,13 @@
     justify-content: center;
   }
 
+  .next {
+    top: -2rem;
+  }
+
   .foot {
     position: relative;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 30px;
     text-align: center;
@@ -154,14 +140,14 @@
     top: 0rem;
   }
 
-  .textblock{
+  .textblock {
     height: 60%;
   }
 
   .text {
     position: relative;
     overflow-wrap: break-word;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 32px;
     text-align: center;
@@ -170,7 +156,7 @@
 
   .comma {
     position: relative;
-    font-family: 'Jacques Francois Shadow';
+    font-family: "Jacques Francois Shadow";
     font-style: normal;
     font-size: 90px;
     text-align: center;
@@ -197,15 +183,19 @@
   .comma {
     position: relative;
     top: 1rem;
-    font-family: 'Jacques Francois Shadow';
+    font-family: "Jacques Francois Shadow";
     font-style: normal;
     font-size: 58px;
     text-align: center;
     color: #293e40;
   }
 
-  .textblock{
+  .textblock {
     height: 45%;
+  }
+
+  .next {
+    top: -1rem;
   }
 
   .innercard {
@@ -222,7 +212,7 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 32px;
     text-align: center;
@@ -231,7 +221,7 @@
 
   .heading {
     position: relative;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 35px;
     color: #293e40;
@@ -241,7 +231,7 @@
   .foot {
     position: relative;
     top: 0rem;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 35px;
     text-align: center;
@@ -267,17 +257,18 @@
   .comma {
     position: relative;
     top: 2rem;
-    font-family: 'Jacques Francois Shadow';
+    font-family: "Jacques Francois Shadow";
     font-style: normal;
     font-size: 58px;
     text-align: center;
     color: #293e40;
   }
 
-  .textblock{
+  .textblock {
     height: 47%;
   }
 
+  
   .innercard {
     position: relative;
     margin-top: 40px;
@@ -292,7 +283,7 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 27px;
     text-align: center;
@@ -301,7 +292,7 @@
 
   .heading {
     position: relative;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 33px;
     color: #293e40;
@@ -311,7 +302,7 @@
   .foot {
     position: relative;
     top: 0rem;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 33px;
     text-align: center;
@@ -332,7 +323,7 @@
   .comma {
     position: relative;
     top: 1rem;
-    font-family: 'Jacques Francois Shadow';
+    font-family: "Jacques Francois Shadow";
     font-style: normal;
     font-size: 58px;
     text-align: center;
@@ -349,7 +340,7 @@
     padding: 2rem;
   }
 
-  .textblock{
+  .textblock {
     height: 43%;
   }
 
@@ -358,11 +349,16 @@
     justify-content: center;
     top: 0rem;
   }
+
+  .r1{
+    height: 60%;
+  }
+
   .text {
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 23px;
     text-align: center;
@@ -371,7 +367,7 @@
 
   .heading {
     position: relative;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 29px;
     color: #293e40;
@@ -381,7 +377,7 @@
   .foot {
     position: relative;
     top: 0rem;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-size: 27px;
     text-align: center;

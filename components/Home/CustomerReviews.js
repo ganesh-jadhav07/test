@@ -5,7 +5,6 @@ import style from "./CustomerReviews.module.css";
 let count = 0;
 function CustomerReviews() {
   const [currentReview, setReview] = useState(0);
-
   const review = [
     {
       id: 1,
@@ -33,13 +32,11 @@ function CustomerReviews() {
     count = (count + 1) % review.length;
     setReview(count);
   };
-
   const handlePrev = () => {
     const productLength = review.length;
     count = (currentReview + productLength - 1) % productLength;
     setReview(count);
   };
-
   return (
     <div className={style.card}>
       <div className={style.card1}>
@@ -51,37 +48,24 @@ function CustomerReviews() {
           <div className={style.textblock}>
             <p className={style.text}>{review[currentReview].title}</p>
           </div>
-          <ChevronLeftIcon className={style.next} onClick={handleNext} />
-          <ChevronRightIcon className={style.prev} onClick={handlePrev} />
+          <ChevronLeftIcon  className={style.prev} onClick={handlePrev}   />
+          <ChevronRightIcon className={style.next} onClick={handleNext} />
           <p className={style.comma}>“</p>
           <p className={style.foot}>BitSight Technologies</p>
           <div className={style.lists}>
-            <ul>
-              <li
-                className={style.rec1}
-                style={{ left: "40%", top: "0.4rem" }}
-              />
-              <li
-                className={style.rec2}
-                style={{ left: "42.5%", top: "0.1rem" }}
-              />
-              <li
-                className={style.rec2}
-                style={{ left: "45%", bottom: "0.3rem" }}
-              />
-              <li
-                className={style.rec2}
-                style={{ left: "48%", bottom: "0.7rem" }}
-              />
-              <li
-                className={style.rec2}
-                style={{ left: "50.5%", bottom: "1.7rem" }}
-              />
-              <li
-                className={style.rec2}
-                style={{ left: "53%", bottom: "2.7rem" }}
-              />
-            </ul>
+            {Array.from({ length: 4 }).map((item, index) => (
+              <div
+                onClick={() => currentReview(index)}>
+                
+                 { currentReview === index ? (
+                    <img src="images/blue.png" className={style.r1} />
+                  ) : (
+                    <img src="images/gray.png" className={style.r1} />
+                  )
+          
+               }
+              </div>
+            ))}
           </div>
         </div>
       </div>
