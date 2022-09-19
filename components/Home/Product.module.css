@@ -50,8 +50,8 @@
 
 .squareDiamond {
   /* position: absolute;
-  top: 50px;
-  left: 50px; */
+    top: 50px;
+    left: 50px; */
   width: 22em;
   height: 22em;
   border: 1.21078px solid #b2b2b3;
@@ -131,7 +131,7 @@
     height: 50%;
     width: 100%;
     /* display: flex;
-    justify-content: center; */
+      justify-content: center; */
   }
   .secondContent {
     height: 50%;
