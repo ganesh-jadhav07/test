@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../public/images/bp.png";
+import logo from "../../public/bp.png";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
@@ -7,20 +7,17 @@ import Image from "next/image";
 
 function NavBar() {
   const route = useRouter();
-
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("black");
   const [textColor, setTextColor] = useState("black");
   const [opacity, setOpacity] = useState("1");
-
-  
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   useEffect(() => {
-    document.body.style.overflow = nav?"hidden":"auto";
+    document.body.style.overflow = nav ? "hidden" : "auto";
     const changeColor = () => {
       if (window.scrollY >= 500) {
         setOpacity("1");
@@ -159,7 +156,7 @@ function NavBar() {
               role="presentation"
               tabIndex={-1}
               onClick={handleNav}
-              className={`p-4 font-bold text-xl ${
+              className={`p-4 font-bold text-3xl ${
                 route.pathname === "/careers" ? "text-blue-700" : "text-white"
               }`}>
               <Link href="/careers">Careers</Link>

@@ -1,19 +1,20 @@
-.card {
+.outerCard {
   display: grid;
   grid-template-columns: 4fr 3fr;
   width: 100%;
 }
 
-.card1 {
+.leftCard {
   position: relative;
   width: 100%;
 }
 
-.textblock {
+.reviewBlock {
   height: 40%;
 }
 
-.innercard {
+
+.reviewContainer {
   position: relative;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -23,7 +24,7 @@
   padding: 2rem;
 }
 
-.comma {
+.quote {
   position: relative;
   top: 3rem;
   font-family: "Jacques Francois Shadow";
@@ -33,12 +34,13 @@
   color: #293e40;
 }
 
-.innercard:hover .prev {
+
+.reviewContainer:hover .prev {
   height: 6%;
   opacity: 1;
 }
 
-.innercard:hover .next {
+.reviewContainer:hover .next {
   height: 6%;
   opacity: 1;
 }
@@ -71,7 +73,7 @@
   color: #293e40;
 }
 
-.heading {
+.reviewTitle {
   position: relative;
   font-family: "Inter";
   font-style: normal;
@@ -79,7 +81,7 @@
   color: #293e40;
 }
 
-.foot {
+.reviewBy {
   position: relative;
   top: 2rem;
   font-family: "Inter";
@@ -106,12 +108,12 @@
 /* media queries for responsive design*/
 
 @media (max-width: 1080px) {
-  .card {
+  .outerCard {
     display: grid;
     grid-template-columns: 4fr 3fr;
   }
 
-  .innercard {
+  .reviewContainer {
     position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -127,11 +129,13 @@
     justify-content: center;
   }
 
+
   .next {
     top: -2rem;
   }
 
-  .foot {
+ 
+  .reviewBy {
     position: relative;
     font-family: "Inter";
     font-style: normal;
@@ -141,7 +145,9 @@
     top: 0rem;
   }
 
-  .textblock {
+
+
+  .reviewBlock {
     height: 60%;
   }
 
@@ -155,7 +161,7 @@
     color: #293e40;
   }
 
-  .comma {
+  .quote {
     position: relative;
     font-family: "Jacques Francois Shadow";
     font-style: normal;
@@ -167,12 +173,12 @@
 }
 
 @media (max-width: 813px) {
-  .card {
+  .outerCard {
     height: 4rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .card div:nth-of-type(1) {
+  .outerCard div:nth-of-type(1) {
     order: 2;
   }
 
@@ -181,7 +187,7 @@
     top: 0rem;
     justify-content: center;
   }
-  .comma {
+  .quote {
     position: relative;
     top: 1rem;
     font-family: "Jacques Francois Shadow";
@@ -191,6 +197,7 @@
     color: #293e40;
   }
 
+
   .textblock {
     height: 45%;
   }
@@ -199,7 +206,12 @@
     top: -1rem;
   }
 
-  .innercard {
+ 
+  .reviewBlock {
+    height: 45%;
+  }
+
+  .reviewContainer {
     position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -220,7 +232,7 @@
     color: #293e40;
   }
 
-  .heading {
+  .reviewTitle {
     position: relative;
     font-family: "Inter";
     font-style: normal;
@@ -229,7 +241,7 @@
     top: -0.8rem;
   }
 
-  .foot {
+  .reviewBy {
     position: relative;
     top: 0rem;
     font-family: "Inter";
@@ -241,12 +253,12 @@
 }
 
 @media (max-width: 630px) {
-  .card {
+  .outerCard {
     height: 4rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .card div:nth-of-type(1) {
+  .outerCard div:nth-of-type(1) {
     order: 2;
   }
 
@@ -255,7 +267,7 @@
     top: 1rem;
     justify-content: center;
   }
-  .comma {
+  .quote {
     position: relative;
     top: 2rem;
     font-family: "Jacques Francois Shadow";
@@ -265,12 +277,18 @@
     color: #293e40;
   }
 
+
   .textblock {
     height: 47%;
   }
 
   
-  .innercard {
+ 
+  .reviewBlock {
+    height: 47%;
+  }
+
+  .reviewContainer {
     position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -291,7 +309,7 @@
     color: #293e40;
   }
 
-  .heading {
+  .reviewTitle {
     position: relative;
     font-family: "Inter";
     font-style: normal;
@@ -300,7 +318,7 @@
     top: -0.8rem;
   }
 
-  .foot {
+  .reviewBy {
     position: relative;
     top: 0rem;
     font-family: "Inter";
@@ -312,16 +330,16 @@
 }
 
 @media (max-width: 489px) {
-  .card {
+  .outerCard {
     height: 4rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .card div:nth-of-type(1) {
+  .outerCard div:nth-of-type(1) {
     order: 2;
   }
 
-  .comma {
+  .quote {
     position: relative;
     top: 1rem;
     font-family: "Jacques Francois Shadow";
@@ -331,7 +349,7 @@
     color: #293e40;
   }
 
-  .innercard {
+  .reviewContainer {
     position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -341,7 +359,8 @@
     padding: 2rem;
   }
 
-  .textblock {
+
+  .reviewBlock {
     height: 43%;
   }
 
@@ -366,7 +385,7 @@
     color: #293e40;
   }
 
-  .heading {
+  .reviewTitle {
     position: relative;
     font-family: "Inter";
     font-style: normal;
@@ -375,7 +394,7 @@
     top: -0.8rem;
   }
 
-  .foot {
+  .reviewBy {
     position: relative;
     top: 0rem;
     font-family: "Inter";
