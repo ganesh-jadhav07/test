@@ -1,9 +1,12 @@
+import { useEffect, useState } from "react";
 import classes from "./CloudServices.module.css";
 import CloudCard from "../cards/CloudCard";
 import BlueBlock from "../../public/images/home/BlueBlock.png";
 import cloud from "../../public/images/home/SalesF.png";
 
-function CloudServices() {
+function CloudServices(props) {
+  console.log(props);
+
   const clouds = [
     {
       id: 1,
@@ -26,6 +29,7 @@ function CloudServices() {
       text: " With immense experience and heaps of platform certifications, our heaps of platform certifications.  our consultants have built full lifecycle,",
     },
   ];
+
   return (
     <div className={`pt-16 ${classes.div} h-screen`}>
       <div className="text-white p-8">
@@ -74,3 +78,5 @@ function CloudServices() {
 }
 
 export default CloudServices;
+
+//fetch data from wordpress server
