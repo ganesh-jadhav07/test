@@ -27,7 +27,7 @@ function CloudServices() {
   ];
   return (
     <div className={`pt-16 object-cover ${classes.div}`}>
-      <div className="text-white p-8">
+      <div className="p-8 text-white">
         <div>
           <img
             src={BlueBlock.src}
@@ -55,11 +55,11 @@ function CloudServices() {
       </div>
 
       {/* Cloud Services Card */}
-      <div className={classes.cloudCardSection}>
+      {/* <div className={classes.cloudCardSection}>
         {clouds.map((cloud) => (
           <CloudCard key={cloud.id} {...cloud} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
