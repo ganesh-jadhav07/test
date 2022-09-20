@@ -122,6 +122,11 @@
     padding: 2rem;
   }
 
+  .img{
+    position: relative;
+    margin-top: 15rem;
+  }
+
   .lists {
     position: relative;
     top: 0rem;
@@ -190,6 +195,10 @@
     font-size: 58px;
     text-align: center;
     color: #293e40;
+  }
+
+  .img{
+    margin-top: 0rem;
   }
 
   .textblock {
@@ -270,6 +279,9 @@
     height: 47%;
   }
 
+  .img{
+    margin-top: 0rem;
+  }
   
   .innercard {
     position: relative;
@@ -344,6 +356,10 @@
 
   .textblock {
     height: 43%;
+  }
+
+  .img{
+    margin-top: 0rem;
   }
 
   .lists {
