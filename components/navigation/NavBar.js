@@ -7,6 +7,7 @@ import Image from "next/image";
 import { data } from "autoprefixer";
 
 function NavBar() {
+  //navigation list
   const navList = [
     {
       name: "Home",
@@ -104,6 +105,7 @@ function NavBar() {
           onClick={handleNav}
           className="z-10 block lg:hidden"
         >
+          {/* Hamburger Icons */}
           {nav ? (
             <XMarkIcon className="w-10 text-black bg-white" />
           ) : (
