@@ -32,7 +32,7 @@ function Product() {
     setProducts(count);
   };
 
-  // JSX of Diamond Logo (Reuse it anywhere you want)
+  // Diamond Logo
   const diamondLogo = (
     <div className="flex flex-col items-center">
       <ul>

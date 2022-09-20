@@ -27,7 +27,7 @@ function CloudServices() {
     },
   ];
   return (
-    <div className={`pt-16 ${classes.div}`}>
+    <div className={`pt-16 ${classes.div} h-screen`}>
       <div className="text-white p-8">
         <div>
           <img
@@ -64,11 +64,11 @@ function CloudServices() {
           <CloudCard key={cloud.id} {...cloud} />
         ))}
       </div> */}
-      <div className={classes.cloudCardSection}>
+      {/* <div className={classes.cloudCardSection}>
         {[1, 2, 3, 4].map((id) => (
           <img key={id} src={cloud.src} alt="..." />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

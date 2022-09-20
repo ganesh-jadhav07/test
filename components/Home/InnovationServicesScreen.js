@@ -1,5 +1,9 @@
 import React from "react";
+
+// style imports
 import style from "./InnovationServicesScreen.module.css";
+
+// Image imports
 import fone from "../../public/images/home/fone.jpg";
 import arrow1 from "../../public/images/home/arrow1.png";
 import arrow2 from "../../public/images/home/arrow2.png";
@@ -9,6 +13,7 @@ import arrow4 from "../../public/images/home/arrow4.png";
 function InnovationServicesScreen() {
   return (
     <div className="w-screen h-screen">
+      {/* Content div */}
       <div className={`${style.backgroundContainer}`}>
         <h1 className={style.textContainer}>
           Accelerate your business with our Innovation Services
@@ -30,6 +35,8 @@ function InnovationServicesScreen() {
           Get In Touch
         </button>
       </div>
+
+      {/*  Image Div */}
       <div>
         <img
           className={`${style.imageContainer} object-cover lg:h-full xl:h-full 2xl:h-full `}
