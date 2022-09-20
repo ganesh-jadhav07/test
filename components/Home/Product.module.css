@@ -16,7 +16,7 @@
   font-size: xx-large;
   font-family: "Inter";
 }
-.description {
+.discription {
   line-height: 20px;
   padding: 0px 16px;
   text-align: center;
@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: row;
 }
-.cardContent {
+.firstContent {
   width: 50vw;
   position: relative;
   display: flex;
@@ -120,14 +120,14 @@
   .title {
     font-size: x-large;
   }
-  .description {
+  .discription {
     padding: 0px 0px;
   }
   .bodyContent {
     flex-direction: column-reverse;
     height: 40em;
   }
-  .cardContent {
+  .firstContent {
     height: 50%;
     width: 100%;
     /* display: flex;
@@ -170,15 +170,14 @@
   .secondBody {
     font-size: 20.0667px;
     padding-left: 3em;
-    margin-top: -5em;
+    margin-top: -6em;
     width: 16em;
   }
   .bodyContent {
     height: 40em;
     flex-direction: column;
-    justify-content: center;
   }
-  .cardContent {
+  .firstContent {
     height: 70%;
     width: 100%;
     display: flex;
@@ -187,7 +186,7 @@
     background: url("https://s3-alpha-sig.figma.com/img/94f5/5b29/850a1d34fe433ad0d65970d5a829c7ea?Expires=1664150400&Signature=Qx3MjIqc0sLUbCQxPQp3rEK3UIRrSAIV0OLmM2NHLktVz5hPRcwbIMJom7cHT3Q9EUtfw-hzczoBuz~f-Rs5-Skb6Acd6Dqyes8kXOkShd71DypIOXZBjlTVlKdZOarUiNkDRn9~rLH59bkPwUl8ZndheqnUPjo8bJKD7zHc-MV29OboggF2J4tdKIPOg54WzWzRf9LE9B1dIqeDmyaZ1LM0JEAi14VU2sfCUzuZbrCw~HLLm6MSTA8Ayi7QSyhEQQWEcu647mJ2NPdMBIGQms4CC2NLIGUsnmawIepHTD9bOGZrr2EEciJ7T3xop35NegU0O5T4Epwt4Uiy6bUvbw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")
       center center;
     background-size: cover;
-    height: 33%;
+    height: 16%;
     width: 100%;
   }
   .chevronIcon {

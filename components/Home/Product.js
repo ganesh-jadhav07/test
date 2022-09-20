@@ -19,20 +19,20 @@ function Product() {
 
   const [currentProduct, setProducts] = useState(0);
 
-  // View next product
+  // view next product
   const handleNext = () => {
     count = (count + 1) % products.length;
     setProducts(count);
   };
 
-  // View previous product
+  // view previous product
   const handlePrev = () => {
     const productLength = products.length;
     count = (currentProduct + productLength - 1) % productLength;
     setProducts(count);
   };
 
-  // JSX of Diamond Logo
+  // JSX of Diamond Logo (Reuse it anywhere you want)
   const diamondLogo = (
     <div className={`flex flex-col items-center`}>
       <ul>
@@ -46,15 +46,15 @@ function Product() {
   );
 
   return (
-    <div className={`h-screen w-full ${styles.bgImage} `}>
+    <div className={`h-screen ${styles.bgImage} `}>
       <div
         className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}>
         <div className={`${styles.titleContent}  flex flex-col items-center `}>
           <span className={`${styles.title} flex flex-row items-center`}>
             {diamondLogo}
-            <span className="ml-4">Leverage the power of our Apps</span>
+            <span className="ml-4">Laverage the power of our Apps</span>
           </span>
-          <div className={`${styles.description}  mt-2`}>
+          <div className={`${styles.discription}  mt-2`}>
             We have a strong innovation culture at Bluepineapple. Our Apps are
             aimed at providing solutions for critical industry demands and new
             business needs.
@@ -62,7 +62,7 @@ function Product() {
         </div>
       </div>
       <div className={`${styles.bodyContent}  px-6`}>
-        <div className={`${styles.cardContent} `}>
+        <div className={`${styles.firstContent} `}>
           <ChevronLeftIcon
             className={`${styles.chevronIcon} z-[1] text-bGreen cursor-pointer`}
             onClick={handlePrev}

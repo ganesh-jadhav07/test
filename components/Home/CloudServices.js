@@ -1,6 +1,7 @@
 import classes from "./CloudServices.module.css";
 import CloudCard from "../cards/CloudCard";
 import BlueBlock from "../../public/images/home/BlueBlock.png";
+import cloud from "../../public/images/home/SalesF.png";
 
 function CloudServices() {
   const clouds = [
@@ -26,38 +27,46 @@ function CloudServices() {
     },
   ];
   return (
-    <div className={`pt-16 object-cover ${classes.div}`}>
+    <div className={`pt-16 ${classes.div}`}>
       <div className="text-white p-8">
         <div>
           <img
             src={BlueBlock.src}
             alt="..."
-            className="ml-[16.5rem] w-4 -mb-6"
+            className="ml-[10.75rem] md:ml-[16.5rem] w-4 -mb-6"
           />
-          <p className="text-[55px]">Unlock 10x Performance</p>
+          <p className="text-[2.275rem] md:text-[3.45rem]">
+            Unlock 10x Performance
+          </p>
         </div>
-        <p className="text-[24px] mt-2">
+        <p className="text-[1rem] md:text-[1.5rem] mt-2">
           Bluepineapple comes with more than 200 years of collective experience
           to help you achieve this.
         </p>
-        <p className="text-[32px] max-w-2xl mt-4">
+        <p className="text-[1.5rem] md:text-[2rem] max-w-2xl mt-4">
           Leverage our multi-cloud expertise to fast-track your digital
           transformation
         </p>
-        <p className="text-[18px] max-w-md mt-4">
+        <p className="text-[0.725rem] md:text-[1.125rem] max-w-md mt-4">
           Maximize your ROI on platform investments and speed up your cloud
           adoption. Fast track your digital transformation journey by drawing
           synergies across multiple cloud platforms.
         </p>
-        <button type="button" className="p-2 bg-[#3C71FF] rounded-[4px] mt-4">
+        <button
+          type="button"
+          className="p-1 md:p-2 bg-[#3C71FF] rounded-[4px] mt-4 mb-1">
           Learn More
         </button>
       </div>
-
       {/* Cloud Services Card */}
-      <div className={classes.cloudCardSection}>
+      {/* <div className={classes.cloudCardSection}>
         {clouds.map((cloud) => (
           <CloudCard key={cloud.id} {...cloud} />
+        ))}
+      </div> */}
+      <div className={classes.cloudCardSection}>
+        {[1, 2, 3, 4].map((id) => (
+          <img key={id} src={cloud.src} alt="..." />
         ))}
       </div>
     </div>

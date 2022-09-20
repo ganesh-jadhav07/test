@@ -9,7 +9,7 @@ function Home() {
     <div>
       <CloudServices />
       <InnovationServicesScreen />
-      <Product />
+      {/* <Product /> */}
       <CustomerReviews />
     </div>
   );
