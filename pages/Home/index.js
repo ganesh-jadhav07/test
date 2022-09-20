@@ -13,7 +13,6 @@ import CustomerReviews from "../../components/Home/CustomerReviews";
 import dataFetcher from "../../lib/wordpress/dataFetcher";
 import { DEMO } from "../../lib/wordpress/api";
 
-
 function Home() {
   const [currentPage, setCurrentPage] = useState(null);
 
@@ -27,11 +26,10 @@ function Home() {
     <ReactPageScroller
       pageOnChange={handlePageChange}
       onBeforePageScroll={handleBeforePageChange}
-      customPageNumber={currentPage}
-    >
+      customPageNumber={currentPage}>
       <CloudServices />
-      <InnovationServicesScreen />
-      {/* <Product /> */}
+      {/* <InnovationServicesScreen /> */}
+      <Product />
       <CustomerReviews />
     </ReactPageScroller>
   );
