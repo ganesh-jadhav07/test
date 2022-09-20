@@ -33,30 +33,33 @@ function CustomerReviews() {
     },
   ];
 
+  // function to go to next review
   const handleNext = () => {
     count = (count + 1) % review.length;
     setReview(count);
   };
+
+  // function to go to prev review
   const handlePrev = () => {
     const productLength = review.length;
     count = (currentReview + productLength - 1) % productLength;
     setReview(count);
   };
   return (
-    <div className={`${style.card}` }>
-      <div className={style.card1}>
+    <div className={style.outerCard}>
+      <div className={style.leftCard}>
         <img src={Contact.src} className={style.img} alt="loading.png" />
       </div>
-      <div className={style.card2}>
-        <div className={style.innercard}>
-          <h1 className={style.heading}>Customer Speak</h1>
+      <div className={style.rightCard}>
+        <div className={style.reviewCard}>
+          <h1 className={style.reviewTitle}>Customer Speak</h1>
           <div className={style.textblock}>
             <p className={style.text}>{review[currentReview].title}</p>
           </div>
           <ChevronLeftIcon className={style.prev} onClick={handlePrev} />
           <ChevronRightIcon className={style.next} onClick={handleNext} />
-          <p className={style.comma}>“</p>
-          <p className={style.foot}>{review[currentReview].client}</p>
+          <p className={style.quote}>“</p>
+          <p className={style.reviewBy}>{review[currentReview].client}</p>
           <div className={`${style.lists} p-2`}>
             {Array.from({ length: 4 }).map((item, index) => (
               <div onClick={() => currentReview(index)}>
