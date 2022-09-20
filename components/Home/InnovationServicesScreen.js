@@ -8,8 +8,8 @@ import arrow4 from "../../public/images/home/arrow4.png";
 
 function InnovationServicesScreen() {
   return (
-    <div>
-      <div className={style.backgroundContainer}>
+    <div className="w-screen h-screen">
+      <div className={`${style.backgroundContainer}`}>
         <h1 className={style.textContainer}>
           Accelerate your business with our Innovation Services
         </h1>

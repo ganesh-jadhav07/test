@@ -43,7 +43,7 @@ function CustomerReviews() {
     setReview(count);
   };
   return (
-    <div className={style.card}>
+    <div className={`${style.card}` }>
       <div className={style.card1}>
         <img src={Contact.src} className={style.img} alt="loading.png" />
       </div>
