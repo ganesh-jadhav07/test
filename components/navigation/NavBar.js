@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../public/bp.png";
-import Link from "next/link";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useRouter } from "next/router";
 import Image from "next/image";
-import { data } from "autoprefixer";
+import { useRouter } from "next/router";
+import Link from "next/link";
+
+//logo import
+import logo from "../../public/bp.png";
+
+//icon imports
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
+
 
 function NavBar() {
   //navigation list
