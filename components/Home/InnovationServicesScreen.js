@@ -12,7 +12,7 @@ import arrow4 from "../../public/images/home/arrow4.png";
 
 function InnovationServicesScreen() {
   return (
-    <div className="w-screen h-screen">
+    <div className="h-screen pt-16">
       {/* Content div */}
       <div className={`${style.backgroundContainer}`}>
         <h1 className={style.textContainer}>
@@ -31,6 +31,7 @@ function InnovationServicesScreen() {
           <img className={style.imageStyle4} src={arrow3.src} alt="Not Found" />
           <img className={style.imageStyle5} src={arrow4.src} alt="Not Found" />
         </div>
+        {/* Button Section */}
         <button className={style.btnStyle} type="button">
           Get In Touch
         </button>
@@ -39,7 +40,7 @@ function InnovationServicesScreen() {
       {/*  Image Div */}
       <div>
         <img
-          className={`${style.imageContainer} object-cover lg:h-full xl:h-full 2xl:h-full `}
+          className={`${style.imageContainer} object-cover lg:h-full xl:h-full 2xl:h-full`}
           src={fone.src}
           alt="Not Found"
         />
