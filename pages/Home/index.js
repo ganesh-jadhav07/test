@@ -28,7 +28,7 @@ function Home() {
       onBeforePageScroll={handleBeforePageChange}
       customPageNumber={currentPage}>
       <CloudServices />
-      {/* <InnovationServicesScreen /> */}
+      <InnovationServicesScreen />
       <Product />
       <CustomerReviews />
     </ReactPageScroller>
