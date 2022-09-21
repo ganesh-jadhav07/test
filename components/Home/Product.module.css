@@ -2,6 +2,7 @@
   background: url("https://s3-alpha-sig.figma.com/img/94f5/5b29/850a1d34fe433ad0d65970d5a829c7ea?Expires=1664150400&Signature=Qx3MjIqc0sLUbCQxPQp3rEK3UIRrSAIV0OLmM2NHLktVz5hPRcwbIMJom7cHT3Q9EUtfw-hzczoBuz~f-Rs5-Skb6Acd6Dqyes8kXOkShd71DypIOXZBjlTVlKdZOarUiNkDRn9~rLH59bkPwUl8ZndheqnUPjo8bJKD7zHc-MV29OboggF2J4tdKIPOg54WzWzRf9LE9B1dIqeDmyaZ1LM0JEAi14VU2sfCUzuZbrCw~HLLm6MSTA8Ayi7QSyhEQQWEcu647mJ2NPdMBIGQms4CC2NLIGUsnmawIepHTD9bOGZrr2EEciJ7T3xop35NegU0O5T4Epwt4Uiy6bUvbw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")
     center center;
   background-size: cover;
+  padding-top: 4rem;
 }
 .headerTopContent {
   height: 6.5em;
@@ -25,6 +26,7 @@
   height: 30em;
   display: flex;
   flex-direction: row;
+  padding: 0px 1.5rem;
 }
 .firstContent {
   width: 50vw;
@@ -104,28 +106,50 @@
 .chevronIcon {
   width: 3em;
 }
+.firstParagraph {
+  margin-top: 1.5rem;
+}
 
 /* Media Queries */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .bgImage {
+    padding-top: 3.5rem;
+  }
   .squareDiamond {
     width: 15.5em;
     height: 15.5em;
   }
+  .squareDiamondBody {
+    height: 17em;
+  }
+  .greenFolderImage {
+    width: 6em;
+    height: 6em;
+  }
+  .diamondParagraph {
+    font-size: small;
+  }
   .headerTopContent {
     height: 8em;
+    display: flex;
+    justify-content: flex-start;
   }
   .titleContent {
     width: 23em;
   }
   .title {
-    font-size: x-large;
+    font-size: 20px;
   }
   .discription {
     padding: 0px 0px;
+    font-size: 15px;
+    text-align: left;
   }
   .bodyContent {
     flex-direction: column-reverse;
     height: 40em;
+    justify-content: flex-end;
+    padding: 0px 0px;
   }
   .firstContent {
     height: 50%;
@@ -134,16 +158,34 @@
       justify-content: center; */
   }
   .secondContent {
-    height: 50%;
+    height: 25%;
     width: 100%;
+    margin-top: 17px;
   }
   .secondBody {
     padding-left: 0em;
     margin-top: 0em;
+    font-size: 15px;
+    height: 100%;
+  }
+  .diamondLogo {
+    display: none;
+  }
+  .firstParagraph {
+    text-align: left;
+    line-height: 19px;
+    margin-top: 0px;
+  }
+  .secondParagraph {
+    line-height: 19px;
+    text-align: left;
+  }
+  .chevronIcon {
+    width: 2em;
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 501px) and (max-width: 768px) {
   .bgImage {
     background: black;
   }

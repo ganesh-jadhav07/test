@@ -54,6 +54,7 @@ function NavBar() {
     setNav(!nav);
   };
 
+  //use Effect for changing color of navigation while scrolling
   useEffect(() => {
     document.body.style.overflow = nav ? "hidden" : "auto";
 
