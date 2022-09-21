@@ -1,0 +1,61 @@
+.div {
+  background-image: url("https://s3-alpha-sig.figma.com/img/0e1e/e3f9/4fc153fea9f692e479a9ef0c53748536?Expires=1664150400&Signature=VVhzD9cMNO4y-Gdg1u~MxCSAnfRbyWC5WtEtXzMd60Jtz-erIS5QaA01AeBQg3-7k~G3W3zH6KmIAoTzuE7IvXMfC3ZSghCih-~ozB~TRRa5ekeR~47nJSkXEqDGW-K7BTCv1xR67bGSmwAUhdqz6I7NwUYwfRIMrLA2NpVXjeOwFuyOMy1AkM9ru1yTyhSUAUM9qtmSNiLerMmx-JvoZYS4whXV150TdcmDvchfpBD3dsF5XgTrDPIsOMON6e1qpZIcG3VgMZkusnLM5XsXrQa8sA-S0oYIcZ2xRKL9bF0ThXC3bic9suySsQCJN2pNCOyZtyCP-rdkmOKA0OM9Cw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.cloudCardSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding-left: 7rem;
+  left: 8rem;
+  margin-top: -1rem;
+  position: relative;
+}
+
+.cloudCardSection img:nth-child(even) {
+  margin-left: -11rem;
+  margin-top: -10rem;
+}
+
+.cloudCardSection img:nth-child(odd) {
+  margin-left: -23rem;
+}
+
+.cloudCardSection img:nth-child(1) {
+  margin-left: 0rem;
+}
+
+.cloudCardSection img:nth-child(4) {
+  margin-left: -36rem;
+}
+
+@media screen and (min-width: 480px) {
+  .cloudCardSection {
+    grid-template-columns: 1fr 1fr 1f 1f;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cloudCardSection {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: -5rem;
+    left: 10rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cloudCardSection {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* margin-top: -200px; */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cloudCardSection {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* margin-top: -200px; */
+    /* grid-gap: 1em; */
+  }
+}

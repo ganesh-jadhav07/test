@@ -1,27 +1,66 @@
 import React, { useState, useEffect } from "react";
+import logo from "../../public/bp.png";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import { data } from "autoprefixer";
 
 function NavBar() {
-  const [nav, setNav] = useState(true);
-  const [color, setColor] = useState("transparent");
+  //navigation list
+  const navList = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Services",
+      path: "/Services",
+    },
+    {
+      name: "Innovation",
+      path: "/Innovation",
+    },
+    {
+      name: "About",
+      path: "/About",
+    },
+    {
+      name: "Careers",
+      path: "/Careers",
+    },
+    {
+      name: "Blog",
+      path: "/Blog",
+    },
+    {
+      name: "Contact",
+      path: "/Contact",
+    },
+  ];
+
+  const route = useRouter();
+  const [nav, setNav] = useState(false);
+  const [color, setColor] = useState("black");
   const [textColor, setTextColor] = useState("white");
   const [opacity, setOpacity] = useState("1");
-  const handleNav = () => {
-    console.log(nav);
 
+  const handleNav = () => {
     setNav(!nav);
   };
 
   useEffect(() => {
+    document.body.style.overflow = nav ? "hidden" : "auto";
+
+    //function for changing color of nav
     const changeColor = () => {
       if (window.scrollY >= 500) {
-        setOpacity("0.6");
+        setOpacity("1");
         setColor("#000000");
         setTextColor("#ffffff");
       } else {
         setOpacity("1");
-        setColor("transparent");
+        setColor("black");
         setTextColor("#ffffff");
       }
     };
@@ -33,34 +72,30 @@ function NavBar() {
       className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
       style={{ backgroundColor: `${color}`, opacity: `${opacity}` }}
     >
+      {/* logo section */}
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <Link href="/">
-          <h1 style={{ color: `${textColor}` }} className="text-4xl font-bold">
-            Bluepineapple
+          <h1
+            style={{ color: `${textColor}` }}
+            className={"text-3xl flex m-[-5]"}
+          >
+            <Image src={logo} alt="logo" height={40} width={40} />
+            <p>Bluepineapple</p>
           </h1>
         </Link>
+
+        {/* main navigation */}
         <ul style={{ color: `${textColor}` }} className="hidden lg:flex">
-          <li className="p-4">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#gallery">Services</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#in">Innovation</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#in">About</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#in">Careeres</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#in">Blog</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/Contact">Contact</Link>
-          </li>
+          {navList.map((data) => (
+            <li
+              key={data.name}
+              className={`p-4 font-bold ${
+                route.pathname === data.path ? "text-blue-700" : "text-white"
+              }`}
+            >
+              <Link href={data.path}>{data.name}</Link>
+            </li>
+          ))}
         </ul>
 
         {/* mobile button */}
@@ -70,54 +105,34 @@ function NavBar() {
           onClick={handleNav}
           className="z-10 block lg:hidden"
         >
+          {/* Hamburger Icons */}
           {nav ? (
-            <Bars3Icon className="w-10 bg-white" />
+            <XMarkIcon className="w-10 text-black bg-white" />
           ) : (
-            <XMarkIcon className="w-10 bg-white" />
+            <Bars3Icon className="w-10 text-black bg-white" />
           )}
         </div>
 
-        {/* Mobile Menu */}
+        {/* Hamburger Menu */}
         <div
           className={
             nav
-              ? "lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-              : "lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 "
           }
         >
           <ul>
-            <li
-              role="presentation"
-              tabIndex={-1}
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
-              <Link href="/">Home</Link>
-            </li>
-            <li
-              role="presentation"
-              tabIndex={-1}
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
-              <Link href="/#gallery">Gallery</Link>
-            </li>
-            <li
-              role="presentation"
-              tabIndex={-1}
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
-              <Link href="/work">Work</Link>
-            </li>
-            <li
-              role="presentation"
-              tabIndex={-1}
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
-              <Link href="/contact">Contact</Link>
-            </li>
+            {navList.map((data) => (
+              <li
+                key={data.name}
+                onClick={handleNav}
+                className={`p-4 font-bold text-2xl ${
+                  route.pathname === data.path ? "text-blue-700" : "text-white"
+                }`}
+              >
+                <Link href={data.path}>{data.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

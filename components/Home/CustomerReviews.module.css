@@ -1,0 +1,429 @@
+.outerCard {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+.leftCard {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textblock {
+  height: 45%;
+}
+
+.reviewCard {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 34rem;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.img {
+  height: 100vh;
+  width: 100%;
+}
+
+.quote {
+  position: relative;
+  bottom: 0rem;
+  font-family: "Jacques Francois Shadow";
+  font-style: normal;
+  font-size: 85px;
+  text-align: center;
+  color: #293e40;
+}
+
+.reviewCard:hover .prev {
+  height: 6%;
+  opacity: 1;
+}
+
+.reviewCard:hover .next {
+  height: 6%;
+  opacity: 1;
+}
+
+.prev {
+  position: relative;
+  opacity: 0;
+  height: 6%;
+  top: 0rem;
+  cursor: pointer;
+}
+
+.next {
+  position: relative;
+  height: 6%;
+  top: -1.8rem;
+  left: 94%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.text {
+  position: relative;
+  overflow-wrap: break-word;
+  top: 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 27px;
+  text-align: center;
+  color: #293e40;
+}
+
+.reviewTitle {
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 38px;
+  color: #293e40;
+  padding: 0.8rem;
+}
+
+.reviewBy {
+  position: relative;
+  bottom: 4rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+  color: #293e40;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.lists {
+  display: flex;
+  position: relative;
+  bottom: 5rem;
+  justify-content: center;
+  height: 1.9rem;
+}
+
+.r1 {
+  margin: 1.5%;
+  padding-left: 3px;
+  height: 100%;
+}
+
+/* media queries for responsive design*/
+
+@media (max-width: 1080px) {
+  .outerCard {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+  }
+
+  .reviewCard {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 34rem;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .img {
+    position: relative;
+  }
+
+  .reviewTitle {
+    position: relative;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 30px;
+    color: #293e40;
+    padding: 0.5rem;
+  }
+
+  .lists {
+    position: relative;
+    bottom: 8rem;
+    justify-content: center;
+  }
+
+  .next {
+    top: -1.8rem;
+    left: 92%;
+  }
+
+  .reviewBy {
+    position: relative;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 27px;
+    text-align: center;
+    color: #293e40;
+    bottom: 6.7rem;
+  }
+
+  .textblock {
+    height: 60%;
+  }
+
+  .text {
+    position: relative;
+    overflow-wrap: break-word;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 23px;
+    text-align: center;
+    color: #293e40;
+  }
+
+  .quote {
+    position: relative;
+    font-family: "Jacques Francois Shadow";
+    font-style: normal;
+    font-size: 80px;
+    text-align: center;
+    color: #293e40;
+    bottom: 2rem;
+  }
+}
+
+@media (max-width: 813px) {
+  .outerCard {
+    height: 4rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .outerCard div:nth-of-type(1) {
+    order: 2;
+  }
+
+  .lists {
+    position: relative;
+    bottom: 5.2rem;
+    justify-content: center;
+  }
+  .quote {
+    position: relative;
+    bottom: 0.2rem;
+    font-family: "Jacques Francois Shadow";
+    font-style: normal;
+    font-size: 52px;
+    text-align: center;
+    color: #293e40;
+  }
+
+  .img {
+    margin-top: 0rem;
+    height: 16rem;
+    width: 50%;
+    margin-left: 30%;
+  }
+
+  .textblock {
+    height: 45%;
+  }
+
+  .prev {
+    width: 2rem;
+  }
+
+  .next {
+    top: -1rem;
+    width: 2rem;
+  }
+
+  .reviewCard {
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 0px;
+    height: 21rem;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .text {
+    position: relative;
+    overflow-wrap: break-word;
+    top: 0.2rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 21px;
+    text-align: center;
+    color: #293e40;
+  }
+
+  .reviewTitle {
+    position: relative;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 27px;
+    color: #293e40;
+    top: 0.3rem;
+  }
+
+  .reviewBy {
+    position: relative;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 22px;
+    bottom: 3.8rem;
+    text-align: center;
+    color: #293e40;
+  }
+}
+
+@media (max-width: 630px) {
+  .outerCard {
+    height: 4rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .outerCard div:nth-of-type(1) {
+    order: 2;
+  }
+
+  .lists {
+    position: relative;
+    justify-content: center;
+  }
+  .quote {
+    position: relative;
+    font-family: "Jacques Francois Shadow";
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    color: #293e40;
+    bottom: 0.5rem;
+  }
+
+  .textblock {
+    height: 47%;
+  }
+
+  .img {
+    margin-top: 0rem;
+  }
+
+  .reviewCard {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 20rem;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .text {
+    position: relative;
+    overflow-wrap: break-word;
+    top: 0.2rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 18.5px;
+    text-align: center;
+    color: #293e40;
+  }
+
+  .reviewTitle {
+    position: relative;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 24px;
+    color: #293e40;
+    top: 0.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .reviewBy {
+    position: relative;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #293e40;
+  }
+}
+
+@media (max-width: 489px) {
+  .outerCard {
+    height: 4rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .outerCard div:nth-of-type(1) {
+    order: 2;
+  }
+
+  .quote {
+    position: relative;
+    font-family: "Jacques Francois Shadow";
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+    color: #293e40;
+    padding-bottom: 0.6rem;
+  }
+
+  .reviewCard {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 20.5rem;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .textblock {
+    height: 43%;
+  }
+
+  .img {
+    width: 100%;
+    margin: 0rem;
+  }
+
+  .lists {
+    position: relative;
+    justify-content: center;
+    bottom: 4.5rem;
+  }
+
+  .r1 {
+    height: 70%;
+  }
+
+  .text {
+    position: relative;
+    overflow-wrap: break-word;
+    top: 0.2rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+    color: #293e40;
+  }
+
+  .reviewTitle {
+    position: relative;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 22px;
+    color: #293e40;
+    top: 1rem;
+  }
+
+  .reviewBy {
+    position: relative;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #293e40;
+  }
+}
