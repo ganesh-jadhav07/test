@@ -5,8 +5,6 @@ import Contact from "../../public/images/home/Vector820.png";
 import { customerReview } from "../../lib/wordpress/api";
 import dataFetcher from "../../lib/wordpress/dataFetcher";
 
-let count = 0;
-
 function CustomerReviews() {
   const [reviews, setReviews] = useState(null);
 
@@ -14,7 +12,7 @@ function CustomerReviews() {
   const customer = async () => {
     const response = await dataFetcher(customerReview);
     const all_Posts = response.data;
-    setReviews(all_Posts.reviews.nodes)
+    setReviews(all_Posts.reviews.nodes);
   };
 
   console.log(reviews);
@@ -23,24 +21,22 @@ function CustomerReviews() {
   }, []);
 
   const [currentReview, setReview] = useState(0);
-  
+
   // function to go to next review
   const handleNext = () => {
-    count = (count + 1) % reviews.length;
+    let count = (currentReview + 1) % reviews.length;
     setReview(count);
   };
 
   // function to go to prev review
   const handlePrev = () => {
     const reviewLen = reviews.length;
-    count = (currentReview + reviewLen - 1) % reviewLen;
+    let count = (currentReview + reviewLen - 1) % reviewLen;
     setReview(count);
   };
 
   return (
     <div className={style.outerCard}>
-
-
       {/* image div */}
       <div className={style.leftCard}>
         <img src={Contact.src} className={style.img} alt="loading.png" />
@@ -53,7 +49,17 @@ function CustomerReviews() {
 
           {/* main content */}
           <div className={style.textblock}>
-            <div className={style.text}>{reviews === null || undefined ? "Data Loading" : <p dangerouslySetInnerHTML={{ __html: reviews[currentReview].content }}  />} </div>
+            <div className={style.text}>
+              {reviews === null || undefined ? (
+                "Data Loading"
+              ) : (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: reviews[currentReview].content,
+                  }}
+                />
+              )}{" "}
+            </div>
           </div>
 
           {/* left and right arrow icons */}
@@ -61,20 +67,28 @@ function CustomerReviews() {
           <ChevronRightIcon className={style.next} onClick={handleNext} />
 
           <p className={style.quote}>“</p>
-          <p className={style.reviewBy}>{reviews === null || undefined ? "Data Loading" : reviews[currentReview].title}</p>
+          <p className={style.reviewBy}>
+            {reviews === null || undefined
+              ? "Data Loading"
+              : reviews[currentReview].title}
+          </p>
 
           {/* slider indicator */}
-          <div className={`${style.lists} p-2`}>
-            {Array.from({ length: 4 }).map((item, index) => (
-              <div key={index} onClick={() => currentReview(index)}>
-                {currentReview === index ? (
-                  <img src="images/blue.png" className={style.r1} />
-                ) : (
-                  <img src="images/gray.png" className={style.r1} />
-                )}
-              </div>
-            ))}
-          </div>
+          {reviews === null || undefined ? (
+            "Loading"
+          ) : (
+            <div className={`${style.lists} p-2`}>
+              {reviews.map((item, index) => (
+                <div key={item.id} onClick={() => currentReview(index)}>
+                  {currentReview === index ? (
+                    <img src="images/blue.png" className={style.r1} />
+                  ) : (
+                    <img src="images/gray.png" className={style.r1} />
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
