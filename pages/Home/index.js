@@ -29,7 +29,7 @@ function Home() {
       customPageNumber={currentPage}>
       <CloudServices />
       {/* <InnovationServicesScreen /> */}
-      <Product />
+      {/* <Product /> */}
       <CustomerReviews />
     </ReactPageScroller>
   );

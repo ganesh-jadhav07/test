@@ -7,6 +7,7 @@ import dataFetcher from "../../lib/wordpress/dataFetcher";
 
 function CustomerReviews() {
   const [reviews, setReviews] = useState(null);
+  const [currentReview, setCurrentReview] = useState(0);
 
   // function for fetching the data
   const customer = async () => {
@@ -15,24 +16,27 @@ function CustomerReviews() {
     setReviews(all_Posts.reviews.nodes);
   };
 
-  console.log(reviews);
   useEffect(() => {
     customer();
   }, []);
 
-  const [currentReview, setReview] = useState(0);
+//   useEffect(() => {
+//     const intervalID = setInterval(reviews, 5000);
+//     return () => clearInterval(intervalID);
+// }, [reviews])
+
 
   // function to go to next review
   const handleNext = () => {
     let count = (currentReview + 1) % reviews.length;
-    setReview(count);
+    setCurrentReview(count);
   };
 
   // function to go to prev review
   const handlePrev = () => {
     const reviewLen = reviews.length;
     let count = (currentReview + reviewLen - 1) % reviewLen;
-    setReview(count);
+    setCurrentReview(count);
   };
 
   return (
@@ -48,7 +52,7 @@ function CustomerReviews() {
           <h1 className={style.reviewTitle}>Customer Speak</h1>
 
           {/* main content */}
-          <div className={style.textblock}>
+          {/* <div className={style.textblock}>
             <div className={style.text}>
               {reviews === null || undefined ? (
                 "Data Loading"
@@ -60,11 +64,21 @@ function CustomerReviews() {
                 />
               )}{" "}
             </div>
+          </div> */}
+          <div className={style.textblock}>
+          <p className={style.text}>Bluepineapple has been a trusted partner for us . They are very professional, taking a consultative approach to all development requests. We look forward to our continued partnership with Bluepineapple.</p>
           </div>
+          {/* setInterval(() => {
+            <p
+            dangerouslySetInnerHTML={{
+              __html: reviews[currentReview].content,
+            }}
+          />
+          }, 30000); */}
 
           {/* left and right arrow icons */}
-          <ChevronLeftIcon className={style.prev} onClick={handlePrev} />
-          <ChevronRightIcon className={style.next} onClick={handleNext} />
+          {/* <ChevronLeftIcon className={style.prev} onClick={handlePrev} />
+          <ChevronRightIcon className={style.next} onClick={handleNext} /> */}
 
           <p className={style.quote}>“</p>
           <p className={style.reviewBy}>
@@ -72,9 +86,11 @@ function CustomerReviews() {
               ? "Data Loading"
               : reviews[currentReview].title}
           </p>
-
+              <div className={`${style.lists} p-2`}>
+                <p>hi</p>
+              </div>
           {/* slider indicator */}
-          {reviews === null || undefined ? (
+          {/* {reviews === null || undefined ? (
             "Loading"
           ) : (
             <div className={`${style.lists} p-2`}>
@@ -88,7 +104,7 @@ function CustomerReviews() {
                 </div>
               ))}
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>

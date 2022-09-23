@@ -43,7 +43,7 @@ function NavBar() {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("black");
   const [textColor, setTextColor] = useState("white");
-  const [opacity, setOpacity] = useState("1");
+  const [opacity, setOpacity] = useState("0.5");
 
   const handleNav = () => {
     setNav(!nav);
@@ -55,11 +55,11 @@ function NavBar() {
     //function for changing color of nav
     const changeColor = () => {
       if (window.scrollY >= 500) {
-        setOpacity("1");
+        setOpacity("0.5");
         setColor("#000000");
         setTextColor("#ffffff");
       } else {
-        setOpacity("1");
+        setOpacity("0.5");
         setColor("black");
         setTextColor("#ffffff");
       }
