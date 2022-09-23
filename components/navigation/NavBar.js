@@ -113,9 +113,9 @@ function NavBar() {
         >
           {/* Hamburger Icons */}
           {nav ? (
-            <XMarkIcon className="w-10 text-black bg-white" />
+            <XMarkIcon className="w-5 text-white" />
           ) : (
-            <Bars3Icon className="w-10 text-black bg-white" />
+            <Bars3Icon className="w-5 text-white" />
           )}
         </div>
 

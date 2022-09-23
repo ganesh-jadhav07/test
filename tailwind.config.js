@@ -13,3 +13,10 @@ module.exports = {
   },
   plugins: [],
 };
+// screens: {
+//   'smallmobile':'320px',
+//   'mobile':'420px',
+//   'tablet': '640px',
+//   'laptop': '1024px',
+//   'desktop': '1280px',
+// },
