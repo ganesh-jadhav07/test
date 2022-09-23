@@ -47,7 +47,7 @@ function NavBar() {
   const route = useRouter();
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("black");
-  const [textColor, setTextColor] = useState("white");
+  const [textColor, setTextColor] = useState("#999999");
   const [opacity, setOpacity] = useState("1");
 
   const handleNav = () => {
@@ -60,14 +60,14 @@ function NavBar() {
 
     //function for changing color of nav
     const changeColor = () => {
-      if (window.scrollY >= 500) {
-        setOpacity("1");
-        setColor("#000000");
-        setTextColor("#ffffff");
+      if (window.scrollY >= 70) {
+        setOpacity("0.7");
+        setColor("white");
+        setTextColor("#999999");
       } else {
         setOpacity("1");
         setColor("black");
-        setTextColor("#ffffff");
+        setTextColor("#999999");
       }
     };
     window.addEventListener("scroll", changeColor);
@@ -76,17 +76,17 @@ function NavBar() {
   return (
     <div
       className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
-      style={{ backgroundColor: `${color}`, opacity: `${opacity}` }}
+      style={{ backgroundColor: `${route.pathname === '/Contact'?'white':color}`, opacity: `${route.pathname === '/Contact'?0.8:color}` }}
     >
       {/* logo section */}
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-2 text-[#999999]">
         <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
-            className={"text-3xl flex m-[-5]"}
+            className={"text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl "}
           >
-            <Image src={logo} alt="logo" height={40} width={40} />
-            <p>Bluepineapple</p>
+            <Image src={logo} alt="logo" height={35} width={35} />
+            <p><b>Blue</b>pineapple</p>
           </h1>
         </Link>
 
@@ -96,7 +96,7 @@ function NavBar() {
             <li
               key={data.name}
               className={`p-4 font-bold ${
-                route.pathname === data.path ? "text-blue-700" : "text-white"
+                route.pathname === data.path ? "text-blue-700" : "text-[#999999]"
               }`}
             >
               <Link href={data.path}>{data.name}</Link>
@@ -113,9 +113,9 @@ function NavBar() {
         >
           {/* Hamburger Icons */}
           {nav ? (
-            <XMarkIcon className="w-5 text-white" />
+            <XMarkIcon className="w-5 text-[#999999]" />
           ) : (
-            <Bars3Icon className="w-5 text-white" />
+            <Bars3Icon className="w-5 text-[#999999]" />
           )}
         </div>
 
@@ -133,7 +133,7 @@ function NavBar() {
                 key={data.name}
                 onClick={handleNav}
                 className={`p-4 font-bold text-2xl ${
-                  route.pathname === data.path ? "text-blue-700" : "text-white"
+                  route.pathname === data.path ? "text-blue-700" : "text-[#999999]"
                 }`}
               >
                 <Link href={data.path}>{data.name}</Link>
