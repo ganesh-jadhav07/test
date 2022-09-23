@@ -2,18 +2,33 @@ import { useEffect, useState } from "react";
 import classes from "./CloudServices.module.css";
 import BlueBlock from "../../public/images/home/BlueBlock.png";
 
-// Cloud sevices
+// Cloud sevices images
 import SalesF from "../../public/images/home/SalesF.png";
 import ServiceN from "../../public/images/home/ServiceN.png";
 import Azure from "../../public/images/home/Azure.png";
 import AWS from "../../public/images/home/AWS.png";
 
+import dataFetcher from "../../lib/wordpress/dataFetcher";
+import { HomePageSection1 } from "../../lib/wordpress/api";
+
 function CloudServices() {
+  // Fetching data
+  useEffect(() => {
+    async function Clouds() {
+      const res = await dataFetcher(HomePageSection1);
+      console.log(res.data);
+    }
+    Clouds();
+  }, []);
+
+  // Images cloud Services
   const clouds = [SalesF, ServiceN, Azure, AWS];
   return (
     <div className={`pt-16 ${classes.div}`}>
+      {/* Description */}
       <div className="text-white p-8">
         <div>
+          {/* Smalll Blue diamond */}
           <img
             src={BlueBlock.src}
             alt="..."
@@ -42,6 +57,8 @@ function CloudServices() {
           Learn More
         </button>
       </div>
+
+      {/* Cards */}
       <div className={classes.cloudCardSection}>
         {clouds.map((cloud) => (
           <img key={cloud.src} src={cloud.src} alt="..." className="w-64" />
