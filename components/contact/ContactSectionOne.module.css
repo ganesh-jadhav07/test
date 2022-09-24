@@ -32,7 +32,50 @@
 }
 
 /* media screens for potrait mode */
-@media only screen and (min-width: 320px) and (orientation: portrait) {
+@media only screen and (max-width:300px) and (orientation:portrait){
+  .backgroundImageContainer {
+    position: relative;
+    padding-bottom: 70.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageContainerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 16/9;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 26%;
+    font-size: 1.1rem;
+    left:4%;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 36%;
+    font-size: 0.9rem;
+    left:4%;
+  }
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 47%;
+    left:4%;
+    font-size: 0.7rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    top: 75%;
+    width: 20%;
+    right: 10%;
+  }
+}
+@media only screen and (min-width: 300px) and (orientation: portrait) {
   .backgroundImageContainer {
     position: relative;
     padding-bottom: 75.25%; /* 16:9 ratio */
@@ -49,7 +92,7 @@
   .backgroundImageHeading {
     position: absolute;
     color: white;
-    top: 7rem;
+    top: 40%;
     font-size: 1.5rem;
     left:4%;
   }
@@ -57,16 +100,16 @@
     position: absolute;
     white-space: nowrap;
     color: white;
-    top: calc(100% - 130px);
-    font-size: 1.1rem;
+    top: 54%;
+    font-size: 0.9rem;
     left:4%;
   }
 
   .backgroundImageContentContainer {
     position: absolute;
-    top: calc(100% - 100px);
+    top: 62%;
     left:4%;
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .mailIcon{

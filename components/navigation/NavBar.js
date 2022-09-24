@@ -77,17 +77,17 @@ function NavBar() {
   return (
     <div
       className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
-      style={{ backgroundColor: `${route.pathname === '/Contact'?'white':color}`, opacity: `${route.pathname === '/Contact'?0.8:color}` }}
+      style={{ backgroundColor: `${route.pathname === '/Contact'?'white':color}`, opacity: `${route.pathname === '/Contact'?0.8:opacity}` }}
     >
       {/* logo section */}
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-[#999999]">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center text-[#999999]">
         <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
             className={"text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl "}
           >
-            <Image src={logo} alt="logo" height={40} width={40} />
-            <p>Bluepineapple</p>
+            <img src={logo.src} alt="logo" className="self-center w-2 h-2 sm:w-4 sm:h-5 md:w-5 lg:w-6 lg:h-6"/>
+            <p className="self-center text-[0.5rem] sm:text-base md:text-lg lg:text-xl">Bluepineapple</p>
           </h1>
         </Link>
 
