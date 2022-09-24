@@ -60,9 +60,9 @@ function NavBar() {
 
     //function for changing color of nav
     const changeColor = () => {
-      if (window.scrollY >= 70) {
-        setOpacity("0.7");
-        setColor("white");
+      if (window.scrollY >= 500) {
+        setOpacity("1");
+        setColor("#000000");
         setTextColor("#999999");
       } else {
         setOpacity("1");
@@ -76,19 +76,20 @@ function NavBar() {
   return (
     <div
       className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
-      style={{ backgroundColor: `${route.pathname === '/Contact'?'white':color}`, opacity: `${route.pathname === '/Contact'?0.8:color}` }}
+      style={{ backgroundColor: `${color}`, opacity: `${opacity}` }}
     >
       {/* logo section */}
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-2 text-[#999999]">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-[#999999]">
         <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
             className={"text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl "}
           >
             <Image src={logo} alt="logo" height={35} width={35} />
-            <p><b>Blue</b>pineapple</p>
+            <p>Bluepineapple</p>
           </h1>
         </Link>
+
         {/* main navigation */}
         <ul style={{ color: `${textColor}` }} className="hidden lg:flex">
           {navList.map((data) => (
