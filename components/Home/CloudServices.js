@@ -1,73 +1,74 @@
-import { useEffect, useState } from "react";
-import classes from "./CloudServices.module.css";
-import BlueBlock from "../../public/images/home/BlueBlock.png";
-
-// Cloud sevices images
-import SalesF from "../../public/images/home/SalesF.png";
-import ServiceN from "../../public/images/home/ServiceN.png";
-import Azure from "../../public/images/home/Azure.png";
-import AWS from "../../public/images/home/AWS.png";
-
-import dataFetcher from "../../lib/wordpress/dataFetcher";
+import React, { useEffect, useState } from "react";
 import { HomePageSection1 } from "../../lib/wordpress/api";
+import dataFetcher from "../../lib/wordpress/dataFetcher";
 
-function CloudServices() {
+import classes from "./CloudServices.module.css";
+
+// Cloud Images
+import salesF from "../../public/images/home/SalesLogo.png";
+
+// Icons
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+
+const CloudServices = () => {
+  const [services, setServices] = useState(null);
+  const [content, setContent] = useState(null);
+
   // Fetching data
   useEffect(() => {
-    async function Clouds() {
+    (async function Clouds() {
       const res = await dataFetcher(HomePageSection1);
-      console.log(res.data);
-    }
-    Clouds();
+      const allData = res.data;
+      // console.log(allData);
+      setServices(allData.services.nodes);
+      setContent(allData.page.homepage_customfields);
+    })();
   }, []);
 
-  // Images cloud Services
-  const clouds = [SalesF, ServiceN, Azure, AWS];
+  console.log(services);
+  console.log(content);
   return (
-    <div className={`pt-16 ${classes.div}`}>
-      {/* Description */}
-      <div className="text-white p-8">
-        <div>
-          {/* Smalll Blue diamond */}
-          <img
-            src={BlueBlock.src}
-            alt="..."
-            className="ml-[10.75rem] md:ml-[9.5rem] w-3 -mb-4"
-          />
-          <p className="text-[1.275rem] md:text-[2rem]">
-            Unlock 10x Performance
-          </p>
-        </div>
-        <p className="text-[1rem] md:text-[1rem] mt-2">
+    <div className={classes.section}>
+      <div className={classes.content}>
+        <div className={classes.section1Title}>Unlock 10x Performane</div>
+        <div className={classes.section1Subtitle}>
           Bluepineapple comes with more than 200 years of collective experience
           to help you achieve this.
-        </p>
-        <p className="text-[1.5rem] md:text-[1.5rem] max-w-xl mt-4">
-          Leverage our multi-cloud expertise to fast-track your digital
-          transformation
-        </p>
-        <p className="text-[0.725rem] md:text-[0.725rem] max-w-sm mt-4">
+        </div>
+        <div className={classes.section1Tagline}>
+          Bluepineapple comes with more than 200 years of collective experience
+          to help you achieve this.
+        </div>
+        <div className={classes.section1Content}>
           Maximize your ROI on platform investments and speed up your cloud
           adoption. Fast track your digital transformation journey by drawing
           synergies across multiple cloud platforms.
-        </p>
-        <button
-          type="button"
-          className="p-1 md:p-2 bg-[#3C71FF] rounded-[4px] mt-4 mb-1">
-          Learn More
-        </button>
+        </div>
       </div>
-
-      {/* Cards */}
-      <div className={classes.cloudCardSection}>
-        {clouds.map((cloud) => (
-          <img key={cloud.src} src={cloud.src} alt="..." className="w-64" />
-        ))}
+      <div className={classes.cloudSection}>
+        <div className={classes.cloud}>
+          <div className={classes.cloudLogo}>
+            <img src={salesF.src} alt="SalesForce" />
+          </div>
+          <div className={classes.cloudDescription}>
+            <div>
+              <ChevronLeftIcon className="w-3 justify-center" />
+            </div>
+            <div>
+              With immense experience and heaps of platform certifications, our
+              consultants have built full lifecycle, turnkey solutions on the
+              platform: from Sales cloud, Communities and Service cloud
+              implementations to bespoke business process solutions involving
+              complex workflows and integrations.
+            </div>
+            <div>
+              <ChevronRightIcon className="w-3" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default CloudServices;
-
-//fetch data from wordpress server
