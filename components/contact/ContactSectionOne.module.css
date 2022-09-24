@@ -175,6 +175,54 @@
 
 /* media queries for landscape mode */
 
+@media only screen and (max-height: 200px) and (orientation: landscape) {
+  .backgroundImageContainer {
+    position: relative;
+    object-fit: cover;
+    padding-bottom: 25.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .backgroundImageContainer {
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 40.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 40%;
+    font-size:1.8rem;
+  left: 2rem;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 55%;
+    font-size: 1.2rem;
+    left:2rem
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 67%;
+    left:2rem;
+    font-size: 1rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    width: 20%;
+    top: 57%;
+    right: 10%;
+  }
+}
+
 @media only screen and (min-height: 200px) and (orientation: landscape) {
   .backgroundImageContainer {
     position: relative;

@@ -11,7 +11,7 @@ function ContactFooter() {
             <h2 className="pl-2 mb-3 text-xs font-bold tracking-widest text-left text-gray-900 title-font md:text-sm">
               INDIA
             </h2>
-            <nav className="justify-center pl-2 mb-10 text-xs text-left list-none md:text-sm">
+            <nav className="justify-center w-1/4 pl-2 mb-10 text-xs text-left list-none md:text-sm">
               India 3rd Floor, Vasudha House, Baner Road, Pune, Maharashtra
               411045, India{" "}
             </nav>{" "}
@@ -24,7 +24,7 @@ function ContactFooter() {
             <h2 className="pl-2 mb-3 text-xs font-bold tracking-widest text-left text-gray-900 title-font md:text-sm">
               INDIA
             </h2>
-            <nav className="pl-2 mb-10 text-xs text-left list-none md:text-sm">
+            <nav className="w-1/4 pl-2 mb-10 text-xs text-left list-none md:text-sm">
               India 3rd Floor, Vasudha House, Baner Road, Pune, Maharashtra
               411045, India{" "}
             </nav>{" "}
@@ -36,7 +36,7 @@ function ContactFooter() {
           <h2 className="pl-2 mb-3 text-xs font-bold tracking-widest text-left text-gray-900 title-font md:text-sm">
             INDIA
           </h2>
-          <nav className="pl-2 mb-10 text-xs text-left list-none md:text-sm">
+          <nav className="w-1/4 pl-2 mb-10 text-xs text-left list-none md:text-sm">
             India 3rd Floor, Vasudha House, Baner Road, Pune, Maharashtra
             411045, India{" "}
           </nav>{" "}
