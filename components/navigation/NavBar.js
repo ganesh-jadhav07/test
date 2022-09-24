@@ -85,7 +85,7 @@ function NavBar() {
             style={{ color: `${textColor}` }}
             className={"text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl "}
           >
-            <Image src={logo} alt="logo" height={35} width={35} />
+            <Image src={logo} alt="logo" height={40} width={40} />
             <p>Bluepineapple</p>
           </h1>
         </Link>
