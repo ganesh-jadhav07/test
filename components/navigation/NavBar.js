@@ -72,11 +72,12 @@ function NavBar() {
     };
     window.addEventListener("scroll", changeColor);
   });
+  
 
   return (
     <div
       className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
-      style={{ backgroundColor: `${color}`, opacity: `${opacity}` }}
+      style={{ backgroundColor: `${route.pathname === '/Contact'?'white':color}`, opacity: `${route.pathname === '/Contact'?0.8:color}` }}
     >
       {/* logo section */}
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-[#999999]">
