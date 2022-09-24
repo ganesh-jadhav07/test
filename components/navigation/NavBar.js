@@ -89,7 +89,6 @@ function NavBar() {
             <p><b>Blue</b>pineapple</p>
           </h1>
         </Link>
-
         {/* main navigation */}
         <ul style={{ color: `${textColor}` }} className="hidden lg:flex">
           {navList.map((data) => (
