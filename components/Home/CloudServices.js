@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HomePageSection1 } from "../../lib/wordpress/api";
 import dataFetcher from "../../lib/wordpress/dataFetcher";
+import BlueBlock from "../../public/images/home/BlueBlock.png";
 
 import classes from "./CloudServices.module.css";
 
@@ -30,14 +31,19 @@ const CloudServices = () => {
   return (
     <div className={classes.section}>
       <div className={classes.content}>
-        <div className={classes.section1Title}>Unlock 10x Performane</div>
+        <div className={classes.section1Title}>
+          <div className={classes.blueBlock}>
+            <img src={BlueBlock.src} alt="dot.png" />
+          </div>
+          <p>Unlock 10x Performance</p>
+        </div>
         <div className={classes.section1Subtitle}>
           Bluepineapple comes with more than 200 years of collective experience
           to help you achieve this.
         </div>
         <div className={classes.section1Tagline}>
-          Bluepineapple comes with more than 200 years of collective experience
-          to help you achieve this.
+          Leverage our multi-cloud expertise to fast-track your digital
+          transformation
         </div>
         <div className={classes.section1Content}>
           Maximize your ROI on platform investments and speed up your cloud
@@ -51,18 +57,18 @@ const CloudServices = () => {
             <img src={salesF.src} alt="SalesForce" />
           </div>
           <div className={classes.cloudDescription}>
-            <div>
-              <ChevronLeftIcon className="w-3 justify-center" />
+            <div className={classes.leftIcon}>
+              <ChevronLeftIcon className={`justify-center`} />
             </div>
             <div>
-              With immense experience and heaps of platform certifications, our
-              consultants have built full lifecycle, turnkey solutions on the
-              platform: from Sales cloud, Communities and Service cloud
-              implementations to bespoke business process solutions involving
-              complex workflows and integrations.
+              With expertise spanning the platform gamut from IT Asset
+              management and IT Service Management to Project Portfolio to CSM
+              and FSM, we help customers achieve tactical and strategic wins on
+              the ServiceNow platform and help them build a sustainable vision
+              and roadmap.
             </div>
-            <div>
-              <ChevronRightIcon className="w-3" />
+            <div className={classes.rightIcon}>
+              <ChevronRightIcon className={`justify-center`} />
             </div>
           </div>
         </div>

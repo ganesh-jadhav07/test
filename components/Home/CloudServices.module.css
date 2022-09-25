@@ -3,9 +3,11 @@
   background-image: url("https://s3-alpha-sig.figma.com/img/0e1e/e3f9/4fc153fea9f692e479a9ef0c53748536?Expires=1664755200&Signature=azQLGfKQHOaQZiFno8zXs1f83NNTEsZ-S~Q3Q-6FGqMCxEbfAPuze7~gXTrYY1qWxdfmiI74uGPCZx5sa8pBsR~36RV40~MAJf7PrumT4DkVJjynRfQjaQK73OcaRUYL2jVM5cHxAWBZPgprldE3HF9OvYoFU2gXFBpFynmCwuasa9bC8AmPb5s-umZRHL5bd2QrnNSq6RPOzeEL33kwF4B9CF-OEsSTab3qRDMKQXbE3Wubfn9SvN0EkJTBVnOQ7Ge~V~j44gzvqkVEzUgCbwcJnreVAlMzgfVU96xgEkq2BX6gCkDmmAmoS0Tnv8jggv61P0kKG6rCXZ5rlEBLew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
   background-size: cover;
   background-position: center;
-  padding-top: 40px;
+  padding-top: 63px;
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
@@ -17,12 +19,18 @@
 }
 
 .section1Title {
+  position: relative;
   max-width: 287px;
   font-size: 1.5rem;
   line-height: 29px;
   font-weight: 500;
 }
 
+.blueBlock {
+  width: 8px;
+  position: absolute;
+  left: 115px;
+}
 .section1Subtitle {
   max-width: 315px;
   font-size: 15px;
@@ -45,6 +53,7 @@
 }
 
 .cloudSection {
+  position: relative;
   margin-top: 60px;
   height: 186px;
   width: 186px;
@@ -56,13 +65,29 @@
   border-radius: 23.5567px;
 }
 
+.leftIcon,
+.rightIcon {
+  position: absolute;
+  top: 80px;
+  width: 1.5rem;
+  color: #999999;
+}
+
+.leftIcon {
+  left: -24px;
+}
+
+.rightIcon {
+  right: -24px;
+}
+
 .cloud {
   height: 186px;
   width: 186px;
   transform: rotate(-45deg);
   /* background-color: red; */
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .cloudLogo {
@@ -75,9 +100,9 @@
 }
 
 .cloudDescription {
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
   font-family: "Inter";
@@ -85,4 +110,10 @@
   font-weight: 500;
   font-size: 8.36263px;
   line-height: 16px;
+}
+
+@media screen and (min-width: 498px) {
+  .section {
+    flex-direction: row;
+  }
 }
