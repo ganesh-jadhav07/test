@@ -1,73 +1,99 @@
-import { useEffect, useState } from "react";
-import classes from "./CloudServices.module.css";
+import React, { useEffect, useState } from "react";
+import { HomePageSection1 } from "../../lib/wordpress/api";
+import dataFetcher from "../../lib/wordpress/dataFetcher";
 import BlueBlock from "../../public/images/home/BlueBlock.png";
 
-// Cloud sevices images
-import SalesF from "../../public/images/home/SalesF.png";
-import ServiceN from "../../public/images/home/ServiceN.png";
-import Azure from "../../public/images/home/Azure.png";
-import AWS from "../../public/images/home/AWS.png";
+import classes from "./CloudServices.module.css";
 
-import dataFetcher from "../../lib/wordpress/dataFetcher";
-import { HomePageSection1 } from "../../lib/wordpress/api";
+// Cloud Images
+import salesF from "../../public/images/home/SalesLogo.png";
 
-function CloudServices() {
+// Icons
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+
+let count = 0;
+const CloudServices = () => {
+  const [services, setServices] = useState(null);
+  const [content, setContent] = useState(null);
+
+  const [service, setService] = useState(0);
+
   // Fetching data
   useEffect(() => {
-    async function Clouds() {
+    (async function Clouds() {
       const res = await dataFetcher(HomePageSection1);
-      console.log(res.data);
-    }
-    Clouds();
+      const allData = res.data;
+      console.log(allData);
+      setServices(allData.services.nodes);
+      setContent(allData.page.homepage_customfields);
+    })();
   }, []);
 
-  // Images cloud Services
-  const clouds = [SalesF, ServiceN, Azure, AWS];
-  return (
-    <div className={`pt-16 ${classes.div}`}>
-      {/* Description */}
-      <div className="text-white p-8">
-        <div>
-          {/* Smalll Blue diamond */}
-          <img
-            src={BlueBlock.src}
-            alt="..."
-            className="ml-[10.75rem] md:ml-[9.5rem] w-3 -mb-4"
-          />
-          <p className="text-[1.275rem] md:text-[2rem]">
-            Unlock 10x Performance
-          </p>
-        </div>
-        <p className="text-[1rem] md:text-[1rem] mt-2">
-          Bluepineapple comes with more than 200 years of collective experience
-          to help you achieve this.
-        </p>
-        <p className="text-[1.5rem] md:text-[1.5rem] max-w-xl mt-4">
-          Leverage our multi-cloud expertise to fast-track your digital
-          transformation
-        </p>
-        <p className="text-[0.725rem] md:text-[0.725rem] max-w-sm mt-4">
-          Maximize your ROI on platform investments and speed up your cloud
-          adoption. Fast track your digital transformation journey by drawing
-          synergies across multiple cloud platforms.
-        </p>
-        <button
-          type="button"
-          className="p-1 md:p-2 bg-[#3C71FF] rounded-[4px] mt-4 mb-1">
-          Learn More
-        </button>
-      </div>
+  // view next service
+  const handleNext = () => {
+    count = (count + 1) % services.length;
+    setService(count);
+  };
 
-      {/* Cards */}
-      <div className={classes.cloudCardSection}>
-        {clouds.map((cloud) => (
-          <img key={cloud.src} src={cloud.src} alt="..." className="w-64" />
-        ))}
+  // view previous service
+  const handlePrev = () => {
+    const cloudLength = services.length;
+    count = (cloud + cloudLength - 1) % cloudLength;
+    setService(count);
+  };
+
+  // services !== null
+  //   ? services.map((service) => {
+  //       console.log(service);
+  //     })
+  //   : "";
+  // console.log(content);
+  return (
+    <div className={classes.section}>
+      <div className={classes.content}>
+        <div className={classes.section1Title}>
+          <div className={classes.blueBlock}>
+            <img src={BlueBlock.src} alt="dot.png" />
+          </div>
+          <p>{content !== null ? content.section1Title : ""}</p>
+        </div>
+        <div className={classes.section1Subtitle}>
+          {content !== null ? content.section1Subtitle : ""}
+        </div>
+        <div className={classes.section1Tagline}>
+          {content !== null ? content.section1Tagline : ""}
+        </div>
+        <div className={classes.section1Content}>
+          {content !== null ? content.section1Content : ""}
+        </div>
+      </div>
+      <div className={classes.cloudSection}>
+        <div className={classes.cloud}>
+          <div className={classes.cloudLogo}>
+            <img
+              src={
+                services !== null
+                  ? services[service].services.logo.sourceUrl
+                  : ""
+              }
+              alt="CloudLogo"
+            />
+          </div>
+          <div className={classes.cloudDescription}>
+            <div className={classes.leftIcon} onClick={handlePrev}>
+              <ChevronLeftIcon className={`justify-center`} />
+            </div>
+            <div>
+              {services !== null ? services[service].services.overview : ""}
+            </div>
+            <div className={classes.rightIcon} onClick={handleNext}>
+              <ChevronRightIcon className={`justify-center`} />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default CloudServices;
-
-//fetch data from wordpress server
