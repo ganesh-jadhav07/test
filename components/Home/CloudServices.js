@@ -11,23 +11,43 @@ import salesF from "../../public/images/home/SalesLogo.png";
 // Icons
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
+let count = 0;
 const CloudServices = () => {
   const [services, setServices] = useState(null);
   const [content, setContent] = useState(null);
+
+  const [service, setService] = useState(0);
 
   // Fetching data
   useEffect(() => {
     (async function Clouds() {
       const res = await dataFetcher(HomePageSection1);
       const allData = res.data;
-      // console.log(allData);
+      console.log(allData);
       setServices(allData.services.nodes);
       setContent(allData.page.homepage_customfields);
     })();
   }, []);
 
-  console.log(services);
-  console.log(content);
+  // view next service
+  const handleNext = () => {
+    count = (count + 1) % services.length;
+    setService(count);
+  };
+
+  // view previous service
+  const handlePrev = () => {
+    const cloudLength = services.length;
+    count = (cloud + cloudLength - 1) % cloudLength;
+    setService(count);
+  };
+
+  // services !== null
+  //   ? services.map((service) => {
+  //       console.log(service);
+  //     })
+  //   : "";
+  // console.log(content);
   return (
     <div className={classes.section}>
       <div className={classes.content}>
@@ -35,39 +55,38 @@ const CloudServices = () => {
           <div className={classes.blueBlock}>
             <img src={BlueBlock.src} alt="dot.png" />
           </div>
-          <p>Unlock 10x Performance</p>
+          <p>{content !== null ? content.section1Title : ""}</p>
         </div>
         <div className={classes.section1Subtitle}>
-          Bluepineapple comes with more than 200 years of collective experience
-          to help you achieve this.
+          {content !== null ? content.section1Subtitle : ""}
         </div>
         <div className={classes.section1Tagline}>
-          Leverage our multi-cloud expertise to fast-track your digital
-          transformation
+          {content !== null ? content.section1Tagline : ""}
         </div>
         <div className={classes.section1Content}>
-          Maximize your ROI on platform investments and speed up your cloud
-          adoption. Fast track your digital transformation journey by drawing
-          synergies across multiple cloud platforms.
+          {content !== null ? content.section1Content : ""}
         </div>
       </div>
       <div className={classes.cloudSection}>
         <div className={classes.cloud}>
           <div className={classes.cloudLogo}>
-            <img src={salesF.src} alt="SalesForce" />
+            <img
+              src={
+                services !== null
+                  ? services[service].services.logo.sourceUrl
+                  : ""
+              }
+              alt="CloudLogo"
+            />
           </div>
           <div className={classes.cloudDescription}>
-            <div className={classes.leftIcon}>
+            <div className={classes.leftIcon} onClick={handlePrev}>
               <ChevronLeftIcon className={`justify-center`} />
             </div>
             <div>
-              With expertise spanning the platform gamut from IT Asset
-              management and IT Service Management to Project Portfolio to CSM
-              and FSM, we help customers achieve tactical and strategic wins on
-              the ServiceNow platform and help them build a sustainable vision
-              and roadmap.
+              {services !== null ? services[service].services.overview : ""}
             </div>
-            <div className={classes.rightIcon}>
+            <div className={classes.rightIcon} onClick={handleNext}>
               <ChevronRightIcon className={`justify-center`} />
             </div>
           </div>
