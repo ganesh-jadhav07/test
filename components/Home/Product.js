@@ -1,35 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+//style import
 import styles from "./Product.module.css";
+
+// icons import
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
-const count = 0;
-function Product() {
-  const products = [
-    {
-      id: 1,
-      title:
-        "Green Folder helps organisations template, version, automate as aimed at providing solutions for critical industry demands and new document related processes.",
-    },
-    {
-      id: 2,
-      title:
-        "Green Verifi is a video based compliance solution for KYC processes. It helps onboard customers with proper identity verification within minutes.",
-    },
-  ];
+// api imports
+import dataFetcher from "../../lib/wordpress/dataFetcher";
+import { PRODUCTS } from "../../lib/wordpress/api";
 
-  const [currentProduct, setProducts] = useState(0);
+import DiamondDesign from "../../public/images/home/DiamondDesign.png";
+
+function Product() {
+  const [products, setProducts] = useState(null);
+
+  const [titleContent, setTitleContent] = useState(null);
+
+  const [greenGrayDiamondIcons, setIcons] = useState(null);
+
+  useEffect(() => {
+    // fetch content from backend
+    async function getProducts() {
+      const response = await dataFetcher(PRODUCTS);
+      const all_Posts = response.data;
+      const content = all_Posts;
+
+      // set title content
+      setTitleContent(content.page.homepage_customfields);
+      console.log("Content: ", content);
+
+      // set products
+      setProducts(content.products.nodes);
+
+      // set green,gray diamond icons
+      setIcons(content.post.icons);
+    }
+
+    getProducts();
+  }, []);
+
+  const [currentProduct, setCurrentProduct] = useState(0);
 
   // view next product
   const handleNext = () => {
-    count = (count + 1) % products.length;
-    setProducts(count);
+    let count = (currentProduct + 1) % products.length;
+    setCurrentProduct(count);
   };
 
   // view previous product
   const handlePrev = () => {
     const productLength = products.length;
-    count = (currentProduct + productLength - 1) % productLength;
-    setProducts(count);
+    let count = (currentProduct + productLength - 1) % productLength;
+    setCurrentProduct(count);
   };
 
   // Diamond Logo
@@ -47,32 +69,38 @@ function Product() {
 
   return (
     <div className={`h-screen ${styles.bgImage}`}>
+      {/* Title section */}
       <div
         className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}
       >
         <div className={`${styles.titleContent}  flex flex-col items-center `}>
           <span className={`${styles.title} flex flex-row items-center`}>
             {diamondLogo}
-            <span className="ml-4">Laverage the power of our Apps</span>
+            <span className="ml-4">
+              {titleContent === null ? "Loading " : titleContent.section3Title}
+            </span>
           </span>
-          <div className={`${styles.discription}  mt-2`}>
-            We have a strong innovation culture at Bluepineapple. Our Apps are
-            aimed at providing solutions for critical industry demands and new
-            business needs.
+          <div className={`${styles.description}  mt-2`}>
+            {titleContent === null ? "Loading" : titleContent.section3Subtitle}
           </div>
         </div>
       </div>
+      {/* Body content */}
       <div className={`${styles.bodyContent}  px-6`}>
+        {/* Diamond card */}
         <div className={`${styles.firstContent} `}>
+          {/* left arrow Preview previous product */}
           <ChevronLeftIcon
             className={`${styles.chevronIcon} z-[1] text-bGreen cursor-pointer`}
             onClick={handlePrev}
           />
-          <div
-            className={`${styles.squareDiamond} bg-slate-200 rotate-45 flex  items-center`}
-          >
+          <div className={`${styles.squareDiamond}  flex  items-center`}>
+            <ChevronLeftIcon
+              className={`${styles.iconForSliding} w-8 text-bGreen cursor-pointer`}
+              onClick={handlePrev}
+            />
             <div
-              className={`${styles.squareDiamondBody} -rotate-45 grid grid-cols-1 justify-evenly `}
+              className={`${styles.squareDiamondBody}  grid grid-cols-1 justify-evenly `}
             >
               <div className="flex items-center justify-center">
                 <img
@@ -80,42 +108,76 @@ function Product() {
                   className={`${styles.greenFolderImage}`}
                 />
               </div>
-              <div
-                className={`${styles.diamondParagraph} text-center font-bold flex items-center overflow-hidden`}
-              >
-                {products[currentProduct].title}
-              </div>
+              {products === null ? (
+                "Loading"
+              ) : (
+                <div
+                  className={`${styles.diamondParagraph} text-center flex items-center overflow-hidden`}
+                >
+                  {products === null
+                    ? "Loading"
+                    : products[currentProduct].products.overview}
+                </div>
+              )}
+
               <span
                 className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}
               >
                 <button className={`${styles.learnMoreButton}`}>
-                  Know More
+                  {titleContent === null
+                    ? "Loading"
+                    : titleContent.section3Buttondata}
                 </button>
-                <ul className="flex w-20 row justify-evenly">
-                  {products.map((each) => (
-                    <li key={each.id} className={`${styles.currentProduct}`} />
-                  ))}
-                </ul>
+                {products === null || undefined ? (
+                  "Loading"
+                ) : (
+                  <ul className="flex w-20 row justify-evenly">
+                    {products.map((eachProduct, index) => (
+                      <>
+                        {index === currentProduct ? (
+                          <img
+                            src={
+                              greenGrayDiamondIcons === null
+                                ? "Loading"
+                                : greenGrayDiamondIcons.greenDiamond.sourceUrl
+                            }
+                            className={`${styles.currentProduct}`}
+                          />
+                        ) : (
+                          <img
+                            src={
+                              greenGrayDiamondIcons === null
+                                ? "Loading"
+                                : greenGrayDiamondIcons.greyDiamond.sourceUrl
+                            }
+                            className={`${styles.currentProduct} `}
+                          />
+                        )}
+                      </>
+                    ))}
+                  </ul>
+                )}
               </span>
             </div>
+            <ChevronRightIcon
+              className={` ${styles.iconForSliding} w-8 text-bGreen cursor-pointer`}
+              onClick={handleNext}
+            />
           </div>
-
+          {/* right arrow (Preview next product) */}
           <ChevronRightIcon
             className={`${styles.chevronIcon} z-[1] text-bGreen cursor-pointer`}
             onClick={handleNext}
           />
         </div>
+        {/* right side content */}
         <div
           className={`${styles.secondContent}  flex items-center justify-end `}
         >
           <div className={`${styles.secondBody}  `}>
             {diamondLogo}
             <div className={`${styles.firstParagraph}`}>
-              A dedicated DevCon team helps us constantly innovate while keeping
-              the business context of the customer front and centre.
-            </div>
-            <div className={`${styles.secondParagraph}`}>
-              Our apps are helping customers in their digital transformation.
+              {titleContent === null ? "Loading" : titleContent.section3Tagline}
             </div>
           </div>
         </div>

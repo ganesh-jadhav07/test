@@ -1,61 +1,310 @@
-.div {
-  background-image: url("https://s3-alpha-sig.figma.com/img/0e1e/e3f9/4fc153fea9f692e479a9ef0c53748536?Expires=1664150400&Signature=VVhzD9cMNO4y-Gdg1u~MxCSAnfRbyWC5WtEtXzMd60Jtz-erIS5QaA01AeBQg3-7k~G3W3zH6KmIAoTzuE7IvXMfC3ZSghCih-~ozB~TRRa5ekeR~47nJSkXEqDGW-K7BTCv1xR67bGSmwAUhdqz6I7NwUYwfRIMrLA2NpVXjeOwFuyOMy1AkM9ru1yTyhSUAUM9qtmSNiLerMmx-JvoZYS4whXV150TdcmDvchfpBD3dsF5XgTrDPIsOMON6e1qpZIcG3VgMZkusnLM5XsXrQa8sA-S0oYIcZ2xRKL9bF0ThXC3bic9suySsQCJN2pNCOyZtyCP-rdkmOKA0OM9Cw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+.section {
+  height: 100vh;
+  /* background-image: url("https://s3-alpha-sig.figma.com/img/0e1e/e3f9/4fc153fea9f692e479a9ef0c53748536?Expires=1664755200&Signature=azQLGfKQHOaQZiFno8zXs1f83NNTEsZ-S~Q3Q-6FGqMCxEbfAPuze7~gXTrYY1qWxdfmiI74uGPCZx5sa8pBsR~36RV40~MAJf7PrumT4DkVJjynRfQjaQK73OcaRUYL2jVM5cHxAWBZPgprldE3HF9OvYoFU2gXFBpFynmCwuasa9bC8AmPb5s-umZRHL5bd2QrnNSq6RPOzeEL33kwF4B9CF-OEsSTab3qRDMKQXbE3Wubfn9SvN0EkJTBVnOQ7Ge~V~j44gzvqkVEzUgCbwcJnreVAlMzgfVU96xgEkq2BX6gCkDmmAmoS0Tnv8jggv61P0kKG6rCXZ5rlEBLew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"); */
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.cloudCardSection {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  padding-left: 7rem;
-  left: 8rem;
-  margin-top: -1rem;
+.content {
+  color: #ffffff;
+  flex: 1;
+}
+
+.cloudSection {
+  flex: 1;
+}
+
+.content > div {
+  margin-top: 10px;
+}
+
+.section1Title {
   position: relative;
+  max-width: 287px;
+  font-size: 1.5rem;
+  line-height: 29px;
+  font-weight: 500;
 }
 
-.cloudCardSection img:nth-child(even) {
-  margin-left: -11rem;
-  margin-top: -10rem;
+.blueBlock {
+  width: 8px;
+  position: absolute;
+  left: 115px;
+}
+.section1Subtitle {
+  max-width: 315px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
-.cloudCardSection img:nth-child(odd) {
-  margin-left: -23rem;
+.section1Tagline {
+  max-width: 325px;
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 500;
 }
 
-.cloudCardSection img:nth-child(1) {
-  margin-left: 0rem;
+.section1Content {
+  max-width: 338px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
-.cloudCardSection img:nth-child(4) {
-  margin-left: -36rem;
+.btn {
+  background: #3c71ff;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* width: 85px; */
+  font-size: 10px;
+  font-weight: 500;
 }
 
-@media screen and (min-width: 480px) {
-  .cloudCardSection {
-    grid-template-columns: 1fr 1fr 1f 1f;
+.cloud {
+  position: relative;
+  height: 186px;
+  width: 186px;
+  background-color: #d9d9d9;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(45deg);
+  box-shadow: inset 0px 7.06701px 3.14089px rgba(0, 0, 0, 0.25);
+  border-radius: 23.5567px;
+}
+
+.leftIcon,
+.rightIcon {
+  position: absolute;
+  top: 80px;
+  width: 1.5rem;
+  color: #999999;
+}
+
+.leftIcon {
+  left: -24px;
+}
+
+.rightIcon {
+  right: -24px;
+}
+
+.cloudContent {
+  height: 186px;
+  width: 186px;
+  transform: rotate(-45deg);
+  /* background-color: red; */
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+
+.cloudLogo {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.cloudLogo img {
+  width: 60px;
+}
+
+.cloudDescription {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8.36263px;
+  line-height: 16px;
+}
+
+/* @media only screen and (min-width: 520px) and (orientation: portrait) {
+  .section1Title {
+    max-width: 478px;
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+
+  .section1Subtitle {
+    max-width: 635px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .section1Tagline {
+    max-width: 654px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+
+  .section1Content {
+    max-width: 463px;
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+
+  .btn {
+    border-radius: 5px;
+    padding: 8px;
+    padding-left: 14px;
+    padding-right: 14px;    
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .blueBlock {
+    width: 12px;
+    left: 195px;
+    top: 8px;
+  }
+} */
+
+/* @media screen and (min-width: 768px) {
+  .section {
+    flex-direction: row;
+  }
+
+  .cloudSection {
+    padding-top: 100px;
+    background: red;
+    flex: 1;
+  }
+
+  .cloud {
+    width: 350px;
+    height: 350px;
+  }
+
+  .cloudContent {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cloudDescription {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .cloudLogo {
+    margin-top: 50px;
+    width: 11rem;
+  }
+
+  .cloudDescription {
+    margin-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+} */
+
+@media screen and (min-width: 520px) {
+  .section {
+    flex-direction: row;
+  }
+
+  .cloudSection {
+    margin-top: 10%;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .cloudCardSection {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: -5rem;
-    left: 10rem;
+/* 1280  720 */
+@media screen and (min-width: 720px) {
+  .section {
+    padding-top: 63px;
   }
-}
-@media screen and (min-width: 1024px) {
-  .cloudCardSection {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* margin-top: -200px; */
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .cloudCardSection {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* margin-top: -200px; */
-    /* grid-gap: 1em; */
+  .cloudSection {
+    margin-top: 8%;
+  }
+
+  .section1Title {
+    position: relative;
+    max-width: 658px;
+    font-size: 3rem;
+    line-height: 66px;
+  }
+
+  .blueBlock {
+    width: 14px;
+    position: absolute;
+    left: 230px;
+    top: 10px;
+  }
+
+  .section1Subtitle {
+    margin-top: 10px;
+    max-width: 989px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .section1Tagline {
+    padding-top: 15px;
+    max-width: 634px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .section1Content {
+    padding-top: 12px;
+    max-width: 623px;
+    font-size: 1rem;
+    line-height: 24px;
+  }
+
+  .btn {
+    margin-top: 5px;
+    background: #3c71ff;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    /* width: 85px; */
+    font-size: 15px;
+  }
+
+  .cloud {
+    height: 350px;
+    width: 350px;
+  }
+
+  .cloudContent {
+    height: 350px;
+    width: 350px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cloudDescription {
+    padding-top: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    top: 150px;
+    width: 3rem;
+  }
+
+  .leftIcon {
+    left: -50px;
+  }
+
+  .rightIcon {
+    right: -50px;
   }
 }

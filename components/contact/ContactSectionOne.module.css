@@ -1,0 +1,507 @@
+.backgroundImageContainer {
+  width: 100vw;
+  object-fit: cover;
+}
+
+.backgroundImageContainerImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.backgroundImageHeading {
+  position: absolute;
+  color: white;
+}
+
+.backgroundImageText {
+  position: absolute;
+  color: white;
+}
+
+.backgroundImageContentContainer {
+  color: white;
+}
+
+.mailIcon{
+  position: absolute;
+  color: white;
+  z-index: 5;
+}
+
+/* media screens for potrait mode */
+@media only screen and (max-width:300px) and (orientation:portrait){
+  .backgroundImageContainer {
+    position: relative;
+    padding-bottom: 70.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageContainerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 16/9;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 26%;
+    font-size: 1.1rem;
+    left:4%;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 36%;
+    font-size: 0.9rem;
+    left:4%;
+  }
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 47%;
+    left:4%;
+    font-size: 0.7rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    top: 75%;
+    width: 20%;
+    right: 10%;
+  }
+}
+@media only screen and (min-width: 300px) and (orientation: portrait) {
+  .backgroundImageContainer {
+    position: relative;
+    padding-bottom: 75.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .backgroundImageContainerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 16/9;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 40%;
+    font-size: 1.5rem;
+    left:4%;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 54%;
+    font-size: 0.9rem;
+    left:4%;
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 62%;
+    left:4%;
+    font-size: 0.7rem;
+  }
+
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    top: 74%;
+    width: 29%;
+    right: 2%;
+  }
+}
+
+@media only screen and (min-width: 520px) and (orientation: portrait) {
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 45%;
+    font-size: 1.8rem;
+    left: 4%;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 55%;
+    font-size: 1.3rem;
+    left: 4%;
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 64%;
+    left:4%;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 42%;
+    font-size: 2.5rem;
+    left: 4%;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 52%;
+    font-size: 1.5rem;
+    left: 4%;
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 58%;
+    left:4%;
+    font-size: 1.5rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    top: 62%;
+    width: 35%;
+    right: 9%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (orientation: portrait) {
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 42%;
+    font-size: 2.5rem;
+    left: 4%;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 52%;
+    font-size: 1.5rem;
+    left: 4%;
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 58%;
+    left:4%;
+    font-size: 1.5rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    top: 62%;
+    width: 35%;
+    right: 9%;
+  }
+}
+
+
+
+
+/* media queries for landscape mode */
+
+@media only screen and (max-height: 200px) and (orientation: landscape) {
+  .backgroundImageContainer {
+    position: relative;
+    object-fit: cover;
+    padding-bottom: 25.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .backgroundImageContainer {
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 40.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 40%;
+    font-size:1.8rem;
+  left: 2rem;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 55%;
+    font-size: 1.2rem;
+    left:2rem
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 67%;
+    left:2rem;
+    font-size: 1rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    width: 20%;
+    top: 57%;
+    right: 10%;
+  }
+}
+
+@media only screen and (min-height: 200px) and (orientation: landscape) {
+  .backgroundImageContainer {
+    position: relative;
+    object-fit: cover;
+    padding-bottom: 25.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .backgroundImageContainer {
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 40.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 40%;
+    font-size:1.8rem;
+  left: 2rem;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 55%;
+    font-size: 1.2rem;
+    left:2rem
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 67%;
+    left:2rem;
+    font-size: 1rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    width: 25%;
+    top: 57%;
+    right: 10%;
+  }
+}
+
+@media only screen and (min-height: 300px) and (orientation: landscape) {
+  .backgroundImageContainer {
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 40%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 55%;
+    font-size: 1.7rem;
+    left: 2rem;
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 66%;
+    font-size: 1.3rem;
+    left: 2rem;
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 76%;
+    left: 2rem;
+    font-size: 1rem;
+  }
+
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    width: 25%;
+    top: 50%;
+    right: 10%;
+  }
+}
+
+@media only screen and (min-height: 400px) and (orientation: landscape) {
+  .backgroundImageContainer {
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 31.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 48%;
+    font-size: 1.7rem;
+    /* left: calc(100% - 856px); */
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 60%;
+    font-size: 1.3rem;
+    /* left: calc(100% - 856px); */
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 70%;
+    /* left: calc(100% - 856px); */
+    font-size: 1rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    width: 20%;
+    top: 35%;
+    right: 10%;
+  }
+}
+
+@media only screen and (min-height: 600px) and (orientation: landscape) {
+  .backgroundImageContainer {
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 40.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 48%;
+    font-size: 2.5rem;
+    /* left: calc(100% - 856px); */
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 60%;
+    font-size: 1.5rem;
+    /* left: calc(100% - 856px); */
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 68%;
+    /* left: calc(100% - 856px); */
+    font-size: 1.2rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    width: 25%;
+    top: 46%;
+    right: 10%;
+  }
+}
+
+@media only screen and (min-height: 800px) and (orientation: landscape) {
+  .backgroundImageContainer {
+    position: relative;
+    padding-bottom: 75.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .backgroundImageContainerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 16/9;
+  }
+  .backgroundImageContainer {
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 40.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .backgroundImageHeading {
+    position: absolute;
+    color: white;
+    top: 50%;
+    font-size: 3rem;
+    /* left: calc(100% - 856px); */
+  }
+  .backgroundImageText {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    top: 62%;
+    font-size: 2rem;
+    /* left: calc(100% - 856px); */
+  }
+
+  .backgroundImageContentContainer {
+    position: absolute;
+    top: 72%;
+    /* left: calc(100% - 856px); */
+    font-size: 1.7rem;
+  }
+
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    width: 25%;
+    top: 46%;
+    right: 10%;
+  }
+}
+
+
+
+/* Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...}  */
