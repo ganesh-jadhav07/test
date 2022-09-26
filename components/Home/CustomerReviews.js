@@ -1,43 +1,46 @@
 import React, { useEffect, useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import style from "./CustomerReviews.module.css";
 import Contact from "../../public/images/home/Vector820.png";
 import { customerReview } from "../../lib/wordpress/api";
 import dataFetcher from "../../lib/wordpress/dataFetcher";
 
+let count = 0;
+
 function CustomerReviews() {
   const [reviews, setReviews] = useState(null);
   const [currentReview, setCurrentReview] = useState(0);
+  const [pause, setPause] = useState(false);
 
   // function for fetching the data
-  const customer = async () => {
-    const response = await dataFetcher(customerReview);
-    const all_Posts = response.data;
-    setReviews(all_Posts.reviews.nodes);
+
+  useEffect(() => {
+    (async () => {
+      const response = await dataFetcher(customerReview);
+      const all_Posts = response.data;
+      setReviews(all_Posts.reviews.nodes);
+    })();
+  }, []);
+
+  // function to go to next review
+
+  const handleNext = () => {
+    count = (count + 1) % reviews.length;
+    console.log(count);
+    setCurrentReview(count);
   };
 
   useEffect(() => {
-    customer();
-  }, []);
+    const next = setInterval(() => {
+      if (
+        currentReview < (reviews !== null ? reviews.length : 0) &&
+        pause === false
+      ) {
+        handleNext();
+      }
+    }, 3000);
 
-//   useEffect(() => {
-//     const intervalID = setInterval(reviews, 5000);
-//     return () => clearInterval(intervalID);
-// }, [reviews])
-
-
-  // function to go to next review
-  const handleNext = () => {
-    let count = (currentReview + 1) % reviews.length;
-    setCurrentReview(count);
-  };
-
-  // function to go to prev review
-  const handlePrev = () => {
-    const reviewLen = reviews.length;
-    let count = (currentReview + reviewLen - 1) % reviewLen;
-    setCurrentReview(count);
-  };
+    return () => clearInterval(next);
+  });
 
   return (
     <div className={style.outerCard}>
@@ -52,7 +55,15 @@ function CustomerReviews() {
           <h1 className={style.reviewTitle}>Customer Speak</h1>
 
           {/* main content */}
-          {/* <div className={style.textblock}>
+          <div
+            className={style.textblock}
+            onMouseEnter={() => {
+              setPause(true);
+            }}
+            onMouseLeave={() => {
+              setPause(false);
+            }}
+          >
             <div className={style.text}>
               {reviews === null || undefined ? (
                 "Data Loading"
@@ -64,21 +75,7 @@ function CustomerReviews() {
                 />
               )}{" "}
             </div>
-          </div> */}
-          <div className={style.textblock}>
-          <p className={style.text}>Bluepineapple has been a trusted partner for us . They are very professional, taking a consultative approach to all development requests. We look forward to our continued partnership with Bluepineapple.</p>
           </div>
-          {/* setInterval(() => {
-            <p
-            dangerouslySetInnerHTML={{
-              __html: reviews[currentReview].content,
-            }}
-          />
-          }, 30000); */}
-
-          {/* left and right arrow icons */}
-          {/* <ChevronLeftIcon className={style.prev} onClick={handlePrev} />
-          <ChevronRightIcon className={style.next} onClick={handleNext} /> */}
 
           <p className={style.quote}>“</p>
           <p className={style.reviewBy}>
@@ -86,11 +83,9 @@ function CustomerReviews() {
               ? "Data Loading"
               : reviews[currentReview].title}
           </p>
-              <div className={`${style.lists} p-2`}>
-                <p>hi</p>
-              </div>
+
           {/* slider indicator */}
-          {/* {reviews === null || undefined ? (
+          {reviews === null || undefined ? (
             "Loading"
           ) : (
             <div className={`${style.lists} p-2`}>
@@ -104,7 +99,7 @@ function CustomerReviews() {
                 </div>
               ))}
             </div>
-          )} */}
+          )}
         </div>
       </div>
     </div>
