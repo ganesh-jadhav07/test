@@ -1,17 +1,23 @@
 .section {
   height: 100vh;
-  background-image: url("https://s3-alpha-sig.figma.com/img/0e1e/e3f9/4fc153fea9f692e479a9ef0c53748536?Expires=1664755200&Signature=azQLGfKQHOaQZiFno8zXs1f83NNTEsZ-S~Q3Q-6FGqMCxEbfAPuze7~gXTrYY1qWxdfmiI74uGPCZx5sa8pBsR~36RV40~MAJf7PrumT4DkVJjynRfQjaQK73OcaRUYL2jVM5cHxAWBZPgprldE3HF9OvYoFU2gXFBpFynmCwuasa9bC8AmPb5s-umZRHL5bd2QrnNSq6RPOzeEL33kwF4B9CF-OEsSTab3qRDMKQXbE3Wubfn9SvN0EkJTBVnOQ7Ge~V~j44gzvqkVEzUgCbwcJnreVAlMzgfVU96xgEkq2BX6gCkDmmAmoS0Tnv8jggv61P0kKG6rCXZ5rlEBLew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  /* background-image: url("https://s3-alpha-sig.figma.com/img/0e1e/e3f9/4fc153fea9f692e479a9ef0c53748536?Expires=1664755200&Signature=azQLGfKQHOaQZiFno8zXs1f83NNTEsZ-S~Q3Q-6FGqMCxEbfAPuze7~gXTrYY1qWxdfmiI74uGPCZx5sa8pBsR~36RV40~MAJf7PrumT4DkVJjynRfQjaQK73OcaRUYL2jVM5cHxAWBZPgprldE3HF9OvYoFU2gXFBpFynmCwuasa9bC8AmPb5s-umZRHL5bd2QrnNSq6RPOzeEL33kwF4B9CF-OEsSTab3qRDMKQXbE3Wubfn9SvN0EkJTBVnOQ7Ge~V~j44gzvqkVEzUgCbwcJnreVAlMzgfVU96xgEkq2BX6gCkDmmAmoS0Tnv8jggv61P0kKG6rCXZ5rlEBLew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"); */
   background-size: cover;
   background-position: center;
-  padding-top: 63px;
+  padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
 .content {
   color: #ffffff;
+  flex: 1;
+}
+
+.cloudSection {
+  flex: 1;
 }
 
 .content > div {
@@ -52,9 +58,19 @@
   font-weight: 400;
 }
 
-.cloudSection {
+.btn {
+  background: #3c71ff;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* width: 85px; */
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.cloud {
   position: relative;
-  margin-top: 60px;
   height: 186px;
   width: 186px;
   background-color: #d9d9d9;
@@ -81,19 +97,19 @@
   right: -24px;
 }
 
-.cloud {
+.cloudContent {
   height: 186px;
   width: 186px;
   transform: rotate(-45deg);
   /* background-color: red; */
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
 }
 
 .cloudLogo {
   display: flex;
   justify-content: center;
-  /* min-height: 40px; */
+  height: 50px;
 }
 
 .cloudLogo img {
@@ -113,8 +129,92 @@
   line-height: 16px;
 }
 
-@media screen and (min-width: 498px) {
+/* @media only screen and (min-width: 520px) and (orientation: portrait) {
+  .section1Title {
+    max-width: 478px;
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+
+  .section1Subtitle {
+    max-width: 635px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .section1Tagline {
+    max-width: 654px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+
+  .section1Content {
+    max-width: 463px;
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+
+  .btn {
+    border-radius: 5px;
+    padding: 8px;
+    padding-left: 14px;
+    padding-right: 14px;    
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .blueBlock {
+    width: 12px;
+    left: 195px;
+    top: 8px;
+  }
+} */
+
+/* @media screen and (min-width: 768px) {
   .section {
     flex-direction: row;
+  }
+
+  .cloudSection {
+    padding-top: 100px;
+    background: red;
+    flex: 1;
+  }
+
+  .cloud {
+    width: 350px;
+    height: 350px;
+  }
+
+  .cloudContent {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cloudDescription {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .cloudLogo {
+    margin-top: 50px;
+    width: 11rem;
+  }
+
+  .cloudDescription {
+    margin-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+} */
+
+@media screen and (min-width: 520px) {
+  .section {
+    flex-direction: row;
+  }
+
+  .cloudSection {
+    margin-top: 10%;
   }
 }
