@@ -1,6 +1,6 @@
 import Home from "./Home/index";
 import dataFetcher from "../lib/wordpress/dataFetcher";
-import {DEMO }from "../lib/wordpress/api"
+import { DEMO } from "../lib/wordpress/api";
 
 export default function index(props) {
   return <Home />;

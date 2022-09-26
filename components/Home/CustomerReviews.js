@@ -11,6 +11,7 @@ function CustomerReviews() {
   const [currentReview, setCurrentReview] = useState(0);
   const [pause, setPause] = useState(false);
 
+
   // function for fetching the data
 
   useEffect(() => {
