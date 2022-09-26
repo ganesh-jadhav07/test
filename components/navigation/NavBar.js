@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useState, useEffect,useContext} from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 //logo import
 import logo from "../../public/bp.png";
@@ -12,7 +12,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 
 function NavBar() {
-  //navigation list
+  
+  const count = useSelector((state)=> state.update.value);
+  console.log('count nav: ', count);
+
   const navList = [
     {
       name: "Home",
@@ -54,29 +57,32 @@ function NavBar() {
     setNav(!nav);
   };
 
+
   //use Effect for changing color of navigation while scrolling
   useEffect(() => {
+    
     document.body.style.overflow = nav ? "hidden" : "auto";
 
     //function for changing color of nav
     const changeColor = () => {
-      if (window.scrollY >= 500) {
-        setOpacity("1");
-        setColor("#000000");
-        setTextColor("#999999");
-      } else {
+      if (count % 2 === 0) {
         setOpacity("1");
         setColor("black");
         setTextColor("#999999");
+      } else {
+        setOpacity("0.8");
+        setColor("white");
+        setTextColor("#999999");
       }
     };
-    window.addEventListener("scroll", changeColor);
+    // window.addEventListener("scroll", changeColor);
+    changeColor();
   });
   
 
   return (
     <div
-      className="fixed top-0 left-0 z-10 w-full bg-opacity-30"
+      className="fixed top-0 left-0 z-10 w-full p-4 bg-opacity-30 sm:p-2 "
       style={{ backgroundColor: `${route.pathname === '/Contact'?'white':color}`, opacity: `${route.pathname === '/Contact'?0.8:opacity}` }}
     >
       {/* logo section */}
@@ -133,7 +139,7 @@ function NavBar() {
               <li
                 key={data.name}
                 onClick={handleNav}
-                className={`p-4 font-bold text-2xl ${
+                className={`p-2 font-bold text-2xl ${
                   route.pathname === data.path ? "text-blue-700" : "text-[#999999]"
                 }`}
               >

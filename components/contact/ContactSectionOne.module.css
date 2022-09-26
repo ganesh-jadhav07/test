@@ -318,7 +318,7 @@
   .backgroundImageContainer {
     object-fit: cover;
     position: relative;
-    padding-bottom: 50.25%; /* 16:9 ratio */
+    padding-bottom: 40%; /* 16:9 ratio */
     height: 0;
     overflow: hidden;
   }
@@ -359,7 +359,7 @@
   .backgroundImageContainer {
     object-fit: cover;
     position: relative;
-    padding-bottom: 40.25%; /* 16:9 ratio */
+    padding-bottom: 31.25%; /* 16:9 ratio */
     height: 0;
     overflow: hidden;
   }
@@ -384,6 +384,14 @@
     top: 70%;
     /* left: calc(100% - 856px); */
     font-size: 1rem;
+  }
+  .mailIcon{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    width: 20%;
+    top: 35%;
+    right: 10%;
   }
 }
 

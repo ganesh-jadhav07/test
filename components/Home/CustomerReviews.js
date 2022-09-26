@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import style from "./CustomerReviews.module.css";
 import Contact from "../../public/images/home/Vector820.png";
@@ -19,7 +19,7 @@ function CustomerReviews() {
     setReviews(all_Posts.reviews.nodes);
   };
 
-  // console.log(reviews);
+  console.log(reviews);
   useEffect(() => {
     customer();
   }, []);
