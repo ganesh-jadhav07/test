@@ -1,39 +1,26 @@
 import React, { useEffect, useState } from "react";
 import style from "./CustomerReviews.module.css";
-import Contact from "../../public/images/home/Vector820.png";
-import { customerReview } from "../../lib/wordpress/api";
-import dataFetcher from "../../lib/wordpress/dataFetcher";
 
 let count = 0;
 
 function CustomerReviews(props) {
-  console.log(props.reviews);
-  const [reviews, setReviews] = useState(null);
+  const data = props.reviews.reviews.nodes;
+  const img = props.reviews.page.homepage_customfields.section4Bg.sourceUrl;
+  let blueDiamond = props.reviews.post.icons.blueDiamond.sourceUrl;
+  let greyDiamond = props.reviews.post.icons.greyDiamond.sourceUrl;
   const [currentReview, setCurrentReview] = useState(0);
   const [pause, setPause] = useState(false);
 
-  // function for fetching the data
-
-  useEffect(() => {
-    (async () => {
-      const response = await dataFetcher(customerReview);
-      const all_Posts = response.data;
-      setReviews(all_Posts.reviews.nodes);
-    })();
-  }, []);
-
   // function to go to next review
-
   const handleNext = () => {
-    count = (count + 1) % reviews.length;
-    console.log(count);
+    count = (count + 1) % props.reviews.reviews.nodes.length;
     setCurrentReview(count);
   };
 
   useEffect(() => {
     const next = setInterval(() => {
       if (
-        currentReview < (reviews !== null ? reviews.length : 0) &&
+        currentReview < (data !== null ? data.length : 0) &&
         pause === false
       ) {
         handleNext();
@@ -47,13 +34,15 @@ function CustomerReviews(props) {
     <div className={style.outerCard}>
       {/* image div */}
       <div className={style.leftCard}>
-        <img src={Contact.src} className={style.img} alt="loading.png" />
+        <img src={img} className={style.img} alt="loading.png" />
       </div>
 
       {/* content card */}
       <div className={style.rightCard}>
         <div className={style.reviewCard}>
-          <h1 className={style.reviewTitle}>Customer Speak</h1>
+          <h1 className={style.reviewTitle}>
+            {props.reviews.page.homepage_customfields.section4Title}
+          </h1>
 
           {/* main content */}
           <div
@@ -63,14 +52,15 @@ function CustomerReviews(props) {
             }}
             onMouseLeave={() => {
               setPause(false);
-            }}>
+            }}
+          >
             <div className={style.text}>
-              {reviews === null || undefined ? (
+              {data === null || undefined ? (
                 "Data Loading"
               ) : (
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: reviews[currentReview].content,
+                    __html: data[currentReview].content,
                   }}
                 />
               )}{" "}
@@ -79,22 +69,22 @@ function CustomerReviews(props) {
 
           <p className={style.quote}>“</p>
           <p className={style.reviewBy}>
-            {reviews === null || undefined
+            {data === null || undefined
               ? "Data Loading"
-              : reviews[currentReview].title}
+              : data[currentReview].title}
           </p>
 
           {/* slider indicator */}
-          {reviews === null || undefined ? (
+          {data === null || undefined ? (
             "Loading"
           ) : (
             <div className={`${style.lists} p-2`}>
-              {reviews.map((item, index) => (
+              {data.map((item, index) => (
                 <div key={item.id} onClick={() => setCurrentReview(index)}>
                   {currentReview === index ? (
-                    <img src="images/blue.png" className={style.r1} />
+                    <img src={blueDiamond} className={style.r1} />
                   ) : (
-                    <img src="images/gray.png" className={style.r1} />
+                    <img src={greyDiamond} className={style.r1} />
                   )}
                 </div>
               ))}

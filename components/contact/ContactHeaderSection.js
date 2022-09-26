@@ -3,7 +3,16 @@ import mailLogo from "../../public/images/home/mail1.png";
 import { CheckIcon } from "@heroicons/react/24/solid";
 import styles from "./ContactSectionOne.module.css";
 
-function ContactSectionOne() {
+function ContactSectionOne(props) {
+  // console.log(props.contactus.contacts.page.contactus.contactBg.sourceUrl);
+  const bgImage = props.contactus.contacts.page.contactus.contactBg.sourceUrl;
+  const mailIcon = props.contactus.contacts.page.contactus.contactMail.sourceUrl;
+  const contactTitle = props.contactus.contacts.page.contactus.contactTitle;
+  const contactSubTitle = props.contactus.contacts.page.contactus.contactSubtitle;
+  const point1 = props.contactus.contacts.page.contactus.contactPoint1;
+  const point2 = props.contactus.contacts.page.contactus.contactPoint2;
+  const point3 = props.contactus.contacts.page.contactus.contactPoint3;
+
   return (
     // Main container
     <div className="relative w-screen bg-auto">
@@ -11,32 +20,32 @@ function ContactSectionOne() {
       <div className="relative">
         <div className={styles.backgroundImageContainer}>
           <img
-            src="https://s3-alpha-sig.figma.com/img/09dd/72a8/71326e2675aef7698b40697340b3f664?Expires=1665360000&Signature=dK12Fy4C5HiJvy93~Pd8~OQ1Z-d7geSDhkK2gWq-VmpFxwkHVBX9PVa4ASiPclBMYfsnSqVGhB3viFZXKGv~oT1DME0odSVNelZFQ-D3XMnxr1ow-0j0T8qdIlszf0EqNkMWyfahmrBGGSwOGZ-akrwOcvFJjGEIqOp~5jXg8mh3t9BnX-DnrKOmjoltVGDmKIpmuah-Ws45DiMKNzo335bHlnHrZB1GDcoYv-w4HCKccl4xWohQlxRwu9iUboTc3~VEqav0ofqtFO4XUfuP9myJCweAdVhWD1p22UQfiqVOA7u6~wJhghd8hKYgg28nlDLqc53l70U1ehohdCEe2w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+            src={bgImage}
             className={`${styles.backgroundImageContainerImage} object-cover`}
           />
         </div>
         <div className={styles.mailIcon}>
-          <img src={mailLogo.src} className="" alt="mail" />
+          <img src={mailIcon} className="" alt="mail" />
         </div>
       </div>
       {/* //main header */}
-      <h1 className={styles.backgroundImageHeading}>Drop a line</h1>
+      <h1 className={styles.backgroundImageHeading}>{contactTitle}</h1>
       <h3 className={styles.backgroundImageText}>
-        We're happy to answer questions.
+        {contactSubTitle}
       </h3>
       {/* content section */}
       <div className={styles.backgroundImageContentContainer}>
         <div className="">
           <CheckIcon className="inline w-5 h-5" />{" "}
-          <span>Learn how to increase team productivity</span>
+          <span>{point1}</span>
         </div>
         <div className="">
           <CheckIcon className="inline w-5 h-5" />{" "}
-          <span> Get pricing information</span>
+          <span>{point2}</span>
         </div>
         <div className="">
           <CheckIcon className="inline w-5 h-5" />{" "}
-          <span>Explore use cases for your team</span>
+          <span>{point3}</span>
         </div>
       </div>
     </div>
