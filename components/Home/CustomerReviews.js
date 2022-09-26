@@ -1,76 +1,106 @@
-import React, { useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import React, { useEffect, useState } from "react";
 import style from "./CustomerReviews.module.css";
-import Contact from "../../public/images/home/Contact.png";
+import Contact from "../../public/images/home/Vector820.png";
+import { customerReview } from "../../lib/wordpress/api";
+import dataFetcher from "../../lib/wordpress/dataFetcher";
 
 let count = 0;
+
 function CustomerReviews() {
-  const [currentReview, setReview] = useState(0);
-  const review = [
-    {
-      id: 1,
-      title:
-        "Bluepineapple has been a trusted partner for us. They are very professional, taking a consultative approach to all development requests. We look forward to our continued partnership with Bluepineapple.",
-      client: "BitSight Technologies",
-    },
-    {
-      id: 2,
-      title:
-        "Very proactive and responsive. Always willing to go the extra mile to support the end customer.",
-      client: "SLE Worldwide",
-    },
-    {
-      id: 3,
-      title:
-        " What I really liked was their flexibility especially when we ran into unexpected issues. They were meticulous in following up on feedback.",
-      client: "UK Customer",
-    },
-    {
-      id: 4,
-      title:
-        "Quick to onboard and embed with the team. I hope we get to work together in the future.",
-      client: "US Customer",
-    },
-  ];
+  const [reviews, setReviews] = useState(null);
+  const [currentReview, setCurrentReview] = useState(0);
+  const [pause, setPause] = useState(false);
+
+
+  // function for fetching the data
+
+  useEffect(() => {
+    (async () => {
+      const response = await dataFetcher(customerReview);
+      const all_Posts = response.data;
+      setReviews(all_Posts.reviews.nodes);
+    })();
+  }, []);
 
   // function to go to next review
+
   const handleNext = () => {
-    count = (count + 1) % review.length;
-    setReview(count);
+    count = (count + 1) % reviews.length;
+    console.log(count);
+    setCurrentReview(count);
   };
 
-  // function to go to prev review
-  const handlePrev = () => {
-    const productLength = review.length;
-    count = (currentReview + productLength - 1) % productLength;
-    setReview(count);
-  };
+  useEffect(() => {
+    const next = setInterval(() => {
+      if (
+        currentReview < (reviews !== null ? reviews.length : 0) &&
+        pause === false
+      ) {
+        handleNext();
+      }
+    }, 3000);
+
+    return () => clearInterval(next);
+  });
+
   return (
     <div className={style.outerCard}>
+      {/* image div */}
       <div className={style.leftCard}>
         <img src={Contact.src} className={style.img} alt="loading.png" />
       </div>
+
+      {/* content card */}
       <div className={style.rightCard}>
         <div className={style.reviewCard}>
           <h1 className={style.reviewTitle}>Customer Speak</h1>
-          <div className={style.textblock}>
-            <p className={style.text}>{review[currentReview].title}</p>
+
+          {/* main content */}
+          <div
+            className={style.textblock}
+            onMouseEnter={() => {
+              setPause(true);
+            }}
+            onMouseLeave={() => {
+              setPause(false);
+            }}
+          >
+            <div className={style.text}>
+              {reviews === null || undefined ? (
+                "Data Loading"
+              ) : (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: reviews[currentReview].content,
+                  }}
+                />
+              )}{" "}
+            </div>
           </div>
-          <ChevronLeftIcon className={style.prev} onClick={handlePrev} />
-          <ChevronRightIcon className={style.next} onClick={handleNext} />
+
           <p className={style.quote}>“</p>
-          <p className={style.reviewBy}>{review[currentReview].client}</p>
-          <div className={`${style.lists} p-2`}>
-            {Array.from({ length: 4 }).map((item, index) => (
-              <div onClick={() => currentReview(index)}>
-                {currentReview === index ? (
-                  <img src="images/blue.png" className={style.r1} />
-                ) : (
-                  <img src="images/gray.png" className={style.r1} />
-                )}
-              </div>
-            ))}
-          </div>
+          <p className={style.reviewBy}>
+            {reviews === null || undefined
+              ? "Data Loading"
+              : reviews[currentReview].title}
+          </p>
+
+          {/* slider indicator */}
+          {reviews === null || undefined ? (
+            "Loading"
+          ) : (
+            <div className={`${style.lists} p-2`}>
+              {reviews.map((item, index) => (
+                <div key={item.id} onClick={() => currentReview(index)}>
+                  {currentReview === index ? (
+                    <img src="images/blue.png" className={style.r1} />
+                  ) : (
+                    <img src="images/gray.png" className={style.r1} />
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 .bgImage {
   background-color: black;
   padding-top: 4em;
+
 }
 .headerTopContent {
   height: 13vh;
@@ -155,6 +156,7 @@
   .headerTopContent {
     height: 24%;
     margin-bottom: 1em;
+
   }
   .titleContent {
     width: 100vw;
@@ -164,11 +166,10 @@
     font-size: 24px;
     width: 12em;
     text-align: center;
+
   }
   .description {
     padding: 0px 0px;
-    font-size: 15px;
-    text-align: left;
   }
   .bodyContent {
     flex-direction: column-reverse;
@@ -184,13 +185,16 @@
     justify-content: center;
   }
   .secondContent {
-    height: 25%;
+    height: 50%;
     width: 100%;
+
     align-items: flex-start;
+
   }
   .secondBody {
     padding-left: 0em;
     margin-top: 0em;
+
     font-size: 15px;
     width: 100vw;
     margin-left: 0%;
@@ -216,6 +220,10 @@
 }
 
 @media screen and (min-width: 421px) and (max-width: 768px) {
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .bgImage {
     background: black;
   }
