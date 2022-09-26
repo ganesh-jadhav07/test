@@ -11,7 +11,7 @@ function ContactSectionOne() {
       <div className="relative">
         <div className={styles.backgroundImageContainer}>
           <img
-            src="https://s3-alpha-sig.figma.com/img/09dd/72a8/71326e2675aef7698b40697340b3f664?Expires=1664150400&Signature=alPUDoP9rqzZBMbWIx~OptanTXLIugPI9Z8PuFscbhfF6D0Njw0tR4qo07~u1i99TfkfggcEIC1BCstrnEsWfZ3CWp4pK-IRJwQLm8t4JD8kcQWRddTsLUxf3LP550Se-Nba4HgcxttFQhp4xXzb1438o9kWcVOJtD8i0tssbPavQgfzxwzLsw9yhKvWBjudWhYNB7dILxnVLSWnzxPy-TXcOgW61f1-fZur0syP49tARLZA~57YrP3wzXbxn0frWddWjt~9Hgdzrx-oXjDfdfhkB7I8d~CEHbxgOdBCp9tAt033HoiZYT5sKS6erFm4sultuF2o1A8ZC36ELtffWA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+            src="https://s3-alpha-sig.figma.com/img/09dd/72a8/71326e2675aef7698b40697340b3f664?Expires=1665360000&Signature=dK12Fy4C5HiJvy93~Pd8~OQ1Z-d7geSDhkK2gWq-VmpFxwkHVBX9PVa4ASiPclBMYfsnSqVGhB3viFZXKGv~oT1DME0odSVNelZFQ-D3XMnxr1ow-0j0T8qdIlszf0EqNkMWyfahmrBGGSwOGZ-akrwOcvFJjGEIqOp~5jXg8mh3t9BnX-DnrKOmjoltVGDmKIpmuah-Ws45DiMKNzo335bHlnHrZB1GDcoYv-w4HCKccl4xWohQlxRwu9iUboTc3~VEqav0ofqtFO4XUfuP9myJCweAdVhWD1p22UQfiqVOA7u6~wJhghd8hKYgg28nlDLqc53l70U1ehohdCEe2w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
             className={`${styles.backgroundImageContainerImage} object-cover`}
           />
         </div>
