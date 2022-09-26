@@ -11,33 +11,37 @@ import { PRODUCTS } from "../../lib/wordpress/api";
 
 import DiamondDesign from "../../public/images/home/DiamondDesign.png";
 
-function Product() {
-  const [products, setProducts] = useState(null);
+function Product(props) {
+  console.log("Data ", props.products);
 
-  const [titleContent, setTitleContent] = useState(null);
+  const products = props.products.products.nodes;
 
-  const [greenGrayDiamondIcons, setIcons] = useState(null);
+  const titleContent = props.products.page.homepage_customfields;
+  console.log("Tititle Content: ", titleContent);
 
-  useEffect(() => {
-    // fetch content from backend
-    async function getProducts() {
-      const response = await dataFetcher(PRODUCTS);
-      const all_Posts = response.data;
-      const content = all_Posts;
+  const greenGrayDiamondIcons = props.products.post.icons;
+  console.log(props.post);
 
-      // set title content
-      setTitleContent(content.page.homepage_customfields);
-      console.log("Content: ", content);
+  // useEffect(() => {
+  //   // fetch content from backend
+  //   async function getProducts() {
+  //     const response = await dataFetcher(PRODUCTS);
+  //     const all_Posts = response.data;
+  //     const content = all_Posts;
 
-      // set products
-      setProducts(content.products.nodes);
+  //     // set title content
+  //     setTitleContent(content.page.homepage_customfields);
+  //     console.log("Content: ", content);
 
-      // set green,gray diamond icons
-      setIcons(content.post.icons);
-    }
+  //     // set products
+  //     setProducts(content.products.nodes);
 
-    getProducts();
-  }, []);
+  //     // set green,gray diamond icons
+  //     setIcons(content.post.icons);
+  //   }
+
+  //   getProducts();
+  // }, []);
 
   const [currentProduct, setCurrentProduct] = useState(0);
 
@@ -76,12 +80,10 @@ function Product() {
         <div className={`${styles.titleContent}  flex flex-col items-center `}>
           <span className={`${styles.title} flex flex-row items-center`}>
             {diamondLogo}
-            <span className="ml-4">
-              {titleContent === null ? "Loading " : titleContent.section3Title}
-            </span>
+            <span className="ml-4">{titleContent.section3Title}</span>
           </span>
           <div className={`${styles.description}  mt-2`}>
-            {titleContent === null ? "Loading" : titleContent.section3Subtitle}
+            {titleContent.section3Subtitle}
           </div>
         </div>
       </div>
@@ -94,7 +96,7 @@ function Product() {
             className={`${styles.chevronIcon} z-[1] text-bGreen cursor-pointer`}
             onClick={handlePrev}
           />
-          <div className={`${styles.squareDiamond}  flex  items-center`}>
+          <div className={`${styles.squareDiamond} flex items-center`}>
             <ChevronLeftIcon
               className={`${styles.iconForSliding} w-8 text-bGreen cursor-pointer`}
               onClick={handlePrev}
@@ -108,55 +110,34 @@ function Product() {
                   className={`${styles.greenFolderImage}`}
                 />
               </div>
-              {products === null ? (
-                "Loading"
-              ) : (
-                <div
-                  className={`${styles.diamondParagraph} text-center flex items-center overflow-hidden`}
-                >
-                  {products === null
-                    ? "Loading"
-                    : products[currentProduct].products.overview}
-                </div>
-              )}
-
+              <div
+                className={`${styles.diamondParagraph} text-center flex items-center overflow-hidden`}
+              >
+                {products[currentProduct].products.overview}
+              </div>
               <span
                 className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}
               >
                 <button className={`${styles.learnMoreButton}`}>
-                  {titleContent === null
-                    ? "Loading"
-                    : titleContent.section3Buttondata}
+                  {titleContent.section3Buttondata}
                 </button>
-                {products === null || undefined ? (
-                  "Loading"
-                ) : (
-                  <ul className="flex w-20 row justify-evenly">
-                    {products.map((eachProduct, index) => (
-                      <>
-                        {index === currentProduct ? (
-                          <img
-                            src={
-                              greenGrayDiamondIcons === null
-                                ? "Loading"
-                                : greenGrayDiamondIcons.greenDiamond.sourceUrl
-                            }
-                            className={`${styles.currentProduct}`}
-                          />
-                        ) : (
-                          <img
-                            src={
-                              greenGrayDiamondIcons === null
-                                ? "Loading"
-                                : greenGrayDiamondIcons.greyDiamond.sourceUrl
-                            }
-                            className={`${styles.currentProduct} `}
-                          />
-                        )}
-                      </>
-                    ))}
-                  </ul>
-                )}
+                <ul className="flex w-20 row justify-evenly">
+                  {products.map((eachProduct, index) => (
+                    <>
+                      {index === currentProduct ? (
+                        <img
+                          src={greenGrayDiamondIcons.greenDiamond.sourceUrl}
+                          className={`${styles.currentProduct}`}
+                        />
+                      ) : (
+                        <img
+                          src={greenGrayDiamondIcons.greyDiamond.sourceUrl}
+                          className={`${styles.currentProduct} `}
+                        />
+                      )}
+                    </>
+                  ))}
+                </ul>
               </span>
             </div>
             <ChevronRightIcon
@@ -177,7 +158,7 @@ function Product() {
           <div className={`${styles.secondBody}  `}>
             {diamondLogo}
             <div className={`${styles.firstParagraph}`}>
-              {titleContent === null ? "Loading" : titleContent.section3Tagline}
+              {titleContent.section3Tagline}
             </div>
           </div>
         </div>
