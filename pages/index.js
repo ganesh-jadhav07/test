@@ -39,8 +39,8 @@ function Home(props) {
       customPageNumber={currentPage}>
       <CloudServices services={props.all_Posts} />
       {/* <InnovationServicesScreen /> */}
-      <Product products={props.all_Posts} />
-      <CustomerReviews reviews={props.all_Posts} />
+      {/* <Product products={props.all_Posts} />
+      <CustomerReviews reviews={props.all_Posts} /> */}
     </ReactPageScroller>
   );
 }
