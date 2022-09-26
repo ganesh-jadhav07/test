@@ -139,7 +139,7 @@ function NavBar() {
               <li
                 key={data.name}
                 onClick={handleNav}
-                className={`p-4 font-bold text-2xl ${
+                className={`p-2 font-bold text-2xl ${
                   route.pathname === data.path ? "text-blue-700" : "text-[#999999]"
                 }`}
               >
