@@ -2,10 +2,12 @@
   background-color: #f2fff6;
   text-align: center;
 }
-.containWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+.gridWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  height: auto;
+  /* z-index: 2; */
 }
 
 .imageStyle2 {
@@ -14,164 +16,336 @@
   width: 3rem;
 }
 .imageStyle3 {
-  margin-top: 7em;
-  height: auto;
+  margin-top: 1em;
   width: 2rem;
 }
 .imageStyle4 {
-  margin-top: 7em;
+  margin-top: 1em;
   width: 1.5rem;
 }
 
 .imageStyle5 {
   margin-top: 1em;
   margin-right: 3em;
-  width: 2rem;
+  width: 2.5rem;
 }
 
 .imageContainer {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .textContainer {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: xx-large;
   padding-left: 1em;
   padding-right: 1em;
   color: rgb(86, 85, 85);
 }
 
 .textContent {
-  font-size: medium;
-  margin-top: 1em;
+  font-size: large;
+  /* margin-top: 1em; */
 }
 
 .btnStyle {
   background-color: black;
   color: white;
-  padding: 14px;
-  /* padding-left: 25px;
-  padding-right: 25px; */
-  /* margin-top: 1em; */
-  margin-top: 0;
-  margin-bottom: 0.25em;
+  padding: 10px;
   border-radius: 10px;
   font-size: 20px;
 }
 
-@media (max-width: 1080px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .backgroundContainer {
     background-color: #f2fff6;
     width: 100%;
     text-align: center;
   }
-  .imageContainer {
-    width: 100%;
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 15px;
+    height: auto;
+    /* z-index: 2; */
   }
 
   .textContainer {
     font-weight: bold;
-    font-size: xx-large;
-    padding: 1rem;
+    font-size: large;
+    padding: 0.3rem;
     color: rgb(86, 85, 85);
   }
 
   .textContent {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-top: 1em;
+    margin-left: 3.5em;
+    margin-right: 3.5em;
+    font-size: small;
   }
 
   .btnStyle {
     background-color: black;
     color: white;
-    padding: 15px;
-    margin-top: -2px;
-    border-radius: 10px;
-    /* margin-bottom:1em;
-        font-weight:bold; */
+    padding: 10px;
+    margin-top: 1em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  .imageStyle2 {
+    margin-top: 3.5em;
+    margin-left: 0.5em;
+    width: 1.5rem;
+  }
+  .imageStyle3 {
+    margin-top: 0.5em;
+    width: 0.9rem;
+    margin-left: 2em;
+  }
+  .imageStyle4 {
+    margin-top: 3.5em;
+    margin-right: 2em;
+    width: 0.8rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0.5em;
+    /* margin-right: 2em; */
+    width: 1.2rem;
   }
 }
 
-@media (max-width: 798px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
   .backgroundContainer {
     background-color: #f2fff6;
     width: 100%;
     text-align: center;
   }
-
-  .imageContainer {
-    width: 100%;
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 7px;
+    height: auto;
+    /* z-index: 2; */
   }
 
   .textContainer {
     font-weight: bold;
-    font-size: xx-large;
-    padding: 1rem;
+    font-size: large;
+    padding: 0.3rem;
     color: rgb(86, 85, 85);
   }
 
   .textContent {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    font-size: medium;
   }
+
   .btnStyle {
     background-color: black;
     color: white;
     padding: 12px;
-    margin-top: 1em;
-    border-radius: 10px;
+    margin-top: 2.5em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .imageStyle2 {
+    margin-top: 3.5em;
+    margin-left: 0.5em;
+    width: 1.5rem;
+  }
+  .imageStyle3 {
+    margin-top: 0.5em;
+    width: 0.9rem;
+  }
+  .imageStyle4 {
+    margin-top: 3.5em;
+    width: 0.8rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+    width: 1.2rem;
   }
 }
 
-@media all and (max-width: 520px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
   .backgroundContainer {
     background-color: #f2fff6;
     width: 100%;
     text-align: center;
   }
-  .imageContainer {
-    max-width: 100%;
-    height: fit-content;
-    position: relative;
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 9px;
+    height: auto;
+    /* z-index: 2; */
   }
 
   .textContainer {
     font-weight: bold;
     font-size: x-large;
-    padding: 1rem;
+    padding: 0.5rem;
     color: rgb(86, 85, 85);
   }
 
   .textContent {
-    margin-left: 0em;
-    margin-right: 0em;
+    /* margin-top: 0.5em; */
+    margin-left: 1em;
+    margin-right: 1em;
     font-size: large;
   }
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 0.3em;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .imageStyle2 {
+    margin-top: 3.5em;
+    margin-left: 0.5em;
+    width: 1.7rem;
+  }
+  .imageStyle3 {
+    margin-top: 0.5em;
+    width: 1.2rem;
+  }
+  .imageStyle4 {
+    margin-top: 3.5em;
+    width: 1rem;
+  }
 
+  .imageStyle5 {
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+    width: 1.5rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .backgroundContainer {
+    background-color: #f2fff6;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    height: auto;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 0.5rem;
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: larger;
+  }
   .btnStyle {
     background-color: black;
     color: white;
     padding: 12px;
     margin-top: 1em;
-    margin-left: 1em;
     border-radius: 10px;
+    font-size: 20px;
   }
-
   .imageStyle2 {
-    margin-top: 10em;
+    margin-top: 3.5em;
     margin-left: 0.5em;
+    width: 2rem;
   }
   .imageStyle3 {
-    margin-top: 19em;
-    height: auto;
+    margin-top: 0.5em;
+    width: 1.5rem;
   }
   .imageStyle4 {
-    margin-top: 16em;
+    margin-top: 3.5em;
+    width: 1.4rem;
   }
 
   .imageStyle5 {
-    margin-top: 10em;
+    margin-top: 0.5em;
     margin-right: 0.5em;
+    width: 1.8rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .backgroundContainer {
+    background-color: #f2fff6;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    height: auto;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 0.5rem;
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {
+    margin-top: 1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    font-size: larger;
+  }
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 14px;
+    margin-top: 1em;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  .imageStyle2 {
+    margin-top: 3.5em;
+    margin-left: 0.5em;
+    width: 3rem;
+  }
+  .imageStyle3 {
+    margin-top: 0.5em;
+    width: 2rem;
+  }
+  .imageStyle4 {
+    margin-top: 3.5em;
+    width: 1.8rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+    width: 2.5rem;
   }
 }
