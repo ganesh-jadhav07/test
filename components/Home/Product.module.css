@@ -1,10 +1,10 @@
 .bgImage {
-  background: url("https://s3-alpha-sig.figma.com/img/94f5/5b29/850a1d34fe433ad0d65970d5a829c7ea?Expires=1664150400&Signature=Qx3MjIqc0sLUbCQxPQp3rEK3UIRrSAIV0OLmM2NHLktVz5hPRcwbIMJom7cHT3Q9EUtfw-hzczoBuz~f-Rs5-Skb6Acd6Dqyes8kXOkShd71DypIOXZBjlTVlKdZOarUiNkDRn9~rLH59bkPwUl8ZndheqnUPjo8bJKD7zHc-MV29OboggF2J4tdKIPOg54WzWzRf9LE9B1dIqeDmyaZ1LM0JEAi14VU2sfCUzuZbrCw~HLLm6MSTA8Ayi7QSyhEQQWEcu647mJ2NPdMBIGQms4CC2NLIGUsnmawIepHTD9bOGZrr2EEciJ7T3xop35NegU0O5T4Epwt4Uiy6bUvbw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")
-    center center;
-  background-size: cover;
+  background-color: black;
+  padding-top: 4em;
+
 }
 .headerTopContent {
-  height: 6.5em;
+  height: 13vh;
 }
 
 .titleContent {
@@ -14,53 +14,58 @@
 }
 .title {
   font-size: xx-large;
-  font-family: "Inter";
 }
-.discription {
-  line-height: 20px;
-  padding: 0px 16px;
+.description {
+  line-height: 1.2em;
+  padding: 0px 2em;
   text-align: center;
 }
 .bodyContent {
-  height: 30em;
+  background: url("https://s3-alpha-sig.figma.com/img/94f5/5b29/850a1d34fe433ad0d65970d5a829c7ea?Expires=1664150400&Signature=Qx3MjIqc0sLUbCQxPQp3rEK3UIRrSAIV0OLmM2NHLktVz5hPRcwbIMJom7cHT3Q9EUtfw-hzczoBuz~f-Rs5-Skb6Acd6Dqyes8kXOkShd71DypIOXZBjlTVlKdZOarUiNkDRn9~rLH59bkPwUl8ZndheqnUPjo8bJKD7zHc-MV29OboggF2J4tdKIPOg54WzWzRf9LE9B1dIqeDmyaZ1LM0JEAi14VU2sfCUzuZbrCw~HLLm6MSTA8Ayi7QSyhEQQWEcu647mJ2NPdMBIGQms4CC2NLIGUsnmawIepHTD9bOGZrr2EEciJ7T3xop35NegU0O5T4Epwt4Uiy6bUvbw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")
+    10% 55%;
+  background-size: cover;
+  height: 76vh;
   display: flex;
   flex-direction: row;
+  padding: 0px 1.5em;
 }
 .firstContent {
   width: 50vw;
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   bottom: 1em;
   left: 0.5em;
 }
 .secondContent {
   width: 50vw;
+  display: flex;
+  justify-content: center;
 }
 .secondBody {
-  width: auto;
-  padding-left: 8em;
-  font-family: "Inter";
+  width: 16em;
   font-style: italic;
-  font-size: 24.0667px;
-  line-height: 30px;
+  font-size: 1.5em;
+  line-height: 1.2em;
   text-align: center;
   color: #ffffff;
+  margin-left: 2em;
 }
 
 .squareDiamond {
-  /* position: absolute;
-    top: 50px;
-    left: 50px; */
   width: 22em;
   height: 22em;
-  border: 1.21078px solid #b2b2b3;
-  box-shadow: inset 0px 10px 7.52927px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
+  border: 0.1em solid #b2b2b3;
+  background-color: #d9d9d9;
+  box-shadow: inset 0px 0.3em 7.52927px rgba(0, 0, 0, 0.25);
+  border-radius: 3em;
+  transform: rotateY(0deg) rotate(45deg);
 }
 
 .squareDiamondBody {
-  height: 28em;
+  height: 25em;
+  width: 21em;
+  transform: rotateY(0deg) rotate(-45deg);
 }
 .greenFolderImage {
   width: 8em;
@@ -70,17 +75,14 @@
   font-size: large;
   height: 8em;
   line-height: 1.4em;
+  font-weight: 600;
 }
 .diamondBottom {
   height: 5em;
 }
 .currentProduct {
-  height: 8px;
-  width: 8px;
-  background-color: #179b95;
-  box-shadow: inset 0px 0.906624px 3.6265px rgba(0, 0, 0, 0.25);
-  border-radius: 0.906624px;
-  transform: rotate(46.24deg);
+  height: 0.8em;
+  width: 0.8em;
 }
 
 .diamondShapeDesign {
@@ -94,52 +96,130 @@
 
 .learnMoreButton {
   background: #179b95;
-  border-radius: 6px;
-  width: 7em;
-  height: 2em;
+  border-radius: 0.3em;
+  width: 8em;
+  height: 2.5em;
   color: white;
-  font-size: medium;
+  font-size: large;
 }
 
 .chevronIcon {
   width: 3em;
 }
+.firstParagraph {
+  margin-top: 1.5rem;
+}
+.iconForSliding {
+  display: none;
+}
 
 /* Media Queries */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 420px) {
+  .bgImage {
+    padding-top: 3.5rem;
+  }
   .squareDiamond {
     width: 15.5em;
     height: 15.5em;
+    transform: rotateY(0deg) rotate(0deg);
+    background-image: url("../../public/images/Rectangle 5.png");
+    background-color: transparent;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    border: none;
+  }
+  .squareDiamond .squareDiamondBody {
+    height: 14em;
+    width: 12em;
+    transform: rotateY(0deg) rotate(0deg);
+  }
+  .diamondBottom {
+    height: 3em;
+  }
+  .learnMoreButton {
+    width: 6.5em;
+    height: 2em;
+    font-size: small;
+  }
+  .currentProduct {
+    height: 0.5em;
+    width: 0.5em;
+  }
+  .greenFolderImage {
+    width: 4em;
+    height: 4em;
+  }
+  .diamondParagraph {
+    font-size: x-small;
   }
   .headerTopContent {
-    height: 8em;
+    height: 24%;
+    margin-bottom: 1em;
+
   }
   .titleContent {
-    width: 23em;
+    width: 100vw;
+    justify-content: flex-end;
   }
   .title {
-    font-size: x-large;
+    font-size: 24px;
+    width: 12em;
+    text-align: center;
+
   }
-  .discription {
+  .description {
     padding: 0px 0px;
   }
   .bodyContent {
     flex-direction: column-reverse;
-    height: 40em;
+    height: 75%;
+    justify-content: flex-end;
+    padding: 0px 0px;
   }
   .firstContent {
-    height: 50%;
-    width: 100%;
-    /* display: flex;
-      justify-content: center; */
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .secondContent {
     height: 50%;
     width: 100%;
+
+    align-items: flex-start;
+
   }
   .secondBody {
     padding-left: 0em;
     margin-top: 0em;
+
+    font-size: 15px;
+    width: 100vw;
+    margin-left: 0%;
+  }
+  .diamondLogo {
+    display: none;
+  }
+  .firstParagraph {
+    text-align: left;
+    line-height: 19px;
+    margin-top: 0px;
+  }
+  .secondParagraph {
+    line-height: 19px;
+    text-align: left;
+  }
+  .chevronIcon {
+    display: none;
+  }
+  .iconForSliding {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
   }
 }
 
@@ -148,14 +228,17 @@
     background: black;
   }
   .squareDiamond {
-    width: 17em;
-    height: 17em;
+    width: 16em;
+    height: 16em;
   }
   .squareDiamondBody {
-    height: 20em;
+    height: 17em;
   }
   .diamondParagraph {
     font-size: small;
+  }
+  .headerTopContent {
+    height: 17vh;
   }
   .titleContent {
     width: 28em;
@@ -170,27 +253,28 @@
   .secondBody {
     font-size: 20.0667px;
     padding-left: 3em;
-    margin-top: -6em;
     width: 16em;
   }
   .bodyContent {
-    height: 40em;
+    height: 36em;
     flex-direction: column;
+    padding: 0em;
   }
   .firstContent {
-    height: 70%;
-    width: 100%;
+    height: 60%;
+    width: 75%;
     display: flex;
+    justify-content: flex-start;
   }
   .secondContent {
-    background: url("https://s3-alpha-sig.figma.com/img/94f5/5b29/850a1d34fe433ad0d65970d5a829c7ea?Expires=1664150400&Signature=Qx3MjIqc0sLUbCQxPQp3rEK3UIRrSAIV0OLmM2NHLktVz5hPRcwbIMJom7cHT3Q9EUtfw-hzczoBuz~f-Rs5-Skb6Acd6Dqyes8kXOkShd71DypIOXZBjlTVlKdZOarUiNkDRn9~rLH59bkPwUl8ZndheqnUPjo8bJKD7zHc-MV29OboggF2J4tdKIPOg54WzWzRf9LE9B1dIqeDmyaZ1LM0JEAi14VU2sfCUzuZbrCw~HLLm6MSTA8Ayi7QSyhEQQWEcu647mJ2NPdMBIGQms4CC2NLIGUsnmawIepHTD9bOGZrr2EEciJ7T3xop35NegU0O5T4Epwt4Uiy6bUvbw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")
-      center center;
-    background-size: cover;
-    height: 16%;
     width: 100%;
+    justify-content: flex-end;
   }
   .chevronIcon {
-    width: 2.5em;
+    width: 2em;
+  }
+  .learnMoreButton {
+    font-size: small;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -202,11 +286,15 @@
     height: 19em;
   }
   .secondBody {
-    padding-left: 4em;
     margin-top: 0em;
+    width: 11em;
+    margin-bottom: 4em;
   }
   .squareDiamondBody {
     height: 20em;
+  }
+  .learnMoreButton {
+    font-size: medium;
   }
   .greenFolderImage {
     width: 7em;
@@ -219,3 +307,47 @@
     width: 3em;
   }
 }
+
+/* Media queries for height 
+
+@media screen and (min-height: 539px) {
+  .bodyContent {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+  }
+  .firstContent {
+    height: 50vh;
+    width: 96vw;
+    display: flex;
+    justify-content: center;
+  }
+  .secondContent {
+    width: 100vw;
+    margin-right: 10em;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .squareDiamond {
+    width: 22em;
+    height: 22em;
+    border: 0.1em solid #b2b2b3;
+    box-shadow: inset 0px 0.3em 7.52927px rgba(0, 0, 0, 0.25);
+    border-radius: 3em;
+  }
+  .squareDiamondBody {
+    height: 25em;
+  }
+  .greenFolderImage {
+    width: 8em;
+    height: 8em;
+  }
+  .diamondParagraph {
+    font-size: large;
+    height: 8em;
+    line-height: 1.4em;
+    font-weight: 500;
+  }
+}
+  */
