@@ -81,13 +81,13 @@ function InnovationServicesScreen() {
 
           <div className={style.gridItem}>
             <img
-              className={style.imageStyle4}
-              src={arrow3.src}
+              className={style.imageStyle5}
+              src={arrow4.src}
               alt="Arrow Iamge Not Found"
             />
             <img
-              className={style.imageStyle5}
-              src={arrow4.src}
+              className={style.imageStyle4}
+              src={arrow3.src}
               alt="Arrow Iamge Not Found"
             />
           </div>
