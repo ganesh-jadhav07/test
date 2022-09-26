@@ -3,7 +3,7 @@
   /* background-image: url("https://s3-alpha-sig.figma.com/img/0e1e/e3f9/4fc153fea9f692e479a9ef0c53748536?Expires=1664755200&Signature=azQLGfKQHOaQZiFno8zXs1f83NNTEsZ-S~Q3Q-6FGqMCxEbfAPuze7~gXTrYY1qWxdfmiI74uGPCZx5sa8pBsR~36RV40~MAJf7PrumT4DkVJjynRfQjaQK73OcaRUYL2jVM5cHxAWBZPgprldE3HF9OvYoFU2gXFBpFynmCwuasa9bC8AmPb5s-umZRHL5bd2QrnNSq6RPOzeEL33kwF4B9CF-OEsSTab3qRDMKQXbE3Wubfn9SvN0EkJTBVnOQ7Ge~V~j44gzvqkVEzUgCbwcJnreVAlMzgfVU96xgEkq2BX6gCkDmmAmoS0Tnv8jggv61P0kKG6rCXZ5rlEBLew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"); */
   background-size: cover;
   background-position: center;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
@@ -216,5 +216,95 @@
 
   .cloudSection {
     margin-top: 10%;
+  }
+}
+
+/* 1280  720 */
+@media screen and (min-width: 720px) {
+  .section {
+    padding-top: 63px;
+  }
+
+  .cloudSection {
+    margin-top: 8%;
+  }
+
+  .section1Title {
+    position: relative;
+    max-width: 658px;
+    font-size: 3rem;
+    line-height: 66px;
+  }
+
+  .blueBlock {
+    width: 14px;
+    position: absolute;
+    left: 230px;
+    top: 10px;
+  }
+
+  .section1Subtitle {
+    margin-top: 10px;
+    max-width: 989px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .section1Tagline {
+    padding-top: 15px;
+    max-width: 634px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .section1Content {
+    padding-top: 12px;
+    max-width: 623px;
+    font-size: 1rem;
+    line-height: 24px;
+  }
+
+  .btn {
+    margin-top: 5px;
+    background: #3c71ff;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    /* width: 85px; */
+    font-size: 15px;
+  }
+
+  .cloud {
+    height: 350px;
+    width: 350px;
+  }
+
+  .cloudContent {
+    height: 350px;
+    width: 350px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cloudDescription {
+    padding-top: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    top: 150px;
+    width: 3rem;
+  }
+
+  .leftIcon {
+    left: -50px;
+  }
+
+  .rightIcon {
+    right: -50px;
   }
 }

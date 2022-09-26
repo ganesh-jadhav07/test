@@ -6,11 +6,11 @@ import dataFetcher from "../../lib/wordpress/dataFetcher";
 
 let count = 0;
 
-function CustomerReviews() {
+function CustomerReviews(props) {
+  console.log(props.reviews);
   const [reviews, setReviews] = useState(null);
   const [currentReview, setCurrentReview] = useState(0);
   const [pause, setPause] = useState(false);
-
 
   // function for fetching the data
 
@@ -63,8 +63,7 @@ function CustomerReviews() {
             }}
             onMouseLeave={() => {
               setPause(false);
-            }}
-          >
+            }}>
             <div className={style.text}>
               {reviews === null || undefined ? (
                 "Data Loading"
@@ -91,7 +90,7 @@ function CustomerReviews() {
           ) : (
             <div className={`${style.lists} p-2`}>
               {reviews.map((item, index) => (
-                <div key={item.id} onClick={() => currentReview(index)}>
+                <div key={item.id} onClick={() => setCurrentReview(index)}>
                   {currentReview === index ? (
                     <img src="images/blue.png" className={style.r1} />
                   ) : (

@@ -12,10 +12,11 @@ import Product from "../../components/Home/Product";
 import CustomerReviews from "../../components/Home/CustomerReviews";
 
 //data fetcher and api imports
-// import dataFetcher from "../../lib/wordpress/dataFetcher";
-// import { DEMO } from "../../lib/wordpress/api";
+import dataFetcher from "../../lib/wordpress/dataFetcher";
+import { DEMO } from "../../lib/wordpress/api";
 
-function Home() {
+function Home(props) {
+  console.log({ props });
   const dispatch = useDispatch();
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -34,10 +35,9 @@ function Home() {
     <ReactPageScroller
       pageOnChange={handlePageChange}
       onBeforePageScroll={handleBeforePageChange}
-      customPageNumber={currentPage}
-    >
+      customPageNumber={currentPage}>
       <CloudServices />
-      <InnovationServicesScreen />
+      {/* <InnovationServicesScreen /> */}
       <Product />
       <CustomerReviews />
     </ReactPageScroller>
@@ -45,3 +45,13 @@ function Home() {
 }
 
 export default Home;
+
+export async function getStaticProps() {
+  const response = await dataFetcher(DEMO);
+  console.log(response);
+  const all_Posts = response.data;
+  // console.log("All posts...  " + all_Posts);
+  return {
+    props: { all_Posts },
+  };
+}
