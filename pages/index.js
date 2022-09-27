@@ -16,8 +16,8 @@ import dataFetcher from "../lib/wordpress/dataFetcher";
 import { HOMEPAGE } from "../lib/wordpress/api";
 
 function Home(props) {
-  console.log("***************");
-  console.log({ props });
+  // console.log("***************");
+  // console.log({ props });
   const dispatch = useDispatch();
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -39,7 +39,7 @@ function Home(props) {
       customPageNumber={currentPage}
     >
       <CloudServices services={props.all_Posts} />
-      <InnovationServicesScreen />
+      <InnovationServicesScreen innovation={props.all_Posts} />
       <Product products={props.all_Posts} />
       {/* <CustomerReviews reviews={props.all_Posts} /> */}
     </ReactPageScroller>
