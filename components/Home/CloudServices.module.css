@@ -126,208 +126,375 @@
   line-height: 16px;
 }
 
-/* Media Queries */
+@media only screen and (max-height: 400px) and (orientation: landscape) {
+  .section {
+    flex-direction: row;
+    align-items: center;
+  }
 
-@media screen and (min-width: 421px) and (max-width: 768px) {
-  .bgImage {
-    background: black;
+  .section1Subtitle {
+    max-width: 412px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
   }
-  .squareDiamond {
-    width: 16em;
-    height: 16em;
+}
+
+@media only screen and (min-height: 800px) and (orientation: landscape) {
+  .section {
+    flex-direction: row;
+    padding-top: 100px;
+    /* align-items: center; */
   }
-  .squareDiamondBody {
-    height: 17em;
+
+  .section1Title {
+    max-width: 487px;
+    font-size: 2.5rem;
+    line-height: 4rem;
   }
-  .diamondParagraph {
-    font-size: small;
+
+  .blueBlock {
+    width: 16px;
+    position: absolute;
+    left: 190px;
   }
-  .headerTopContent {
-    height: 17vh;
+
+  .section1Subtitle {
+    max-width: 612px;
+    font-size: 2rem;
+    line-height: 2.25rem;
   }
-  .titleContent {
-    width: 28em;
+
+  .section1Tagline {
+    padding-top: 20px;
+    max-width: 525px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
-  .title {
-    font-size: x-large;
+
+  .section1Content {
+    padding-top: 15px;
+    max-width: 438px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
-  .greenFolderImage {
-    width: 6em;
-    height: 6em;
+
+  .btn {
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* width: 85px; */
+    font-size: 1.25rem;
   }
-  .secondBody {
-    font-size: 20.0667px;
-    padding-left: 3em;
-    width: 16em;
+
+  .cloud {
+    margin-top: 15%;
+    height: 350px;
+    width: 350px;
   }
-  .bodyContent {
-    height: 36em;
-    flex-direction: column;
-    padding: 0em;
+
+  .leftIcon,
+  .rightIcon {
+    top: 150px;
+    width: 3rem;
   }
-  .firstContent {
-    height: 60%;
-    width: 75%;
+
+  .leftIcon {
+    left: -60px;
+  }
+
+  .rightIcon {
+    right: -60px;
+  }
+
+  .cloudContent {
+    height: 350px;
+    width: 350px;
+    transform: rotate(-45deg);
+  }
+
+  .cloudLogo {
     display: flex;
-    justify-content: flex-start;
-  }
-  .secondContent {
-    width: 100%;
-    justify-content: flex-end;
-  }
-  .chevronIcon {
-    width: 2em;
-  }
-  .learnMoreButton {
-    font-size: small;
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .titleContent {
-    width: 40em;
-  }
-  .squareDiamond {
-    width: 19em;
-    height: 19em;
-  }
-  .secondBody {
-    margin-top: 0em;
-    width: 11em;
-    margin-bottom: 4em;
-  }
-  .squareDiamondBody {
-    height: 20em;
-  }
-  .learnMoreButton {
-    font-size: medium;
-  }
-  .greenFolderImage {
-    width: 7em;
-    height: 7em;
-  }
-  .diamondParagraph {
-    font-size: medium;
-  }
-  .chevronIcon {
-    width: 3em;
-  }
-}
-
-@media only screen and (max-height: 500px) and (orientation: landscape) {
-  .bodyContent {
-    flex-direction: row-reverse;
-    height: 85%;
-    padding: 0px;
-    image-orientation: flip;
-  }
-  .bgImage {
-    padding-top: 2em;
-    padding-left: 3%;
-  }
-  .titleContent {
-    align-items: flex-start;
-    position: relative;
-  }
-  .title {
-    align-self: flex-end;
-  }
-  .firstContent {
-    height: 16em;
-    width: 18em;
-    position: relative;
-  }
-  .squareDiamond {
-    width: 70%;
-    height: 75%;
-    border-radius: 2em;
-  }
-  .squareDiamondBody {
-    height: 14em;
-  }
-
-  .headerTopContent {
-    padding: 0%;
-    display: flex;
-    justify-content: flex-start;
-    height: 15%;
-  }
-  .description {
-    line-height: 1.2em;
-    padding: 0%;
-    text-align: left;
-    width: 80%;
-  }
-  .secondContent {
-    height: 100%;
-    justify-content: flex-start;
-    width: 100%;
-  }
-  .secondBody {
-    width: 66%;
-    padding: 0%;
-    margin: 0%;
-    font-size: medium;
-    text-align: left;
-    margin-top: 2em;
-  }
-  .diamondShapeDesign {
-    display: none;
-  }
-  .greenFolderImage {
-    width: 5em;
-    height: 5em;
-  }
-  .diamondParagraph {
-    font-size: 10px;
-  }
-  .diamondBottom {
-    height: 4em;
-  }
-  .learnMoreButton {
-    width: 7em;
-    font-size: 12px;
-  }
-  .currentProduct {
-    height: 0.6em;
-    width: 0.6em;
-  }
-  .chevronIcon {
-    width: 1.5em;
-  }
-}
-
-@media only screen and (min-height: 1024px) and (orientation: portrait) {
-  .bodyContent {
-    flex-direction: column;
-    height: 80%;
-  }
-  .headerTopContent {
-    height: 20%;
-  }
-  .firstContent {
-    height: 50%;
-    width: 100%;
     justify-content: center;
+    height: 50px;
   }
-  .secondBody {
-    width: 35%;
-    margin-left: 0px;
-    margin-right: 4em;
-    padding: 0px;
+
+  .cloudLogo img {
+    width: 60px;
   }
-  .secondContent {
-    width: 100%;
-    height: 50%;
-    justify-content: flex-end;
-  }
-  .titleContent {
-    width: 100%;
-  }
-  .title {
-    font-size: 2.5em;
-  }
-  .description {
-    font-size: large;
-    padding: 0px 7em;
+
+  .cloudDescription {
+    margin-top: 25px;
+    padding: 5px;
+    font-size: 1.1rem;
+    line-height: 2rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .section {
+    flex-direction: row;
+    padding-top: 100px;
+    /* align-items: center; */
+  }
+
+  .section1Title {
+    max-width: 487px;
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+
+  .blueBlock {
+    width: 16px;
+    position: absolute;
+    left: 190px;
+  }
+
+  .section1Subtitle {
+    max-width: 612px;
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+
+  .section1Tagline {
+    padding-top: 20px;
+    max-width: 525px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .section1Content {
+    padding-top: 15px;
+    max-width: 438px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .btn {
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* width: 85px; */
+    font-size: 1.25rem;
+  }
+
+  .cloud {
+    margin-top: 15%;
+    height: 350px;
+    width: 350px;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    top: 150px;
+    width: 3rem;
+  }
+
+  .leftIcon {
+    left: -60px;
+  }
+
+  .rightIcon {
+    right: -60px;
+  }
+
+  .cloudContent {
+    height: 350px;
+    width: 350px;
+    transform: rotate(-45deg);
+  }
+
+  .cloudLogo {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .cloudLogo img {
+    width: 60px;
+  }
+
+  .cloudDescription {
+    margin-top: 25px;
+    padding: 5px;
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+  .section {
+    padding-top: 12%;
+  }
+
+  .section1Title {
+    max-width: 687px;
+    font-size: 2.75rem;
+    line-height: 4rem;
+  }
+
+  .blueBlock {
+    width: 16px;
+    position: absolute;
+    left: 210px;
+  }
+
+  .section1Subtitle {
+    max-width: 712px;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+
+  .section1Tagline {
+    padding-top: 20px;
+    max-width: 625px;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .section1Content {
+    padding-top: 15px;
+    max-width: 538px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .btn {
+    margin-top: 20px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 1.5rem;
+  }
+
+  .cloud {
+    margin-top: 10%;
+    height: 350px;
+    width: 350px;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    top: 150px;
+    width: 3rem;
+  }
+
+  .leftIcon {
+    left: -60px;
+  }
+
+  .rightIcon {
+    right: -60px;
+  }
+
+  .cloudContent {
+    height: 350px;
+    width: 350px;
+    transform: rotate(-45deg);
+  }
+
+  .cloudLogo {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .cloudLogo img {
+    width: 60px;
+  }
+
+  .cloudDescription {
+    margin-top: 25px;
+    padding: 5px;
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+}
+/* 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .section1Title {
+    position: relative;
+    max-width: 478px;
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .blueBlock {
+    width: 12px;
+    position: absolute;
+    left: 190px;
+  }
+  .section1Subtitle {
+    max-width: 635px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  .section1Tagline {
+    max-width: 624px;
+    font-size: 1.5rem;
+    line-height: 1.725rem;
+  }
+
+  .section1Content {
+    max-width: 463px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  .btn {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1rem;
+  }
+
+  .cloud {
+    position: relative;
+    height: 350px;
+    width: 350px;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    position: absolute;
+    top: 150px;
+    width: 3rem;
+    color: #999999;
+  }
+
+  .leftIcon {
+    left: -50px;
+  }
+
+  .rightIcon {
+    right: -50px;
+  }
+
+  .cloudContent {
+    height: 350px;
+    width: 350px;
+  }
+
+  .cloudLogo {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .cloudLogo img {
+    width: 60px;
+  }
+
+  .cloudDescription {
+    padding: 5px;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+} */
