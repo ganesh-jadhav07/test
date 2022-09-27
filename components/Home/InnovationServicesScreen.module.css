@@ -57,8 +57,7 @@
   font-size: 20px;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) and (orientation: portrait) {
   .backgroundContainer {
     background-color: #f2fff6;
     width: 100%;
@@ -81,8 +80,8 @@
 
   .textContent {
     margin-top: 1em;
-    margin-left: 3.5em;
-    margin-right: 3.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
     font-size: small;
   }
 
@@ -107,17 +106,83 @@
     margin-left: 2em;
   }
   .imageStyle4 {
-    margin-top: 3.5em;
+    margin-top: 0.5em;
     margin-right: 2em;
     width: 0.8rem;
   }
 
   .imageStyle5 {
-    margin-top: 0.5em;
-    /* margin-right: 2em; */
+    margin-top: 3.5em;
+    margin-right: 2em;
     width: 1.2rem;
   }
 }
+
+@media only screen and (min-width: 520px) and (orientation: portrait) {
+  .backgroundContainer {
+    background-color: #f2fff6;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 15px;
+    height: auto;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: larger;
+    padding: 0.3rem;
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {
+    margin-top: 1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    font-size: large;
+  }
+
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 1em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  .imageStyle2 {
+    margin-top: 3.5em;
+    margin-left: 0.5em;
+    width: 1.5rem;
+  }
+  .imageStyle3 {
+    margin-top: 0.5em;
+    width: 0.9rem;
+    margin-left: 2em;
+  }
+  .imageStyle4 {
+    margin-top: 0.5em;
+    margin-right: 2em;
+    width: 0.8rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 3.5em;
+    margin-right: 2em;
+    width: 1.2rem;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+ 
+} */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -168,12 +233,12 @@
     width: 0.9rem;
   }
   .imageStyle4 {
-    margin-top: 3.5em;
+    margin-top: 0.5em;
     width: 0.8rem;
   }
 
   .imageStyle5 {
-    margin-top: 0.5em;
+    margin-top: 3.5em;
     margin-right: 0.5em;
     width: 1.2rem;
   }
@@ -225,12 +290,12 @@
     width: 1.2rem;
   }
   .imageStyle4 {
-    margin-top: 3.5em;
+    margin-top: 0.5em;
     width: 1rem;
   }
 
   .imageStyle5 {
-    margin-top: 0.5em;
+    margin-top: 3.5em;
     margin-right: 0.5em;
     width: 1.5rem;
   }
@@ -282,12 +347,12 @@
     width: 1.5rem;
   }
   .imageStyle4 {
-    margin-top: 3.5em;
+    margin-top: 0.5em;
     width: 1.4rem;
   }
 
   .imageStyle5 {
-    margin-top: 0.5em;
+    margin-top: 3.5em;
     margin-right: 0.5em;
     width: 1.8rem;
   }
@@ -310,42 +375,44 @@
 
   .textContainer {
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 3.4vw;
     padding: 0.5rem;
     color: rgb(86, 85, 85);
   }
 
   .textContent {
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-left: 1.5em;
     margin-right: 1.5em;
-    font-size: larger;
+    font-size: 1.5vw;
   }
   .btnStyle {
     background-color: black;
     color: white;
-    padding: 14px;
+    padding: 10px;
     margin-top: 1em;
     border-radius: 10px;
     font-size: 20px;
   }
   .imageStyle2 {
-    margin-top: 3.5em;
+    margin-top: 2.5em;
     margin-left: 0.5em;
     width: 3rem;
   }
   .imageStyle3 {
     margin-top: 0.5em;
     width: 2rem;
+    margin-left: 2em;
   }
   .imageStyle4 {
-    margin-top: 3.5em;
+    margin-top: 0.5em;
     width: 1.8rem;
+    margin-right: 2.5em;
   }
 
   .imageStyle5 {
-    margin-top: 0.5em;
-    margin-right: 0.5em;
+    margin-top: 2.5em;
+    margin-right: 4.5em;
     width: 2.5rem;
   }
 }

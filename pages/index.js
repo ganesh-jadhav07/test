@@ -36,9 +36,10 @@ function Home(props) {
     <ReactPageScroller
       pageOnChange={handlePageChange}
       onBeforePageScroll={handleBeforePageChange}
-      customPageNumber={currentPage}>
+      customPageNumber={currentPage}
+    >
       <CloudServices services={props.all_Posts} />
-      {/* <InnovationServicesScreen /> */}
+      <InnovationServicesScreen innovation={props.all_Posts} />
       <Product products={props.all_Posts} />
       <CustomerReviews reviews={props.all_Posts} />
     </ReactPageScroller>
