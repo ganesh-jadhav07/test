@@ -17,17 +17,17 @@ import arrow3 from "../../public/images/home/arrow3.png";
 import arrow4 from "../../public/images/home/arrow4.png";
 
 function InnovationServicesScreen() {
-  const [title, setTitle] = useState(null);
-  // Fetching data
-  useEffect(() => {
-    async function Innovation() {
-      const res = await dataFetcher(HomePageSection2);
-      const all_Posts = res.data;
-      setTitle(all_Posts.page.homepage_customfields);
-      console.log(all_Posts.page.homepage_customfields);
-    }
-    Innovation();
-  }, []);
+  // const [title, setTitle] = useState(null);
+  // // Fetching data
+  // useEffect(() => {
+  //   async function Innovation() {
+  //     const res = await dataFetcher(HomePageSection2);
+  //     const all_Posts = res.data;
+  //     setTitle(all_Posts.page.homepage_customfields);
+  //     console.log(all_Posts.page.homepage_customfields);
+  //   }
+  //   Innovation();
+  // }, []);
 
   const router = useRouter();
   function buttonHandler() {
@@ -39,6 +39,7 @@ function InnovationServicesScreen() {
       {/* Content div */}
       <div className={`${style.backgroundContainer} h-1/2 pt-20 `}>
         <h1 className={style.textContainer}>
+          {/* {innovation.title.section2Title} */}
           Accelerate your business with our Innovation Services
           {/* {title === null || undefined ? "Data Loading" : title.section2Title} */}
         </h1>
