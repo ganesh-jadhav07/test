@@ -327,7 +327,7 @@
   }
   .squareDiamond {
     width: 70%;
-    height: 75%;
+    height: 77%;
     border-radius: 2em;
   }
   .squareDiamondBody {
@@ -358,6 +358,9 @@
     font-size: medium;
     text-align: left;
     margin-top: 2em;
+  }
+  .firstParagraph {
+    margin-top: 0px;
   }
   .diamondShapeDesign {
     display: none;

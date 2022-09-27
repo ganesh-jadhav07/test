@@ -5,11 +5,7 @@ import styles from "./Product.module.css";
 // icons import
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
-// api imports
-import dataFetcher from "../../lib/wordpress/dataFetcher";
-import { PRODUCTS } from "../../lib/wordpress/api";
-
-import DiamondDesign from "../../public/images/home/DiamondDesign.png";
+import { useRouter } from "next/router";
 
 function Product(props) {
   console.log("Data ", props.products);
@@ -20,28 +16,8 @@ function Product(props) {
   console.log("Tititle Content: ", titleContent);
 
   const greenGrayDiamondIcons = props.products.post.icons;
-  console.log(props.post);
 
-  // useEffect(() => {
-  //   // fetch content from backend
-  //   async function getProducts() {
-  //     const response = await dataFetcher(PRODUCTS);
-  //     const all_Posts = response.data;
-  //     const content = all_Posts;
-
-  //     // set title content
-  //     setTitleContent(content.page.homepage_customfields);
-  //     console.log("Content: ", content);
-
-  //     // set products
-  //     setProducts(content.products.nodes);
-
-  //     // set green,gray diamond icons
-  //     setIcons(content.post.icons);
-  //   }
-
-  //   getProducts();
-  // }, []);
+  const router = useRouter();
 
   const [currentProduct, setCurrentProduct] = useState(0);
 
@@ -118,7 +94,10 @@ function Product(props) {
               <span
                 className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}
               >
-                <button className={`${styles.learnMoreButton}`}>
+                <button
+                  className={`${styles.learnMoreButton}`}
+                  onClick={() => router.push("./Services")}
+                >
                   {titleContent.section3Buttondata}
                 </button>
                 <ul className="flex w-20 row justify-evenly">
