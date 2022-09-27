@@ -101,9 +101,6 @@
   height: 186px;
   width: 186px;
   transform: rotate(-45deg);
-  /* background-color: red; */
-  /* padding-left: 10px;
-  padding-right: 10px; */
 }
 
 .cloudLogo {
@@ -129,182 +126,208 @@
   line-height: 16px;
 }
 
-/* @media only screen and (min-width: 520px) and (orientation: portrait) {
-  .section1Title {
-    max-width: 478px;
-    font-size: 2.5rem;
-    line-height: 4rem;
-  }
+/* Media Queries */
 
-  .section1Subtitle {
-    max-width: 635px;
-    font-size: 1.25rem;
-    line-height: 2rem;
+@media screen and (min-width: 421px) and (max-width: 768px) {
+  .bgImage {
+    background: black;
   }
-
-  .section1Tagline {
-    max-width: 654px;
-    font-size: 1.5rem;
-    line-height: 1.875rem;
+  .squareDiamond {
+    width: 16em;
+    height: 16em;
   }
-
-  .section1Content {
-    max-width: 463px;
-    font-size: 1rem;
-    line-height: 1.125rem;
+  .squareDiamondBody {
+    height: 17em;
   }
-
-  .btn {
-    border-radius: 5px;
-    padding: 8px;
-    padding-left: 14px;
-    padding-right: 14px;    
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: 500;
+  .diamondParagraph {
+    font-size: small;
   }
-
-  .blueBlock {
-    width: 12px;
-    left: 195px;
-    top: 8px;
+  .headerTopContent {
+    height: 17vh;
   }
-} */
-
-/* @media screen and (min-width: 768px) {
-  .section {
-    flex-direction: row;
+  .titleContent {
+    width: 28em;
   }
-
-  .cloudSection {
-    padding-top: 100px;
-    background: red;
-    flex: 1;
+  .title {
+    font-size: x-large;
   }
-
-  .cloud {
-    width: 350px;
-    height: 350px;
+  .greenFolderImage {
+    width: 6em;
+    height: 6em;
   }
-
-  .cloudContent {
-    width: 200px;
-    height: 200px;
+  .secondBody {
+    font-size: 20.0667px;
+    padding-left: 3em;
+    width: 16em;
   }
-
-  .cloudDescription {
-    font-size: 1.4rem;
-    line-height: 2rem;
+  .bodyContent {
+    height: 36em;
+    flex-direction: column;
+    padding: 0em;
   }
-
-  .cloudLogo {
-    margin-top: 50px;
-    width: 11rem;
+  .firstContent {
+    height: 60%;
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
   }
-
-  .cloudDescription {
-    margin-top: 30px;
-    padding-left: 0;
-    padding-right: 0;
+  .secondContent {
+    width: 100%;
+    justify-content: flex-end;
   }
-} */
-
-@media screen and (min-width: 520px) {
-  .section {
-    flex-direction: row;
+  .chevronIcon {
+    width: 2em;
   }
-
-  .cloudSection {
-    margin-top: 10%;
+  .learnMoreButton {
+    font-size: small;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .titleContent {
+    width: 40em;
+  }
+  .squareDiamond {
+    width: 19em;
+    height: 19em;
+  }
+  .secondBody {
+    margin-top: 0em;
+    width: 11em;
+    margin-bottom: 4em;
+  }
+  .squareDiamondBody {
+    height: 20em;
+  }
+  .learnMoreButton {
+    font-size: medium;
+  }
+  .greenFolderImage {
+    width: 7em;
+    height: 7em;
+  }
+  .diamondParagraph {
+    font-size: medium;
+  }
+  .chevronIcon {
+    width: 3em;
   }
 }
 
-/* 1280  720 */
-@media screen and (min-width: 720px) {
-  .section {
-    padding-top: 63px;
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .bodyContent {
+    flex-direction: row-reverse;
+    height: 85%;
+    padding: 0px;
+    image-orientation: flip;
   }
-
-  .cloudSection {
-    margin-top: 8%;
+  .bgImage {
+    padding-top: 2em;
+    padding-left: 3%;
   }
-
-  .section1Title {
+  .titleContent {
+    align-items: flex-start;
     position: relative;
-    max-width: 658px;
-    font-size: 3rem;
-    line-height: 66px;
+  }
+  .title {
+    align-self: flex-end;
+  }
+  .firstContent {
+    height: 16em;
+    width: 18em;
+    position: relative;
+  }
+  .squareDiamond {
+    width: 70%;
+    height: 75%;
+    border-radius: 2em;
+  }
+  .squareDiamondBody {
+    height: 14em;
   }
 
-  .blueBlock {
-    width: 14px;
-    position: absolute;
-    left: 230px;
-    top: 10px;
+  .headerTopContent {
+    padding: 0%;
+    display: flex;
+    justify-content: flex-start;
+    height: 15%;
   }
-
-  .section1Subtitle {
-    margin-top: 10px;
-    max-width: 989px;
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .description {
+    line-height: 1.2em;
+    padding: 0%;
+    text-align: left;
+    width: 80%;
   }
-
-  .section1Tagline {
-    padding-top: 15px;
-    max-width: 634px;
-    font-size: 2rem;
-    line-height: 2.5rem;
+  .secondContent {
+    height: 100%;
+    justify-content: flex-start;
+    width: 100%;
   }
-
-  .section1Content {
-    padding-top: 12px;
-    max-width: 623px;
-    font-size: 1rem;
-    line-height: 24px;
+  .secondBody {
+    width: 66%;
+    padding: 0%;
+    margin: 0%;
+    font-size: medium;
+    text-align: left;
+    margin-top: 2em;
   }
-
-  .btn {
-    margin-top: 5px;
-    background: #3c71ff;
-    border-radius: 5px;
-    padding: 10px;
-    padding-left: 12px;
-    padding-right: 12px;
-    /* width: 85px; */
-    font-size: 15px;
+  .diamondShapeDesign {
+    display: none;
   }
-
-  .cloud {
-    height: 350px;
-    width: 350px;
+  .greenFolderImage {
+    width: 5em;
+    height: 5em;
   }
-
-  .cloudContent {
-    height: 350px;
-    width: 350px;
-    padding-left: 15px;
-    padding-right: 15px;
+  .diamondParagraph {
+    font-size: 10px;
   }
-
-  .cloudDescription {
-    padding-top: 30px;
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 500;
+  .diamondBottom {
+    height: 4em;
   }
-
-  .leftIcon,
-  .rightIcon {
-    top: 150px;
-    width: 3rem;
+  .learnMoreButton {
+    width: 7em;
+    font-size: 12px;
   }
-
-  .leftIcon {
-    left: -50px;
+  .currentProduct {
+    height: 0.6em;
+    width: 0.6em;
   }
+  .chevronIcon {
+    width: 1.5em;
+  }
+}
 
-  .rightIcon {
-    right: -50px;
+@media only screen and (min-height: 1024px) and (orientation: portrait) {
+  .bodyContent {
+    flex-direction: column;
+    height: 80%;
+  }
+  .headerTopContent {
+    height: 20%;
+  }
+  .firstContent {
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+  }
+  .secondBody {
+    width: 35%;
+    margin-left: 0px;
+    margin-right: 4em;
+    padding: 0px;
+  }
+  .secondContent {
+    width: 100%;
+    height: 50%;
+    justify-content: flex-end;
+  }
+  .titleContent {
+    width: 100%;
+  }
+  .title {
+    font-size: 2.5em;
+  }
+  .description {
+    font-size: large;
+    padding: 0px 7em;
   }
 }

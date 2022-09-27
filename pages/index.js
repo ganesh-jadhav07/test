@@ -16,8 +16,8 @@ import dataFetcher from "../lib/wordpress/dataFetcher";
 import { HOMEPAGE } from "../lib/wordpress/api";
 
 function Home(props) {
-  console.log("***************");
-  console.log({ props });
+  // console.log("***************");
+  // console.log({ props });
   const dispatch = useDispatch();
 
   const [currentPage, setCurrentPage] = useState(0);

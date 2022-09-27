@@ -11,33 +11,37 @@ import { PRODUCTS } from "../../lib/wordpress/api";
 
 import DiamondDesign from "../../public/images/home/DiamondDesign.png";
 
-function Product() {
-  const [products, setProducts] = useState(null);
+function Product(props) {
+  console.log("Data ", props.products);
 
-  const [titleContent, setTitleContent] = useState(null);
+  const products = props.products.products.nodes;
 
-  const [greenGrayDiamondIcons, setIcons] = useState(null);
+  const titleContent = props.products.page.homepage_customfields;
+  console.log("Tititle Content: ", titleContent);
 
-  useEffect(() => {
-    // fetch content from backend
-    async function getProducts() {
-      const response = await dataFetcher(PRODUCTS);
-      const all_Posts = response.data;
-      const content = all_Posts;
+  const greenGrayDiamondIcons = props.products.post.icons;
+  console.log(props.post);
 
-      // set title content
-      setTitleContent(content.page.homepage_customfields);
-      console.log("Content: ", content);
+  // useEffect(() => {
+  //   // fetch content from backend
+  //   async function getProducts() {
+  //     const response = await dataFetcher(PRODUCTS);
+  //     const all_Posts = response.data;
+  //     const content = all_Posts;
 
-      // set products
-      setProducts(content.products.nodes);
+  //     // set title content
+  //     setTitleContent(content.page.homepage_customfields);
+  //     console.log("Content: ", content);
 
-      // set green,gray diamond icons
-      setIcons(content.post.icons);
-    }
+  //     // set products
+  //     setProducts(content.products.nodes);
 
-    getProducts();
-  }, []);
+  //     // set green,gray diamond icons
+  //     setIcons(content.post.icons);
+  //   }
+
+  //   getProducts();
+  // }, []);
 
   const [currentProduct, setCurrentProduct] = useState(0);
 
@@ -71,17 +75,14 @@ function Product() {
     <div className={`h-screen ${styles.bgImage}`}>
       {/* Title section */}
       <div
-        className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}
-      >
+        className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}>
         <div className={`${styles.titleContent}  flex flex-col items-center `}>
           <span className={`${styles.title} flex flex-row items-center`}>
             {diamondLogo}
-            <span className="ml-4">
-              {titleContent === null ? "Loading " : titleContent.section3Title}
-            </span>
+            <span className="ml-4">{titleContent.section3Title}</span>
           </span>
           <div className={`${styles.description}  mt-2`}>
-            {titleContent === null ? "Loading" : titleContent.section3Subtitle}
+            {titleContent.section3Subtitle}
           </div>
         </div>
       </div>
@@ -94,69 +95,45 @@ function Product() {
             className={`${styles.chevronIcon} z-[1] text-bGreen cursor-pointer`}
             onClick={handlePrev}
           />
-          <div className={`${styles.squareDiamond}  flex  items-center`}>
+          <div className={`${styles.squareDiamond} flex items-center`}>
             <ChevronLeftIcon
               className={`${styles.iconForSliding} w-8 text-bGreen cursor-pointer`}
               onClick={handlePrev}
             />
             <div
-              className={`${styles.squareDiamondBody}  grid grid-cols-1 justify-evenly `}
-            >
+              className={`${styles.squareDiamondBody}  grid grid-cols-1 justify-evenly `}>
               <div className="flex items-center justify-center">
                 <img
                   src="https://s3-alpha-sig.figma.com/img/d306/1d86/284cb069f62e8fb441c140e46f8bcae7?Expires=1664150400&Signature=fwubHvqif68DftC7fj~06UI3TGc4VDlZx1MTccOZt48hP5Za3kfFfUu8QBz1ClYmfGUY7QyQ1GycB4Co4yLO7aNQOu99acmuanM6MsLtTd~Ro-T4aBtPWzt59ciRShWDr47w0eoAKOeR~4FMlWQ5wtGHVAF7DfLhXdciBsA60z3D51S~8K1lxqTPVQnZr2P0nW2mEFkC1I4m8GvEShOMDItu8JA208EKmSeI2Kxa5mbpYbbI-lb9RhuqAAkV-nCw4MmqZlvDLkwX10jsvRsdko1kXRrL0oNisHWPEiT5xoaRLmY1Y2sjiNANCpu1E1kvSExqhnTK0iM2j0-6wHlb5w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
                   className={`${styles.greenFolderImage}`}
                 />
               </div>
-              {products === null ? (
-                "Loading"
-              ) : (
-                <div
-                  className={`${styles.diamondParagraph} text-center flex items-center overflow-hidden`}
-                >
-                  {products === null
-                    ? "Loading"
-                    : products[currentProduct].products.overview}
-                </div>
-              )}
-
+              <div
+                className={`${styles.diamondParagraph} text-center flex items-center overflow-hidden`}>
+                {products[currentProduct].products.overview}
+              </div>
               <span
-                className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}
-              >
+                className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}>
                 <button className={`${styles.learnMoreButton}`}>
-                  {titleContent === null
-                    ? "Loading"
-                    : titleContent.section3Buttondata}
+                  {titleContent.section3Buttondata}
                 </button>
-                {products === null || undefined ? (
-                  "Loading"
-                ) : (
-                  <ul className="flex w-20 row justify-evenly">
-                    {products.map((eachProduct, index) => (
-                      <>
-                        {index === currentProduct ? (
-                          <img
-                            src={
-                              greenGrayDiamondIcons === null
-                                ? "Loading"
-                                : greenGrayDiamondIcons.greenDiamond.sourceUrl
-                            }
-                            className={`${styles.currentProduct}`}
-                          />
-                        ) : (
-                          <img
-                            src={
-                              greenGrayDiamondIcons === null
-                                ? "Loading"
-                                : greenGrayDiamondIcons.greyDiamond.sourceUrl
-                            }
-                            className={`${styles.currentProduct} `}
-                          />
-                        )}
-                      </>
-                    ))}
-                  </ul>
-                )}
+                <ul className="flex w-20 row justify-evenly">
+                  {products.map((eachProduct, index) => (
+                    <>
+                      {index === currentProduct ? (
+                        <img
+                          src={greenGrayDiamondIcons.greenDiamond.sourceUrl}
+                          className={`${styles.currentProduct}`}
+                        />
+                      ) : (
+                        <img
+                          src={greenGrayDiamondIcons.greyDiamond.sourceUrl}
+                          className={`${styles.currentProduct} `}
+                        />
+                      )}
+                    </>
+                  ))}
+                </ul>
               </span>
             </div>
             <ChevronRightIcon
@@ -172,12 +149,11 @@ function Product() {
         </div>
         {/* right side content */}
         <div
-          className={`${styles.secondContent}  flex items-center justify-end `}
-        >
+          className={`${styles.secondContent}  flex items-center justify-end `}>
           <div className={`${styles.secondBody}  `}>
             {diamondLogo}
             <div className={`${styles.firstParagraph}`}>
-              {titleContent === null ? "Loading" : titleContent.section3Tagline}
+              {titleContent.section3Tagline}
             </div>
           </div>
         </div>
