@@ -16,7 +16,8 @@ import arrow2 from "../../public/images/home/arrow2.png";
 import arrow3 from "../../public/images/home/arrow3.png";
 import arrow4 from "../../public/images/home/arrow4.png";
 
-function InnovationServicesScreen() {
+function InnovationServicesScreen(props) {
+  const data = props.title.page.homepage_customfields.section2Title;
   // const [title, setTitle] = useState(null);
   // // Fetching data
   // useEffect(() => {
