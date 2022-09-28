@@ -1,9 +1,10 @@
+import React from "react";
 import ContactHeaderSection from "./ContactHeaderSection.js";
 import ContactFooter from "./ContactFooter";
 
 function Contact(props) {
   return (
-    <>
+    <React.Fragment>
       {/* headerSection */}
       <ContactHeaderSection contactus={props} />
 
@@ -218,7 +219,7 @@ function Contact(props) {
 
       {/* footer */}
       <ContactFooter contactus={props} />
-    </>
+    </React.Fragment>
   );
 }
 

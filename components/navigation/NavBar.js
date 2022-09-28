@@ -16,42 +16,11 @@ function NavBar() {
   const [textColor, setTextColor] = useState("#999999");
   const [opacity, setOpacity] = useState("1");
 
+  //useSelector for accessing managing state of full PageScroller
   const count = useSelector((state) => state.update.value);
-  console.log("count nav: ", count);
 
+  //useSelector for accessing managing state of navigation Links
   const navdata = useSelector((state) => state.navigation.value);
-  console.log("navData: ", navdata);
-
-  // const navList = [
-  //   {
-  //     name: "Home",
-  //     path: "/",
-  //   },
-  //   {
-  //     name: "Services",
-  //     path: "/Services",
-  //   },
-  //   {
-  //     name: "Innovation",
-  //     path: "/Innovation",
-  //   },
-  //   {
-  //     name: "About",
-  //     path: "/About",
-  //   },
-  //   {
-  //     name: "Careers",
-  //     path: "/Careers",
-  //   },
-  //   {
-  //     name: "Blog",
-  //     path: "/Blog",
-  //   },
-  //   {
-  //     name: "Contact",
-  //     path: "/Contact",
-  //   },
-  // ];
 
   const handleNav = () => {
     setNav(!nav);

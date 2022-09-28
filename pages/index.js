@@ -5,13 +5,13 @@ import ReactPageScroller from "react-page-scroller";
 import { useDispatch } from "react-redux";
 import { increment } from "../lib/Redux/slice";
 
-//sections of home page
+//imports of different sections of home page
 import CloudServices from "../components/Home/CloudServices";
 import InnovationServicesScreen from "../components/Home/InnovationServicesScreen";
 import Product from "../components/Home/Product";
 import CustomerReviews from "../components/Home/CustomerReviews";
 
-//data fetcher and api and redux imports
+//data fetcher,api and redux imports
 import dataFetcher from "../lib/wordpress/dataFetcher";
 import { HOMEPAGE } from "../lib/wordpress/api";
 import { navItems } from "../lib/Redux/navSlice";
@@ -54,9 +54,7 @@ export default Home;
 
 export async function getStaticProps() {
   const response = await dataFetcher(HOMEPAGE);
-  console.log(response);
   const all_Posts = response.data;
-  // console.log("All posts...  " + all_Posts);
   return {
     props: { all_Posts },
   };
