@@ -92,6 +92,8 @@
 
 /* media queries for responsive design*/
 
+/* for width */
+
 @media (min-width: 1200px) and (orientation: portrait) {
   .outerCard {
     display: grid;
@@ -423,6 +425,8 @@
   }
 }
 
+/* for height */
+
 @media only screen and (min-height: 200px) and (orientation: landscape) {
   .outerCard {
     display: grid;
@@ -448,7 +452,7 @@
   .reviewTitle {
     position: relative;
     font-size: 17px;
-    top: 1rem;
+    top: 0rem;
   }
 
   .reviewBy {
@@ -475,6 +479,7 @@
   .img {
     width: 100%;
     height: 100%;
+    margin-top: 1rem;
   }
 
   .r1 {
@@ -528,7 +533,7 @@
   .reviewTitle {
     position: relative;
     font-size: 24px;
-    top: 1rem;
+    top: 0rem;
   }
 
   .lists {
@@ -573,7 +578,7 @@
   .reviewTitle {
     position: relative;
     font-size: 24px;
-    top: 1rem;
+    top: 0rem;
   }
 
   .lists {
@@ -583,6 +588,10 @@
   }
   .quote {
     top: 4rem;
+  }
+
+  .img{
+    margin-top: 1.5rem;
   }
 }
 
@@ -637,5 +646,24 @@
     font-size: 60px;
     text-align: center;
     top: 3rem;
+  }
+
+  .img{
+    margin-top: 2.5rem;
+  }
+}
+
+@media only screen and (min-height: 900px) and (orientation: landscape) {
+  .reviewTitle{
+    font-size: 55px;
+  }
+  .text{
+    font-size: 45px;
+  }
+  .reviewBy{
+    font-size: 55px;
+  }
+  .quote{
+    font-size: 80px;
   }
 }
