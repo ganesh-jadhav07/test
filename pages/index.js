@@ -37,6 +37,7 @@ function Home(props) {
       pageOnChange={handlePageChange}
       onBeforePageScroll={handleBeforePageChange}
       customPageNumber={currentPage}
+      animationTimer={2000}
     >
       <CloudServices services={props.all_Posts} />
       <InnovationServicesScreen innovation={props.all_Posts} />
