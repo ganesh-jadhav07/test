@@ -11,7 +11,7 @@ import InnovationServicesScreen from "../components/Home/InnovationServicesScree
 import Product from "../components/Home/Product";
 import CustomerReviews from "../components/Home/CustomerReviews";
 
-//data fetcher and api imports
+//data fetcher and api and redux imports
 import dataFetcher from "../lib/wordpress/dataFetcher";
 import { HOMEPAGE } from "../lib/wordpress/api";
 import { navItems } from "../lib/Redux/navSlice";
@@ -21,10 +21,9 @@ function Home(props) {
 
   const dispatch = useDispatch();
   const navigationData =props.all_Posts.navigations.nodes.map(data => data);
-  console.log('navigationData: ', navigationData);
-
   dispatch(navItems(navigationData))
-  
+  // console.log('navigationData: ', navigationData);
+
   useEffect(() => {
     dispatch(increment(currentPage));
   }, [currentPage]);

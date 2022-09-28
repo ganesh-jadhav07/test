@@ -1,11 +1,11 @@
-import ContactSectionOne from "./ContactHeaderSection.js";
+import ContactHeaderSection from "./ContactHeaderSection.js";
 import ContactFooter from "./ContactFooter";
 
 function Contact(props) {
   return (
     <>
       {/* headerSection */}
-      <ContactSectionOne contactus={props} />
+      <ContactHeaderSection contactus={props} />
 
       {/* form Section */}
       <div
