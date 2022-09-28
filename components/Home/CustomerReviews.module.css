@@ -247,7 +247,6 @@
     order: 2;
   }
 
-
   .lists {
     position: relative;
     justify-content: center;
@@ -259,7 +258,7 @@
     font-size: 52px;
     text-align: center;
     color: #293e40;
-    top: 3rem;
+    top: 2.5rem;
   }
 
   .img {
@@ -267,7 +266,7 @@
     height: auto;
   }
 
-  .r1{
+  .r1 {
     height: 100%;
   }
 
@@ -392,7 +391,7 @@
     height: 4rem;
 
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    grid-auto-rows: 430px;
+    grid-auto-rows: 450px;
   }
 
   .outerCard div:nth-of-type(1) {
@@ -413,7 +412,7 @@
     position: relative;
     text-align: center;
     width: 100%;
-    height: 25rem;
+    height: 29rem;
     margin-bottom: 15px;
     margin-top: 15px;
   }
@@ -447,7 +446,7 @@
     top: 0.2rem;
     font-family: "Inter";
     font-style: normal;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     color: #293e40;
   }
@@ -456,7 +455,7 @@
     position: relative;
     font-family: "Inter";
     font-style: normal;
-    font-size: 24px;
+    font-size: 26px;
     color: #293e40;
     top: 1rem;
   }
@@ -465,20 +464,38 @@
     position: relative;
     font-family: "Inter";
     font-style: normal;
-    font-size: 20px;
+    font-size: 26px;
     text-align: center;
     color: #293e40;
     top: 1.5rem;
   }
 }
 
+@media (max-width: 300px) {
+  .text {
+    font-size: 16px;
+  }
+  .reviewTitle {
+    font-size: 23px;
+  }
+  .reviewBy {
+    font-size: 20px;
+  }
+}
 
-@media only screen and (min-height: 200px) and (orientation: landscape){
+@media only screen and (min-height: 200px) and (orientation: landscape) {
   .outerCard {
     display: grid;
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 3fr 4fr;
   }
-  
+
+  .leftCard {
+    order: 1;
+  }
+  .rightCard {
+    order: 2;
+  }
+
   .reviewCard {
     position: relative;
     text-align: center;
@@ -542,14 +559,19 @@
     color: #293e40;
     top: 2.5rem;
   }
-
 }
 
-@media only screen and (min-height: 300px) and (orientation: landscape)
-{
+@media only screen and (min-height: 300px) and (orientation: landscape) {
   .outerCard {
     display: grid;
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 3fr 4fr;
+  }
+
+  .leftCard {
+    order: 1;
+  }
+  .rightCard {
+    order: 2;
   }
 
   .quote {
@@ -561,7 +583,7 @@
     color: #293e40;
     top: 4.8rem;
   }
-  
+
   .reviewCard {
     position: relative;
     text-align: center;
@@ -570,7 +592,7 @@
     margin-bottom: 15px;
     margin-top: 15px;
   }
-  
+
   .reviewBy {
     position: relative;
     font-family: "Inter";
@@ -617,8 +639,7 @@
   }
 }
 
-@media only screen and (min-height: 400px) and (orientation: landscape){
-
+@media only screen and (min-height: 400px) and (orientation: landscape) {
   .outerCard {
     display: grid;
     grid-template-columns: 4fr 4fr;
@@ -647,11 +668,12 @@
     justify-content: center;
     top: 2rem;
   }
-
+  .quote {
+    top: 4rem;
+  }
 }
 
-@media only screen and (min-height: 600px) and (orientation: landscape){
-
+@media only screen and (min-height: 600px) and (orientation: landscape) {
   .outerCard {
     display: grid;
     grid-template-columns: 4fr 4fr;
@@ -679,10 +701,10 @@
   .text {
     position: relative;
     overflow-wrap: break-word;
-    top: 6%;
+    top: 9%;
     font-family: "Inter";
     font-style: normal;
-    font-size: 27px;
+    font-size: 25px;
     text-align: center;
     color: #293e40;
   }
@@ -701,7 +723,7 @@
     position: relative;
     font-family: "Inter";
     font-style: normal;
-    font-size: 30px;
+    font-size: 32px;
     color: #293e40;
     top: 5.5%;
   }
@@ -710,10 +732,9 @@
     position: relative;
     font-family: "Jacques Francois Shadow";
     font-style: normal;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     color: #293e40;
     top: 3rem;
   }
 }
-

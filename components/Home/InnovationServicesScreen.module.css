@@ -375,7 +375,7 @@
 
   .textContainer {
     font-weight: bold;
-    font-size: 3.4vw;
+    font-size: 2rem;
     padding: 0.5rem;
     color: rgb(86, 85, 85);
   }
@@ -384,18 +384,19 @@
     margin-top: 0.5em;
     margin-left: 1.5em;
     margin-right: 1.5em;
-    font-size: 1.5vw;
+    font-size: 1rem;
   }
   .btnStyle {
     background-color: black;
     color: white;
-    padding: 10px;
+    padding: 8px;
     margin-top: 1em;
     border-radius: 10px;
     font-size: 20px;
   }
+
   .imageStyle2 {
-    margin-top: 2.5em;
+    margin-top: 0.5em;
     margin-left: 0.5em;
     width: 3rem;
   }
@@ -411,7 +412,7 @@
   }
 
   .imageStyle5 {
-    margin-top: 2.5em;
+    margin-top: 1em;
     margin-right: 4.5em;
     width: 2.5rem;
   }
