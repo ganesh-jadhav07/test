@@ -60,15 +60,15 @@ function NavBar() {
           <h1
             style={{ color: `${textColor}` }}
             className={
-              "text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl "
+              "text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl 2xl:text-5xl "
             }
           >
             <img
               src={logo.src}
               alt="logo"
-              className="self-center w-2 h-2 sm:w-4 sm:h-5 md:w-5 lg:w-6 lg:h-6"
+              className="self-start w-2 h-2 sm:w-4 sm:h-5 md:w-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9"
             />
-            <p className="self-center text-[0.5rem] sm:text-base md:text-lg lg:text-xl">
+            <p className="self-center text-[0.5rem] sm:text-base md:text-lg lg:text-xl 2xl:text-4xl">
               Bluepineapple
             </p>
           </h1>
@@ -79,7 +79,7 @@ function NavBar() {
           {navdata.map((data) => (
             <li
               key={data.title}
-              className={`p-4 font-bold ${
+              className={`p-4 text-[0.5rem] sm:text-base md:text-lg lg:text-xl 2xl:text-2xl ${
                 route.pathname === data.navigation.path
                   ? "text-blue-700"
                   : "text-[#999999]"
