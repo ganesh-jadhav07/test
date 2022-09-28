@@ -16,6 +16,9 @@ function NavBar() {
   const count = useSelector((state)=> state.update.value);
   console.log('count nav: ', count);
 
+  const navdata = useSelector((state)=> state.navigation.value);
+  console.log('navData: ', navdata);
+
   const navList = [
     {
       name: "Home",
@@ -99,14 +102,14 @@ function NavBar() {
 
         {/* main navigation */}
         <ul style={{ color: `${textColor}` }} className="hidden lg:flex">
-          {navList.map((data) => (
+          {navdata.map((data) => (
             <li
-              key={data.name}
-              className={`p-4 font-bold ${
-                route.pathname === data.path ? "text-blue-700" : "text-[#999999]"
-              }`}
+              key={data.title}
+               className={`p-4 font-bold ${
+                route.pathname === data.navigation.path ? "text-blue-700" : "text-[#999999]"
+               }`}
             >
-              <Link href={data.path}>{data.name}</Link>
+              <Link href={data.navigation.path}>{data.title}</Link>
             </li>
           ))}
         </ul>
@@ -135,15 +138,15 @@ function NavBar() {
           }
         >
           <ul>
-            {navList.map((data) => (
+            {navdata.map((data) => (
               <li
-                key={data.name}
+                key={data.title}
                 onClick={handleNav}
-                className={`p-2 font-bold text-2xl ${
-                  route.pathname === data.path ? "text-blue-700" : "text-[#999999]"
-                }`}
+                // className={`p-2 font-bold text-2xl ${
+                //   route.pathname === data.navigation.path ? "text-blue-700" : "text-[#999999]"
+                // }`}
               >
-                <Link href={data.path}>{data.name}</Link>
+                {/* <Link href={data.navigation.path}>{data.title}</Link> */}
               </li>
             ))}
           </ul>
