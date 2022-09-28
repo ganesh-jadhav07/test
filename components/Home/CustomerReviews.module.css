@@ -92,7 +92,7 @@
 
 /* media queries for responsive design*/
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (orientation: portrait) {
   .outerCard {
     display: grid;
     grid-template-columns: 4fr 3fr;
@@ -116,10 +116,7 @@
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 30px;
-    color: #293e40;
     padding: 1rem;
   }
 
@@ -131,11 +128,8 @@
 
   .reviewBy {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 27px;
     text-align: center;
-    color: #293e40;
     bottom: 1.8rem;
     padding-top: 0.7rem;
   }
@@ -147,20 +141,14 @@
   .text {
     position: relative;
     overflow-wrap: break-word;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 23px;
     text-align: center;
-    color: #293e40;
   }
 
   .quote {
     position: relative;
-    font-family: "Jacques Francois Shadow";
-    font-style: normal;
     font-size: 80px;
     text-align: center;
-    color: #293e40;
     top: 3rem;
   }
 }
@@ -189,10 +177,7 @@
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 30px;
-    color: #293e40;
     padding: 0.5rem;
   }
 
@@ -204,11 +189,8 @@
 
   .reviewBy {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 27px;
     text-align: center;
-    color: #293e40;
     bottom: 1.5rem;
   }
 
@@ -219,20 +201,14 @@
   .text {
     position: relative;
     overflow-wrap: break-word;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 23px;
     text-align: center;
-    color: #293e40;
   }
 
   .quote {
     position: relative;
-    font-family: "Jacques Francois Shadow";
-    font-style: normal;
     font-size: 80px;
     text-align: center;
-    color: #293e40;
     top: 2.5rem;
   }
 }
@@ -253,11 +229,8 @@
   }
   .quote {
     position: relative;
-    font-family: "Jacques Francois Shadow";
-    font-style: normal;
     font-size: 52px;
     text-align: center;
-    color: #293e40;
     top: 2.5rem;
   }
 
@@ -288,29 +261,20 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 35px;
     text-align: center;
-    color: #293e40;
   }
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 39px;
-    color: #293e40;
     top: 0.3rem;
   }
 
   .reviewBy {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 39px;
     text-align: center;
-    color: #293e40;
     top: 0.4rem;
   }
 }
@@ -331,11 +295,8 @@
   }
   .quote {
     position: relative;
-    font-family: "Jacques Francois Shadow";
-    font-style: normal;
     font-size: 50px;
     text-align: center;
-    color: #293e40;
     padding-bottom: 0.4rem;
   }
 
@@ -359,29 +320,20 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 20px;
     text-align: center;
-    color: #293e40;
   }
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 24px;
-    color: #293e40;
     top: 0.5rem;
   }
 
   .reviewBy {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 22px;
     text-align: center;
-    color: #293e40;
     top: 0.8rem;
   }
 }
@@ -400,11 +352,8 @@
 
   .quote {
     position: relative;
-    font-family: "Jacques Francois Shadow";
-    font-style: normal;
     font-size: 40px;
     text-align: center;
-    color: #293e40;
     top: 3.5rem;
   }
 
@@ -444,29 +393,20 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 20px;
     text-align: center;
-    color: #293e40;
   }
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 26px;
-    color: #293e40;
     top: 1rem;
   }
 
   .reviewBy {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 26px;
     text-align: center;
-    color: #293e40;
     top: 1.5rem;
   }
 }
@@ -507,20 +447,14 @@
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 17px;
-    color: #293e40;
     top: 1rem;
   }
 
   .reviewBy {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 17px;
     text-align: center;
-    color: #293e40;
     top: 0rem;
   }
 
@@ -528,11 +462,8 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 14px;
     text-align: center;
-    color: #293e40;
   }
 
   .lists {
@@ -552,11 +483,8 @@
 
   .quote {
     position: relative;
-    font-family: "Jacques Francois Shadow";
-    font-style: normal;
     font-size: 40px;
     text-align: center;
-    color: #293e40;
     top: 2.5rem;
   }
 }
@@ -576,11 +504,8 @@
 
   .quote {
     position: relative;
-    font-family: "Jacques Francois Shadow";
-    font-style: normal;
     font-size: 40px;
     text-align: center;
-    color: #293e40;
     top: 4.8rem;
   }
 
@@ -595,20 +520,14 @@
 
   .reviewBy {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 20px;
     text-align: center;
-    color: #293e40;
     top: 2.4rem;
   }
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 24px;
-    color: #293e40;
     top: 1rem;
   }
 
@@ -631,11 +550,8 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 18px;
     text-align: center;
-    color: #293e40;
   }
 }
 
@@ -656,10 +572,7 @@
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 24px;
-    color: #293e40;
     top: 1rem;
   }
 
@@ -702,39 +615,27 @@
     position: relative;
     overflow-wrap: break-word;
     top: 9%;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 25px;
     text-align: center;
-    color: #293e40;
   }
 
   .reviewBy {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 30px;
     text-align: center;
-    color: #293e40;
     top: 1rem;
   }
 
   .reviewTitle {
     position: relative;
-    font-family: "Inter";
-    font-style: normal;
     font-size: 32px;
-    color: #293e40;
     top: 5.5%;
   }
 
   .quote {
     position: relative;
-    font-family: "Jacques Francois Shadow";
-    font-style: normal;
     font-size: 60px;
     text-align: center;
-    color: #293e40;
     top: 3rem;
   }
 }
