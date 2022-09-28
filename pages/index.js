@@ -17,18 +17,14 @@ import { HOMEPAGE } from "../lib/wordpress/api";
 import { navItems } from "../lib/Redux/navSlice";
 
 function Home(props) {
-  // console.log("***************");
-  console.log(props.all_Posts.navigations);
+  const [currentPage, setCurrentPage] = useState(0);
+
   const dispatch = useDispatch();
   const navigationData =props.all_Posts.navigations.nodes.map(data => data);
   console.log('navigationData: ', navigationData);
 
-  const [currentPage, setCurrentPage] = useState(0);
-   
-
-
   dispatch(navItems(navigationData))
-
+  
   useEffect(() => {
     dispatch(increment(currentPage));
   }, [currentPage]);
