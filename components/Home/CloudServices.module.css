@@ -3,7 +3,7 @@
   /* background-image: url("https://s3-alpha-sig.figma.com/img/0e1e/e3f9/4fc153fea9f692e479a9ef0c53748536?Expires=1664755200&Signature=azQLGfKQHOaQZiFno8zXs1f83NNTEsZ-S~Q3Q-6FGqMCxEbfAPuze7~gXTrYY1qWxdfmiI74uGPCZx5sa8pBsR~36RV40~MAJf7PrumT4DkVJjynRfQjaQK73OcaRUYL2jVM5cHxAWBZPgprldE3HF9OvYoFU2gXFBpFynmCwuasa9bC8AmPb5s-umZRHL5bd2QrnNSq6RPOzeEL33kwF4B9CF-OEsSTab3qRDMKQXbE3Wubfn9SvN0EkJTBVnOQ7Ge~V~j44gzvqkVEzUgCbwcJnreVAlMzgfVU96xgEkq2BX6gCkDmmAmoS0Tnv8jggv61P0kKG6rCXZ5rlEBLew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"); */
   background-size: cover;
   background-position: center;
-  padding-top: 50px;
+  padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
@@ -232,6 +232,103 @@
   }
 }
 
+@media only screen and (min-height: 400px) and (orientation: landscape) {
+  .section {
+    flex-direction: row;
+    padding-top: 40px;
+  }
+
+  .content {
+    padding-top: -50px;
+  }
+  .section1Title {
+    max-width: 687px;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .blueBlock {
+    margin-top: 5px;
+    width: 12px;
+    position: absolute;
+    left: 140px;
+  }
+
+  .section1Subtitle {
+    max-width: 750px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .section1Tagline {
+    padding-top: 10px;
+    max-width: 525px;
+    font-size: 1.4rem;
+    line-height: 1.25;
+  }
+
+  .section1Content {
+    padding-top: 10px;
+    max-width: 438px;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .btn {
+    margin-top: 10px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* width: 85px; */
+    font-size: 1rem;
+  }
+
+  .cloudSection {
+    margin-top: 7%;
+  }
+  .cloud {
+    height: 250px;
+    width: 250px;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    top: 110px;
+    width: 2rem;
+  }
+
+  .leftIcon {
+    left: -40px;
+  }
+
+  .rightIcon {
+    right: -40px;
+  }
+
+  .cloudContent {
+    height: 250px;
+    width: 250px;
+    transform: rotate(-45deg);
+  }
+
+  .cloudLogo {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .cloudLogo img {
+    width: 60px;
+  }
+
+  .cloudDescription {
+    margin-top: 15px;
+    padding: 5px;
+    font-size: 0.8rem;
+    line-height: 1.25;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .section {
     flex-direction: row;
@@ -280,6 +377,10 @@
     font-size: 1.25rem;
   }
 
+  .cloudSection {
+    margin-top: -1%;
+  }
+
   .cloud {
     margin-top: 15%;
     height: 350px;
@@ -324,7 +425,104 @@
   }
 }
 
-@media only screen and (max-width: 900px) and (orientation: portrait) {
+@media screen and (min-height: 600px) {
+  .content {
+    margin-top: -3%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .section {
+    padding-top: 10%;
+  }
+
+  .section1Title {
+    max-width: 687px;
+    font-size: 2.75rem;
+    line-height: 4rem;
+  }
+
+  .blueBlock {
+    width: 16px;
+    position: absolute;
+    left: 210px;
+  }
+
+  .section1Subtitle {
+    max-width: 712px;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+
+  .section1Tagline {
+    padding-top: 20px;
+    max-width: 625px;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .section1Content {
+    padding-top: 15px;
+    max-width: 538px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .btn {
+    margin-top: 20px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 1.5rem;
+  }
+
+  .cloudSection {
+    margin-top: 2%;
+  }
+  .cloud {
+    height: 310px;
+    width: 310px;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    top: 140px;
+    width: 2.2rem;
+  }
+
+  .leftIcon {
+    left: -50px;
+  }
+
+  .rightIcon {
+    right: -50px;
+  }
+
+  .cloudContent {
+    height: 310px;
+    width: 310px;
+    transform: rotate(-45deg);
+  }
+
+  .cloudLogo {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .cloudLogo img {
+    width: 60px;
+  }
+
+  .cloudDescription {
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 800px) and (orientation: portrait) {
   .section {
     padding-top: 12%;
   }
@@ -412,73 +610,76 @@
     line-height: 2rem;
   }
 }
-/* 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+
+@media only screen and (min-width: 900px) and (orientation: portrait) {
+  .section {
+    padding-top: 12%;
+  }
+
   .section1Title {
-    position: relative;
-    max-width: 478px;
-    font-size: 2.5rem;
-    line-height: 3rem;
+    max-width: 687px;
+    font-size: 2.75rem;
+    line-height: 4rem;
   }
 
   .blueBlock {
-    width: 12px;
+    width: 16px;
     position: absolute;
-    left: 190px;
+    left: 210px;
   }
+
   .section1Subtitle {
-    max-width: 635px;
-    font-size: 1.125rem;
-    line-height: 1.5;
+    max-width: 712px;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
   }
 
   .section1Tagline {
-    max-width: 624px;
-    font-size: 1.5rem;
-    line-height: 1.725rem;
+    padding-top: 20px;
+    max-width: 625px;
+    font-size: 2rem;
+    line-height: 2.2rem;
   }
 
   .section1Content {
-    max-width: 463px;
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: 400;
+    padding-top: 15px;
+    max-width: 538px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 
   .btn {
-    margin-top: 10px;
-    border-radius: 5px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 1rem;
+    margin-top: 20px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 1.5rem;
   }
 
   .cloud {
-    position: relative;
+    margin-top: 10%;
     height: 350px;
     width: 350px;
   }
 
   .leftIcon,
   .rightIcon {
-    position: absolute;
     top: 150px;
     width: 3rem;
-    color: #999999;
   }
 
   .leftIcon {
-    left: -50px;
+    left: -60px;
   }
 
   .rightIcon {
-    right: -50px;
+    right: -60px;
   }
 
   .cloudContent {
     height: 350px;
     width: 350px;
+    transform: rotate(-45deg);
   }
 
   .cloudLogo {
@@ -492,9 +693,9 @@
   }
 
   .cloudDescription {
+    margin-top: 25px;
     padding: 5px;
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
   }
-} */
+}
