@@ -41,7 +41,7 @@ function Home(props) {
       <CloudServices services={props.all_Posts} />
       <InnovationServicesScreen innovation={props.all_Posts} />
       <Product products={props.all_Posts} />
-      {/* <CustomerReviews reviews={props.all_Posts} /> */}
+      <CustomerReviews reviews={props.all_Posts} />
     </ReactPageScroller>
   );
 }

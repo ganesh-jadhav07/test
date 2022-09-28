@@ -10,6 +10,9 @@ import { useRouter } from "next/router";
 function Product(props) {
   console.log("Data ", props.products);
 
+  const backgroundImage =
+    props.products.page.homepage_customfields.section3Bg.sourceUrl;
+
   const products = props.products.products.nodes;
 
   const titleContent = props.products.page.homepage_customfields;
@@ -64,7 +67,12 @@ function Product(props) {
         </div>
       </div>
       {/* Body content */}
-      <div className={`${styles.bodyContent}  px-6`}>
+      <div
+        className={`${styles.bodyContent}  px-6`}
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+        }}
+      >
         {/* Diamond card */}
         <div className={`${styles.firstContent} `}>
           {/* left arrow Preview previous product */}
