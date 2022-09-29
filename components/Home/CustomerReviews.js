@@ -8,6 +8,7 @@ function CustomerReviews(props) {
   const img = props.reviews.page.homepage_customfields.section4Bg.sourceUrl;
   let blueDiamond = props.reviews.post.icons.blueDiamond.sourceUrl;
   let greyDiamond = props.reviews.post.icons.greyDiamond.sourceUrl;
+  let quotes = props.reviews.post.icons.openDoubleQuotes.sourceUrl;
   const [currentReview, setCurrentReview] = useState(0);
   const [pause, setPause] = useState(false);
 
@@ -17,18 +18,18 @@ function CustomerReviews(props) {
     setCurrentReview(count);
   };
 
-  useEffect(() => {
-    const next = setInterval(() => {
-      if (
-        currentReview < (data !== null ? data.length : 0) &&
-        pause === false
-      ) {
-        handleNext();
-      }
-    }, 3000);
+  // useEffect(() => {
+  //   const next = setInterval(() => {
+  //     if (
+  //       currentReview < (data !== null ? data.length : 0) &&
+  //       pause === false
+  //     ) {
+  //       handleNext();
+  //     }
+  //   }, 3000);
 
-    return () => clearInterval(next);
-  });
+  //   return () => clearInterval(next);
+  // });
 
   return (
     <div className={style.outerCard}>
@@ -67,7 +68,8 @@ function CustomerReviews(props) {
             </div>
           </div>
 
-          <p className={style.quote}>“</p>
+          {/* <p className={style.quote}>“</p> */}
+          <img src={quotes} className={style.quote} />
           <p className={style.reviewBy}>
             {data === null || undefined
               ? "Data Loading"
