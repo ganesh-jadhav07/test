@@ -37,8 +37,7 @@ function Home(props) {
       pageOnChange={handlePageChange}
       onBeforePageScroll={handleBeforePageChange}
       customPageNumber={currentPage}
-      animationTimer={2000}
-    >
+      animationTimer={2000}>
       <CloudServices services={props.all_Posts} />
       <InnovationServicesScreen innovation={props.all_Posts} />
       <Product products={props.all_Posts} />
@@ -51,7 +50,6 @@ export default Home;
 
 export async function getStaticProps() {
   const response = await dataFetcher(HOMEPAGE);
-  console.log(response);
   const all_Posts = response.data;
   // console.log("All posts...  " + all_Posts);
   return {
