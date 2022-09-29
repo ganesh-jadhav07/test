@@ -8,12 +8,21 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 
 function Product(props) {
-  console.log("Data ", props.products);
+  // const [width, setWidth] = useState(window.innerWidth);
+  // const updateDimensions = () => {
+  //   setWidth(window.innerWidth);
+  // };
+  // useEffect(() => {
+  //   window.addEventListener("resize", updateDimensions);
+  //   return () => window.removeEventListener("resize", updateDimensions);
+  // }, []);
 
   const backgroundImage =
     props.products.page.homepage_customfields.section3Bg.sourceUrl;
 
   const products = props.products.products.nodes;
+
+  console.log(products);
 
   const titleContent = props.products.page.homepage_customfields;
   console.log("Tititle Content: ", titleContent);
