@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 //logo import
 import logo from "../../public/bp.png";
+import bplogo from "../../public/images/bplogo.png";
 
 //icon imports
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -48,10 +49,10 @@ function NavBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 z-10 w-full p-4 bg-opacity-30 sm:p-2 "
+      className="fixed top-0 left-0 z-10 w-full p-4 bg-opacity-30 sm:p-4 "
       style={{
         backgroundColor: `${route.pathname === "/Contact" ? "white" : color}`,
-        opacity: `${route.pathname === "/Contact" ? 0.8 : opacity}`,
+        opacity: `${route.pathname === "/Contact" ? 1 : opacity}`,
       }}
     >
       {/* logo section */}
@@ -64,13 +65,13 @@ function NavBar() {
             }
           >
             <img
-              src={logo.src}
+              src={bplogo.src}
               alt="logo"
-              className="self-start w-2 h-2 sm:w-4 sm:h-5 md:w-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9"
+              className="self-start h-8 w-44 sm:w-44 sm:h-8 md:w-44 lg:w-44 lg:h-8 xl:w-48 xl:h-9 2xl:w-52 2xl:h-10"
             />
-            <p className="self-center text-[0.5rem] sm:text-base md:text-lg lg:text-xl 2xl:text-4xl">
+            {/* <p className="self-center text-[0.5rem] sm:text-base md:text-lg lg:text-xl 2xl:text-4xl">
               Bluepineapple
-            </p>
+            </p> */}
           </h1>
         </Link>
 
@@ -79,7 +80,7 @@ function NavBar() {
           {navdata.map((data) => (
             <li
               key={data.title}
-              className={`p-4 text-[0.5rem] sm:text-base md:text-lg lg:text-xl 2xl:text-2xl ${
+              className={`p-4 text-[0.5rem] hover:text-blue-700 sm:text-base md:text-lg lg:text-xl 2xl:text-2xl ${
                 route.pathname === data.navigation.path
                   ? "text-blue-700"
                   : "text-[#999999]"
@@ -99,9 +100,9 @@ function NavBar() {
         >
           {/* Hamburger Icons */}
           {nav ? (
-            <XMarkIcon className="w-5 text-[#999999]" />
+            <XMarkIcon className="w-7 text-[#999999]" />
           ) : (
-            <Bars3Icon className="w-5 text-[#999999]" />
+            <Bars3Icon className="w-7 text-[#999999]" />
           )}
         </div>
 
@@ -109,8 +110,8 @@ function NavBar() {
         <div
           className={
             nav
-              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-              : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 "
+              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-screen h-screen bg-black text-center ease-in duration-500"
+              : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-500 "
           }
         >
           <ul>
@@ -118,7 +119,7 @@ function NavBar() {
               <li
                 key={data.title}
                 onClick={handleNav}
-                className={`p-2 font-bold text-2xl ${
+                className={`p-4 font-bold text-2xl ${
                   route.pathname === data.navigation.path
                     ? "text-blue-700"
                     : "text-[#999999]"

@@ -1,5 +1,4 @@
 import React from "react";
-import mailLogo from "../../public/images/home/mail1.png";
 import { CheckIcon } from "@heroicons/react/24/solid";
 import styles from "./ContactSectionOne.module.css";
 
