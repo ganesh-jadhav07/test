@@ -100,7 +100,6 @@ const CloudServices = (props) => {
         </div>
       </div>
     </div>
-    // <div className={classes.section}>Hiii...</div>
   );
 };
 

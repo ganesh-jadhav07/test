@@ -53,8 +53,7 @@ function NavBar() {
       style={{
         backgroundColor: `${route.pathname === "/Contact" ? "white" : color}`,
         opacity: `${route.pathname === "/Contact" ? 1 : opacity}`,
-      }}
-    >
+      }}>
       {/* logo section */}
       <div className="max-w-[1240px] m-auto flex justify-between items-center text-[#999999]">
         <Link href="/">
@@ -62,8 +61,7 @@ function NavBar() {
             style={{ color: `${textColor}` }}
             className={
               "text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl 2xl:text-5xl "
-            }
-          >
+            }>
             <img
               src={bplogo.src}
               alt="logo"
@@ -84,8 +82,7 @@ function NavBar() {
                 route.pathname === data.navigation.path
                   ? "text-blue-700"
                   : "text-[#999999]"
-              }`}
-            >
+              }`}>
               <Link href={data.navigation.path}>{data.title}</Link>
             </li>
           ))}
@@ -96,8 +93,7 @@ function NavBar() {
           role="button"
           tabIndex={-1}
           onClick={handleNav}
-          className="z-10 block lg:hidden"
-        >
+          className="z-10 block lg:hidden">
           {/* Hamburger Icons */}
           {nav ? (
             <XMarkIcon className="w-7 text-[#999999] rotate-45 translate-x-9 translate-y-9 ease-in-out duration-500" />
@@ -112,8 +108,7 @@ function NavBar() {
             nav
               ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-screen h-screen bg-white text-center ease-in duration-500"
               : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-500 "
-          }
-        >
+          }>
           <ul>
             {navdata.map((data) => (
               <li
@@ -123,8 +118,7 @@ function NavBar() {
                   route.pathname === data.navigation.path
                     ? "text-blue-700"
                     : "text-[#999999]"
-                }`}
-              >
+                }`}>
                 <Link href={data.navigation.path}>{data.title}</Link>
               </li>
             ))}
