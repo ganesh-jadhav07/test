@@ -1,66 +1,34 @@
-import React, { useState, useEffect,useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 
 //logo import
 import logo from "../../public/bp.png";
+import bplogo from "../../public/images/bplogo.png";
 
 //icon imports
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-
-
 function NavBar() {
-  
-  const count = useSelector((state)=> state.update.value);
-  console.log('count nav: ', count);
-
-  const navList = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "Services",
-      path: "/Services",
-    },
-    {
-      name: "Innovation",
-      path: "/Innovation",
-    },
-    {
-      name: "About",
-      path: "/About",
-    },
-    {
-      name: "Careers",
-      path: "/Careers",
-    },
-    {
-      name: "Blog",
-      path: "/Blog",
-    },
-    {
-      name: "Contact",
-      path: "/Contact",
-    },
-  ];
-
   const route = useRouter();
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("black");
   const [textColor, setTextColor] = useState("#999999");
   const [opacity, setOpacity] = useState("1");
 
+  //useSelector for accessing managing state of full PageScroller
+  const count = useSelector((state) => state.update.value);
+
+  //useSelector for accessing managing state of navigation Links
+  const navdata = useSelector((state) => state.navigation.value);
+
   const handleNav = () => {
     setNav(!nav);
   };
 
-
   //use Effect for changing color of navigation while scrolling
   useEffect(() => {
-    
     document.body.style.overflow = nav ? "hidden" : "auto";
 
     //function for changing color of nav
@@ -78,35 +46,47 @@ function NavBar() {
     // window.addEventListener("scroll", changeColor);
     changeColor();
   });
-  
 
   return (
     <div
-      className="fixed top-0 left-0 z-10 w-full p-4 bg-opacity-30 sm:p-2 "
-      style={{ backgroundColor: `${route.pathname === '/Contact'?'white':color}`, opacity: `${route.pathname === '/Contact'?0.8:opacity}` }}
+      className="fixed top-0 left-0 z-10 w-full p-2 bg-opacity-30 sm:p-2 "
+      style={{
+        backgroundColor: `${route.pathname === "/Contact" ? "white" : color}`,
+        opacity: `${route.pathname === "/Contact" ? 1 : opacity}`,
+      }}
     >
       {/* logo section */}
       <div className="max-w-[1240px] m-auto flex justify-between items-center text-[#999999]">
         <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
-            className={"text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl "}
+            className={
+              "text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl 2xl:text-5xl "
+            }
           >
-            <img src={logo.src} alt="logo" className="self-center w-2 h-2 sm:w-4 sm:h-5 md:w-5 lg:w-6 lg:h-6"/>
-            <p className="self-center text-[0.5rem] sm:text-base md:text-lg lg:text-xl">Bluepineapple</p>
+            <img
+              src={bplogo.src}
+              alt="logo"
+              className="self-start h-8 w-44 sm:w-44 sm:h-8 md:w-44 lg:w-44 lg:h-8 xl:w-48 xl:h-9 2xl:w-52 2xl:h-10"
+            />
+            {/* <p className="self-center text-[0.5rem] sm:text-base md:text-lg lg:text-xl 2xl:text-4xl">
+              Bluepineapple
+            </p> */}
           </h1>
         </Link>
 
         {/* main navigation */}
         <ul style={{ color: `${textColor}` }} className="hidden lg:flex">
-          {navList.map((data) => (
+          {navdata.map((data) => (
             <li
-              key={data.name}
-              className={`p-4 font-bold ${
-                route.pathname === data.path ? "text-blue-700" : "text-[#999999]"
+              key={data.title}
+              className={`p-4 text-[0.5rem] hover:text-blue-700 sm:text-base md:text-lg lg:text-xl 2xl:text-2xl ${
+                route.pathname === data.navigation.path
+                  ? "text-blue-700"
+                  : "text-[#999999]"
               }`}
             >
-              <Link href={data.path}>{data.name}</Link>
+              <Link href={data.navigation.path}>{data.title}</Link>
             </li>
           ))}
         </ul>
@@ -120,9 +100,9 @@ function NavBar() {
         >
           {/* Hamburger Icons */}
           {nav ? (
-            <XMarkIcon className="w-5 text-[#999999]" />
+            <XMarkIcon className="w-7 text-[#999999] rotate-45 translate-x-9 translate-y-9 ease-in-out duration-500" />
           ) : (
-            <Bars3Icon className="w-5 text-[#999999]" />
+            <Bars3Icon className="w-7 text-[#999999] -rotate-45 translate-x-9 -translate-y-9 ease-in-out duration-500" />
           )}
         </div>
 
@@ -130,20 +110,22 @@ function NavBar() {
         <div
           className={
             nav
-              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-              : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 "
+              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-screen h-screen bg-white text-center ease-in duration-500"
+              : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-500 "
           }
         >
           <ul>
-            {navList.map((data) => (
+            {navdata.map((data) => (
               <li
-                key={data.name}
+                key={data.title}
                 onClick={handleNav}
-                className={`p-2 font-bold text-2xl ${
-                  route.pathname === data.path ? "text-blue-700" : "text-[#999999]"
+                className={`p-4 font-bold text-2xl ${
+                  route.pathname === data.navigation.path
+                    ? "text-blue-700"
+                    : "text-[#999999]"
                 }`}
               >
-                <Link href={data.path}>{data.name}</Link>
+                <Link href={data.navigation.path}>{data.title}</Link>
               </li>
             ))}
           </ul>

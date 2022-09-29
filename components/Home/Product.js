@@ -5,14 +5,13 @@ import styles from "./Product.module.css";
 // icons import
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
-// api imports
-import dataFetcher from "../../lib/wordpress/dataFetcher";
-import { PRODUCTS } from "../../lib/wordpress/api";
-
-import DiamondDesign from "../../public/images/home/DiamondDesign.png";
+import { useRouter } from "next/router";
 
 function Product(props) {
   console.log("Data ", props.products);
+
+  const backgroundImage =
+    props.products.page.homepage_customfields.section3Bg.sourceUrl;
 
   const products = props.products.products.nodes;
 
@@ -20,28 +19,8 @@ function Product(props) {
   console.log("Tititle Content: ", titleContent);
 
   const greenGrayDiamondIcons = props.products.post.icons;
-  console.log(props.post);
 
-  // useEffect(() => {
-  //   // fetch content from backend
-  //   async function getProducts() {
-  //     const response = await dataFetcher(PRODUCTS);
-  //     const all_Posts = response.data;
-  //     const content = all_Posts;
-
-  //     // set title content
-  //     setTitleContent(content.page.homepage_customfields);
-  //     console.log("Content: ", content);
-
-  //     // set products
-  //     setProducts(content.products.nodes);
-
-  //     // set green,gray diamond icons
-  //     setIcons(content.post.icons);
-  //   }
-
-  //   getProducts();
-  // }, []);
+  const router = useRouter();
 
   const [currentProduct, setCurrentProduct] = useState(0);
 
@@ -75,7 +54,8 @@ function Product(props) {
     <div className={`h-screen ${styles.bgImage}`}>
       {/* Title section */}
       <div
-        className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}>
+        className={`${styles.headerTopContent}  flex justify-center w-full pt-4`}
+      >
         <div className={`${styles.titleContent}  flex flex-col items-center `}>
           <span className={`${styles.title} flex flex-row items-center`}>
             {diamondLogo}
@@ -87,7 +67,12 @@ function Product(props) {
         </div>
       </div>
       {/* Body content */}
-      <div className={`${styles.bodyContent}  px-6`}>
+      <div
+        className={`${styles.bodyContent}  px-6`}
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+        }}
+      >
         {/* Diamond card */}
         <div className={`${styles.firstContent} `}>
           {/* left arrow Preview previous product */}
@@ -101,20 +86,26 @@ function Product(props) {
               onClick={handlePrev}
             />
             <div
-              className={`${styles.squareDiamondBody}  grid grid-cols-1 justify-evenly `}>
+              className={`${styles.squareDiamondBody}  grid grid-cols-1 justify-evenly `}
+            >
               <div className="flex items-center justify-center">
                 <img
-                  src="https://s3-alpha-sig.figma.com/img/d306/1d86/284cb069f62e8fb441c140e46f8bcae7?Expires=1664150400&Signature=fwubHvqif68DftC7fj~06UI3TGc4VDlZx1MTccOZt48hP5Za3kfFfUu8QBz1ClYmfGUY7QyQ1GycB4Co4yLO7aNQOu99acmuanM6MsLtTd~Ro-T4aBtPWzt59ciRShWDr47w0eoAKOeR~4FMlWQ5wtGHVAF7DfLhXdciBsA60z3D51S~8K1lxqTPVQnZr2P0nW2mEFkC1I4m8GvEShOMDItu8JA208EKmSeI2Kxa5mbpYbbI-lb9RhuqAAkV-nCw4MmqZlvDLkwX10jsvRsdko1kXRrL0oNisHWPEiT5xoaRLmY1Y2sjiNANCpu1E1kvSExqhnTK0iM2j0-6wHlb5w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                  src={products[currentProduct].products.logo.sourceUrl}
                   className={`${styles.greenFolderImage}`}
                 />
               </div>
               <div
-                className={`${styles.diamondParagraph} text-center flex items-center overflow-hidden`}>
+                className={`${styles.diamondParagraph} text-center flex items-center overflow-hidden`}
+              >
                 {products[currentProduct].products.overview}
               </div>
               <span
-                className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}>
-                <button className={`${styles.learnMoreButton}`}>
+                className={`${styles.diamondBottom} text-center flex flex-col items-center justify-around `}
+              >
+                <button
+                  className={`${styles.learnMoreButton}`}
+                  onClick={() => router.push("./Services")}
+                >
                   {titleContent.section3Buttondata}
                 </button>
                 <ul className="flex w-20 row justify-evenly">
@@ -149,7 +140,8 @@ function Product(props) {
         </div>
         {/* right side content */}
         <div
-          className={`${styles.secondContent}  flex items-center justify-end `}>
+          className={`${styles.secondContent}  flex items-center justify-end `}
+        >
           <div className={`${styles.secondBody}  `}>
             {diamondLogo}
             <div className={`${styles.firstParagraph}`}>
