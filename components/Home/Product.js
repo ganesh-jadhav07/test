@@ -4,7 +4,6 @@ import styles from "./Product.module.css";
 
 // icons import
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-
 import { useRouter } from "next/router";
 
 function Product(props) {

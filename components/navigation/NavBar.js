@@ -49,23 +49,23 @@ function NavBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 z-10 w-full p-2 bg-opacity-30 sm:p-2 "
+      className="fixed top-0 left-0 z-10 w-full p-1 transition duration-1000 ease-in-out"
       style={{
         backgroundColor: `${route.pathname === "/Contact" ? "white" : color}`,
         opacity: `${route.pathname === "/Contact" ? 1 : opacity}`,
       }}>
       {/* logo section */}
-      <div className="max-w-[1240px] m-auto flex justify-between items-center text-[#999999]">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center text-[#999999] ml-0">
         <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
             className={
-              "text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl 2xl:text-5xl "
+              "text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl 2xl:text-4xl "
             }>
             <img
               src={bplogo.src}
               alt="logo"
-              className="self-start h-8 w-44 sm:w-44 sm:h-8 md:w-44 lg:w-44 lg:h-8 xl:w-48 xl:h-9 2xl:w-52 2xl:h-10"
+              className="self-start h-8 ml-0 w-44 sm:w-44 sm:h-8 md:w-44 lg:w-44 lg:h-8 xl:w-48 xl:h-9 2xl:w-48 2xl:h-10"
             />
             {/* <p className="self-center text-[0.5rem] sm:text-base md:text-lg lg:text-xl 2xl:text-4xl">
               Bluepineapple
@@ -78,7 +78,7 @@ function NavBar() {
           {navdata.map((data) => (
             <li
               key={data.title}
-              className={`p-4 text-[0.5rem] hover:text-blue-700 sm:text-base md:text-lg lg:text-xl 2xl:text-2xl ${
+              className={`p-4 text-[0.5rem] hover:text-blue-700 sm:text-base md:text-lg lg:text-xl 2xl:text-xl ${
                 route.pathname === data.navigation.path
                   ? "text-blue-700"
                   : "text-[#999999]"

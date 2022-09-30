@@ -1,5 +1,5 @@
 .backgroundContainer {
-  background-color: #f2fff6;
+  background-color: #ffffff;
   text-align: center;
 }
 .gridWrapper {
@@ -59,7 +59,7 @@
 
 @media only screen and (min-width: 320px) and (orientation: portrait) {
   .backgroundContainer {
-    background-color: #f2fff6;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
   }
@@ -120,7 +120,7 @@
 
 @media only screen and (min-width: 520px) and (orientation: portrait) {
   .backgroundContainer {
-    background-color: #f2fff6;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
   }
@@ -187,7 +187,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .backgroundContainer {
-    background-color: #f2fff6;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
   }
@@ -247,7 +247,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .backgroundContainer {
-    background-color: #f2fff6;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
   }
@@ -304,7 +304,7 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .backgroundContainer {
-    background-color: #f2fff6;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
   }
@@ -359,9 +359,10 @@
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+
 @media only screen and (min-width: 1200px) {
   .backgroundContainer {
-    background-color: #f2fff6;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
   }
@@ -415,5 +416,65 @@
     margin-top: 1em;
     margin-right: 4.5em;
     width: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0 12%;
+    height: auto;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: 3.4rem;
+    padding: 0.5rem;
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {
+    margin-top: 0.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    font-size: 1.3rem;
+  }
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin-top: 1em;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  .imageStyle2 {
+    margin-top: 0.5em;
+    margin-left: -1.5em;
+    width: 4rem;
+  }
+  .imageStyle3 {
+    margin-top: 0.5em;
+    width: 2.5rem;
+    margin-left: 4em;
+  }
+  .imageStyle4 {
+    margin-top: 0.5em;
+    width: 2.5rem;
+    margin-right: 2.5em;
+  }
+
+  .imageStyle5 {
+    margin-top: 1em;
+    margin-left: 4.5em;
+    margin-right: 0;
+    width: 4rem;
   }
 }
