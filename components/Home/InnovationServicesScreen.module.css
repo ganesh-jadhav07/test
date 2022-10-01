@@ -66,7 +66,6 @@
   .gridWrapper {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 15px;
     height: auto;
     /* z-index: 2; */
   }
@@ -74,47 +73,106 @@
   .textContainer {
     font-weight: bold;
     font-size: large;
-    padding: 0.3rem;
+    margin-top: -10%;
+    /* padding: 0.rem; */
     color: rgb(86, 85, 85);
   }
 
   .textContent {
-    margin-top: 1em;
     margin-left: 1.5em;
     margin-right: 1.5em;
-    font-size: small;
+    font-size: 0.8rem;
   }
 
   .btnStyle {
     background-color: black;
     color: white;
-    padding: 10px;
+    padding: 5px;
     margin-top: 1em;
     margin-left: 0.2em;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .imageStyle2 {
-    margin-top: 3.5em;
-    margin-left: 0.5em;
+    /* margin-top: 3.5em; */
+    margin-left: 0em;
     width: 1.5rem;
   }
   .imageStyle3 {
-    margin-top: 0.5em;
+    /* margin-top: 0.5em; */
     width: 0.9rem;
-    margin-left: 2em;
+    margin-left: 1em;
   }
   .imageStyle4 {
-    margin-top: 0.5em;
-    margin-right: 2em;
+    /* margin-top: 0.5em; */
+    margin-right: 0em;
     width: 0.8rem;
   }
 
   .imageStyle5 {
-    margin-top: 3.5em;
-    margin-right: 2em;
+    /* margin-top: 3.5em; */
+    margin-right: 1em;
     width: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 410px) and (orientation: portrait) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: large;
+    margin-top: -10%;
+    padding: 0.3rem;
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {
+    margin: 2.4%;
+    font-size: 1rem;
+  }
+
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-top: 1em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .imageStyle2 {
+    margin-top: 3.5em;
+    margin-left: 0em;
+    width: 1.6rem;
+  }
+  .imageStyle3 {
+    margin-top: 0.5em;
+    width: 1rem;
+    margin-left: 1em;
+  }
+  .imageStyle4 {
+    margin-top: 0.5em;
+    margin-right: 0em;
+    width: 1rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 3.5em;
+    margin-right: 1em;
+    width: 1.6rem;
   }
 }
 
@@ -140,7 +198,7 @@
   }
 
   .textContent {
-    margin-top: 1em;
+    margin-top: 0em;
     margin-left: 1.5em;
     margin-right: 1.5em;
     font-size: large;
@@ -150,7 +208,7 @@
     background-color: black;
     color: white;
     padding: 10px;
-    margin-top: 1em;
+    margin-top: 0em;
     margin-left: 0.2em;
     border-radius: 8px;
     font-size: 18px;
@@ -178,11 +236,6 @@
     width: 1.2rem;
   }
 }
-
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {
- 
-} */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -261,16 +314,17 @@
 
   .textContainer {
     font-weight: bold;
-    font-size: x-large;
+    font-size: xx-large;
     padding: 0.5rem;
     color: rgb(86, 85, 85);
+    margin-top: -4%;
   }
 
   .textContent {
     /* margin-top: 0.5em; */
     margin-left: 1em;
     margin-right: 1em;
-    font-size: large;
+    font-size: x-large;
   }
   .btnStyle {
     background-color: black;
@@ -298,6 +352,63 @@
     margin-top: 3.5em;
     margin-right: 0.5em;
     width: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 9px;
+    height: auto;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 0.5rem;
+    color: rgb(86, 85, 85);
+    margin-top: -4%;
+  }
+
+  .textContent {
+    /* margin-top: 0.5em; */
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: xx-large;
+  }
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin-top: 0.3em;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  .imageStyle2 {
+    margin-top: 8.5em;
+    margin-left: 0.5em;
+    width: 2rem;
+  }
+  .imageStyle3 {
+    margin-top: 0.5em;
+    width: 1.2rem;
+  }
+  .imageStyle4 {
+    margin-top: 0.5em;
+    width: 1rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 8.5em;
+    margin-right: 0.5em;
+    width: 2rem;
   }
 }
 
@@ -369,14 +480,15 @@
   .gridWrapper {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    padding: 0 8%;
     height: auto;
     /* z-index: 2; */
   }
 
   .textContainer {
+    margin-top: 0%;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 0.5rem;
     color: rgb(86, 85, 85);
   }
@@ -385,7 +497,7 @@
     margin-top: 0.5em;
     margin-left: 1.5em;
     margin-right: 1.5em;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .btnStyle {
     background-color: black;
@@ -398,24 +510,25 @@
 
   .imageStyle2 {
     margin-top: 0.5em;
-    margin-left: 0.5em;
-    width: 3rem;
+    margin-left: -1.5em;
+    width: 4rem;
   }
   .imageStyle3 {
     margin-top: 0.5em;
-    width: 2rem;
-    margin-left: 2em;
+    width: 1.8rem;
+    margin-left: 4em;
   }
   .imageStyle4 {
     margin-top: 0.5em;
-    width: 1.8rem;
+    width: 2rem;
     margin-right: 2.5em;
   }
 
   .imageStyle5 {
     margin-top: 1em;
-    margin-right: 4.5em;
-    width: 2.5rem;
+    margin-left: 4.5em;
+    margin-right: 0;
+    width: 4rem;
   }
 }
 
@@ -444,15 +557,15 @@
     margin-top: 0.5em;
     margin-left: 1.5em;
     margin-right: 1.5em;
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
   .btnStyle {
     background-color: black;
     color: white;
-    padding: 8px;
+    padding: 15px;
     margin-top: 1em;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 
   .imageStyle2 {
@@ -476,5 +589,306 @@
     margin-left: 4.5em;
     margin-right: 0;
     width: 4rem;
+  }
+}
+
+/* media queries for height */
+@media only screen and (min-height: 300px) and (orientation: landscape) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    margin-top: -3%;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: medium;
+    margin-top: -5%;
+    /* padding: 0.rem; */
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {  
+
+    font-size: 0.8rem;
+  }
+
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-top: 0em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .imageStyle2 {
+    margin-top: 0em;
+    margin-left: 0em;
+    width: 1.5rem;
+  }
+  .imageStyle3 {
+    /* margin-top: 0.5em; */
+    width: 0.9rem;
+    margin-left: 1em;
+  }
+  .imageStyle4 {
+    /* margin-top: 0.5em; */
+    margin-right: 0em;
+    width: 0.8rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0em;
+    margin-right: 1em;
+    width: 1.5rem;
+  }
+}
+
+@media only screen and (min-height: 410px) and (orientation: landscape) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    margin-top: -3%;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: -4%;
+    /* padding: 0.rem; */
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {  
+    font-size: 0.8rem;
+  }
+
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-top: 1em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .imageStyle2 {
+    margin-top: 0em;
+    margin-left: 0em;
+    width: 1.5rem;
+  }
+  .imageStyle3 {
+    /* margin-top: 0.5em; */
+    width: 0.9rem;
+    margin-left: 1em;
+  }
+  .imageStyle4 {
+    /* margin-top: 0.5em; */
+    margin-right: 0em;
+    width: 0.8rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0em;
+    margin-right: 1em;
+    width: 1.5rem;
+  }
+}
+
+@media only screen and (min-height: 600px) and (orientation: landscape) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    margin-top: -1%;
+    margin: 0 0%;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 0%;
+    /* padding: 0.rem; */
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {  
+    font-size: 1.2rem;
+  }
+
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-top: 0.5em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .imageStyle2 {
+    margin-top: 0em;
+    margin-left: 0em;
+    width: 1.8rem;
+  }
+  .imageStyle3 {
+    /* margin-top: 0.5em; */
+    width: 1.2rem;
+    margin-left: 2em;
+  }
+  .imageStyle4 {
+    /* margin-top: 0.5em; */
+    margin-right: 0em;
+    width: 1.2rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0em;
+    margin-right: 1em;
+    width: 1.8rem;
+  }
+}
+
+@media only screen and (min-height: 800px) and (orientation: landscape) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    margin-top: -1%;
+    margin: 0 10%;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 2%;
+    /* padding: 0.rem; */
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {  
+    font-size: 1rem;
+  }
+
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 1em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
+
+  .imageStyle2 {
+    margin-top: 0em;
+    margin-left: 0em;
+    width: 1.8rem;
+  }
+  .imageStyle3 {
+    /* margin-top: 0.5em; */
+    width: 1.2rem;
+    margin-left: 2em;
+  }
+  .imageStyle4 {
+    /* margin-top: 0.5em; */
+    margin-right: 0em;
+    width: 1.2rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0em;
+    margin-right: 1em;
+    width: 1.8rem;
+  }
+}
+
+@media only screen and (min-height: 900px) and (orientation: landscape) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    margin-top: -1%;
+    margin: 0 0%;
+    padding: 1%;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: xxx-large;
+    margin-top: 2%;
+    /* padding: 0.rem; */
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {  
+    font-size: 1.5rem;
+  }
+
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 1em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
+
+  .imageStyle2 {
+    margin-top: 0em;
+    margin-left: 0em;
+    width: 3.5rem;
+  }
+  .imageStyle3 {
+    /* margin-top: 0.5em; */
+    width: 2rem;
+    margin-left: 2em;
+  }
+  .imageStyle4 {
+    /* margin-top: 0.5em; */
+    margin-right: 0em;
+    width: 2rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0em;
+    margin-right: 1em;
+    width: 3.5rem;
   }
 }

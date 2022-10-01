@@ -49,7 +49,7 @@ function NavBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 z-10 w-full p-1 transition duration-1000 ease-in-out"
+      className="fixed top-0 left-0 z-10 w-full p-2 transition duration-1000 ease-in-out"
       style={{
         backgroundColor: `${route.pathname === "/Contact" ? "white" : color}`,
         opacity: `${route.pathname === "/Contact" ? 0.9: opacity}`,
@@ -106,7 +106,7 @@ function NavBar() {
         <div
           className={
             nav
-              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-1/2 h-screen bg-white text-center ease-in duration-500"
+              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-screen h-screen bg-white text-center ease-in duration-500"
               : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-500 "
           }>
           <ul>
@@ -114,7 +114,7 @@ function NavBar() {
               <li
                 key={data.title}
                 onClick={handleNav}
-                className={`p-4 font-bold text-2xl ${
+                className={`p-4 font-bold text-2xl sm:p-1 sm:text-lg ${
                   route.pathname === data.navigation.path
                     ? "text-blue-700"
                     : "text-[#999999]"
