@@ -363,23 +363,20 @@
   .backgroundImageHeading {
     position: absolute;
     color: white;
-    top: 48%;
-    font-size: 1.7rem;
-    /* left: calc(100% - 856px); */
+    top: 41%;
+    font-size: 1.5rem;
   }
   .backgroundImageText {
     position: absolute;
     white-space: nowrap;
     color: white;
-    top: 60%;
-    font-size: 1.3rem;
-    /* left: calc(100% - 856px); */
+    top: 52%;
+    font-size: 1rem;
   }
 
   .backgroundImageContentContainer {
     position: absolute;
-    top: 70%;
-    /* left: calc(100% - 856px); */
+    top: 60%;
     font-size: 1rem;
   }
   .mailIcon {
@@ -405,7 +402,6 @@
     color: white;
     top: 48%;
     font-size: 2.5rem;
-    /* left: calc(100% - 856px); */
   }
   .backgroundImageText {
     position: absolute;
@@ -413,13 +409,11 @@
     color: white;
     top: 60%;
     font-size: 1.5rem;
-    /* left: calc(100% - 856px); */
   }
 
   .backgroundImageContentContainer {
     position: absolute;
     top: 68%;
-    /* left: calc(100% - 856px); */
     font-size: 1.2rem;
   }
   .mailIcon {
@@ -433,13 +427,6 @@
 }
 
 @media only screen and (min-height: 800px) and (orientation: landscape) {
-  .backgroundImageContainer {
-    position: relative;
-    padding-bottom: 75.25%; /* 16:9 ratio */
-    height: 0;
-    overflow: hidden;
-  }
-
   .backgroundImageContainerImage {
     position: absolute;
     top: 0;
@@ -449,38 +436,35 @@
   .backgroundImageContainer {
     object-fit: cover;
     position: relative;
-    padding-bottom: 40.25%; /* 16:9 ratio */
+    padding-bottom: 23.25%; /* 16:9 ratio */
     height: 0;
     overflow: hidden;
   }
   .backgroundImageHeading {
     position: absolute;
     color: white;
-    top: 50%;
-    font-size: 3rem;
-    /* left: calc(100% - 856px); */
+    top: 40%;
+    font-size: 2rem;
   }
   .backgroundImageText {
     position: absolute;
     white-space: nowrap;
     color: white;
-    top: 62%;
-    font-size: 2rem;
-    /* left: calc(100% - 856px); */
+    top: 54%;
+    font-size: 1.5rem;
   }
 
   .backgroundImageContentContainer {
     position: absolute;
-    top: 72%;
-    /* left: calc(100% - 856px); */
-    font-size: 1.7rem;
+    top: 66%;
+    font-size: 1.3rem;
   }
 
   .mailIcon {
     position: absolute;
     color: white;
     z-index: 5;
-    width: 25%;
+    width: 15%;
     top: 46%;
     right: 10%;
   }
@@ -505,7 +489,6 @@
     color: white;
     top: 50%;
     font-size: 3rem;
-    /* left: calc(100% - 856px); */
   }
   .backgroundImageText {
     position: absolute;
@@ -513,13 +496,11 @@
     color: white;
     top: 62%;
     font-size: 2rem;
-    /* left: calc(100% - 856px); */
   }
 
   .backgroundImageContentContainer {
     position: absolute;
     top: 72%;
-    /* left: calc(100% - 856px); */
     font-size: 1.7rem;
   }
 
@@ -551,23 +532,20 @@
     position: absolute;
     color: white;
     top: 50%;
-    font-size: 4rem;
-    /* left: calc(100% - 856px); */
+    font-size: 3.5rem;
   }
   .backgroundImageText {
     position: absolute;
     white-space: nowrap;
     color: white;
     top: 61%;
-    font-size: 3rem;
-    /* left: calc(100% - 856px); */
+    font-size: 2.5rem;
   }
 
   .backgroundImageContentContainer {
     position: absolute;
     top: 70%;
-    /* left: calc(100% - 856px); */
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .mailIcon {

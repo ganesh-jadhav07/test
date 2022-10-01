@@ -52,7 +52,7 @@ function NavBar() {
       className="fixed top-0 left-0 z-10 w-full p-1 transition duration-1000 ease-in-out"
       style={{
         backgroundColor: `${route.pathname === "/Contact" ? "white" : color}`,
-        opacity: `${route.pathname === "/Contact" ? 1 : opacity}`,
+        opacity: `${route.pathname === "/Contact" ? 0.9: opacity}`,
       }}>
       {/* logo section */}
       <div className="max-w-[1240px] m-auto flex justify-between items-center text-[#999999] ml-0">
@@ -96,9 +96,9 @@ function NavBar() {
           className="z-10 block lg:hidden">
           {/* Hamburger Icons */}
           {nav ? (
-            <XMarkIcon className="w-7 text-[#999999] rotate-45 translate-x-9 translate-y-9 ease-in-out duration-500" />
+            <XMarkIcon className="w-7 text-[#999999]" />
           ) : (
-            <Bars3Icon className="w-7 text-[#999999] -rotate-45 translate-x-9 -translate-y-9 ease-in-out duration-500" />
+            <Bars3Icon className="w-7 text-[#999999]" />
           )}
         </div>
 
@@ -106,7 +106,7 @@ function NavBar() {
         <div
           className={
             nav
-              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-screen h-screen bg-white text-center ease-in duration-500"
+              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-1/2 h-screen bg-white text-center ease-in duration-500"
               : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-500 "
           }>
           <ul>
