@@ -38,7 +38,7 @@ function NavBar() {
         setColor("black");
         setTextColor("#999999");
       } else {
-        setOpacity("0.8");
+        setOpacity("1");
         setColor("white");
         setTextColor("#999999");
       }
