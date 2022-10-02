@@ -9,10 +9,12 @@
 .leftCard {
   position: relative;
   width: 100%;
+  background-color: red;
 }
 
 .rightCard {
   height: 100%;
+  background-color: yellow;
 }
 
 .textblock {
@@ -27,6 +29,7 @@
   text-align: center;
   width: 100%;
   padding: 2rem;
+  background-color: pink;
 }
 
 .img {
@@ -38,16 +41,14 @@
 
 .quote {
   position: relative;
-  top: 6rem;
-  left: 17rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .text {
   position: relative;
   overflow-wrap: break-word;
   top: 1rem;
-  font-family: "Inter";
-  font-style: normal;
   font-size: 27px;
   text-align: center;
   color: #293e40;
@@ -55,8 +56,6 @@
 
 .reviewTitle {
   position: relative;
-  font-family: "Inter";
-  font-style: normal;
   font-size: 38px;
   color: #293e40;
   padding: 0.8rem;
@@ -64,12 +63,9 @@
 
 .reviewBy {
   position: relative;
-  font-family: "Inter";
-  font-style: normal;
   font-size: 30px;
   text-align: center;
   color: #293e40;
-  padding-top: 2.5rem;
 }
 
 .lists {
@@ -77,6 +73,13 @@
   position: relative;
   justify-content: center;
   height: 1.9rem;
+}
+
+.foot {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-auto-flow: dense;
 }
 
 .r1 {
@@ -120,19 +123,23 @@
   .lists {
     position: relative;
     justify-content: center;
-    bottom: 2.5rem;
   }
 
   .reviewBy {
     position: relative;
     font-size: 27px;
     text-align: center;
-    bottom: 1.8rem;
-    padding-top: 0.7rem;
   }
 
   .textblock {
     height: 60%;
+  }
+
+  .foot{
+  display: grid;
+
+    justify-content: center;
+    margin-top: 10%;
   }
 
   .text {
@@ -144,9 +151,8 @@
 
   .quote {
     position: relative;
-    font-size: 80px;
-    text-align: center;
-    top: 3rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -178,17 +184,22 @@
     padding: 0.5rem;
   }
 
+  .foot{
+    justify-content: center;
+  display: grid;
+
+    margin-top: 10%;
+  }
+
   .lists {
     position: relative;
     justify-content: center;
-    bottom: 2rem;
   }
 
   .reviewBy {
     position: relative;
     font-size: 27px;
     text-align: center;
-    bottom: 1.5rem;
   }
 
   .textblock {
@@ -204,13 +215,12 @@
 
   .quote {
     position: relative;
-    font-size: 80px;
-    text-align: center;
-    top: 2.5rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px){
   .outerCard {
     height: 4rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -221,13 +231,18 @@
   }
 
   .lists {
-    position: relative;
     justify-content: center;
   }
   .quote {
-    position: relative;
-   left: 47%;
-    top: 2.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  .foot{
+    justify-content: center;
+    margin-top: 10%;
+  display: grid;
+
   }
 
   .img {
@@ -268,10 +283,8 @@
   }
 
   .reviewBy {
-    position: relative;
     font-size: 39px;
     text-align: center;
-    top: 0.4rem;
   }
 }
 
@@ -291,9 +304,15 @@
   }
   .quote {
     position: relative;
-    font-size: 50px;
-    text-align: center;
-    padding-bottom: 0.4rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .foot{
+    justify-content: center;
+    margin-top: 10%;
+  display: grid;
+
   }
 
   .textblock {
@@ -330,7 +349,6 @@
     position: relative;
     font-size: 22px;
     text-align: center;
-    top: 0.8rem;
   }
 }
 
@@ -346,19 +364,22 @@
     order: 2;
   }
 
+  .foot{
+    justify-content: center;
+    margin-top: 18%;
+  }
+
   .quote {
     position: relative;
-    font-size: 40px;
-    top: 3.5rem;
-    left: 49%;
-    height: 4%;
+    width: 1.3rem;
+    height: 1.3rem;
   }
 
   .reviewCard {
     position: relative;
     text-align: center;
     width: 100%;
-    height: 29rem;
+    height: 27rem;
     margin-bottom: 15px;
     margin-top: 15px;
   }
@@ -379,7 +400,6 @@
   .lists {
     position: relative;
     justify-content: center;
-    top: 1rem;
   }
 
   .r1 {
@@ -390,21 +410,20 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-size: 20px;
+    font-size: 19.5px;
     text-align: center;
   }
 
   .reviewTitle {
     position: relative;
     font-size: 26px;
-    top: 1rem;
   }
 
   .reviewBy {
     position: relative;
-    font-size: 26px;
+    font-size: 23px;
     text-align: center;
-    top: 1.5rem;
+    order: 2;
   }
 }
 
@@ -413,13 +432,20 @@
     font-size: 16px;
   }
   .reviewTitle {
-    font-size: 23px;
+    font-size: 22px;
   }
   .reviewBy {
-    font-size: 20px;
+    font-size: 19px;
   }
   .quote{
-    height: 3%;
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .foot{
+    justify-content: center;
+    margin-top: 25%;
+    display: grid;
+
   }
 }
 
@@ -457,21 +483,24 @@
     position: relative;
     font-size: 17px;
     text-align: center;
-    top: 0rem;
   }
 
   .text {
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-size: 14px;
+    font-size: 12.5px;
     text-align: center;
   }
 
   .lists {
     position: relative;
     justify-content: center;
-    bottom: 0.5rem;
+  }
+
+  .foot{
+    justify-content: center;
+    margin-top: 10%;
   }
 
   .img {
@@ -486,9 +515,8 @@
 
   .quote {
     position: relative;
-    height: 14%;
-    top: 2.5rem;
-    left: 50%;
+    width: 1rem;
+    height: 1rem;
   }
 }
 
@@ -507,9 +535,8 @@
 
   .quote {
     position: relative;
-    top: 4.8rem;
-    height: 8%;
-    left: 47%;
+    width: 1rem;
+    height: 1rem;
   }
 
   .reviewCard {
@@ -521,11 +548,15 @@
     margin-top: 15px;
   }
 
+  .foot{
+    justify-content: center;
+    margin-top: 19%;
+  }
+
   .reviewBy {
     position: relative;
     font-size: 20px;
     text-align: center;
-    top: 2.4rem;
   }
 
   .reviewTitle {
@@ -537,7 +568,6 @@
   .lists {
     position: relative;
     justify-content: center;
-    top: 2rem;
   }
 
   .img {
@@ -553,7 +583,7 @@
     position: relative;
     overflow-wrap: break-word;
     top: 0.2rem;
-    font-size: 18px;
+    font-size: 15.5px;
     text-align: center;
   }
 }
@@ -579,20 +609,26 @@
     top: 0rem;
   }
 
+  .foot{
+    justify-content: center;
+    margin-top: 18%;
+  }
+
   .lists {
     position: relative;
     justify-content: center;
-    top: 2rem;
   }
 
   .quote {
-    top: 5rem;
-    height: 6%;
-    left: 50%;
+    width: 1rem;
+    height: 1rem;
   }
 
   .img{
     margin-top: 1.5rem;
+  }
+  .text{
+    font-size: 16px;
   }
 }
 
@@ -614,7 +650,6 @@
   .lists {
     position: relative;
     justify-content: center;
-    top: 1rem;
   }
 
   .r1 {
@@ -624,7 +659,7 @@
   .text {
     position: relative;
     overflow-wrap: break-word;
-    top: 9%;
+    top: 10%;
     font-size: 25px;
     text-align: center;
   }
@@ -633,7 +668,6 @@
     position: relative;
     font-size: 30px;
     text-align: center;
-    top: 1rem;
   }
 
   .reviewTitle {
@@ -644,31 +678,94 @@
 
   .quote {
     position: relative;
-   height: 3%;
-    top: 3rem;
+   height: 1.6rem;
+   width: 1.8rem;
   }
 
   .img{
     margin-top: 2.5rem;
   }
+  .foot{
+    justify-content: center;
+    margin-top: 14%;
+  }
+}
+
+@media only screen and (min-height: 800px) and (orientation: landscape) {
+  .outerCard {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+  }
+
+  .reviewCard {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 90%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .lists {
+    position: relative;
+    justify-content: center;
+  }
+
+  .r1 {
+    height: 100%;
+  }
+
+  .text {
+    position: relative;
+    overflow-wrap: break-word;
+    top: 10%;
+    font-size: 27px;
+    text-align: center;
+  }
+
+  .reviewBy {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .reviewTitle {
+    position: relative;
+    font-size: 32px;
+    top: 5.5%;
+  }
+
+  .quote {
+    position: relative;
+   height: 1.6rem;
+   width: 1.8rem;
+  }
+
+  .img{
+    margin-top: 2.5rem;
+  }
+  .foot{
+    justify-content: center;
+    margin-top: 16%;
+  }
 }
 
 @media only screen and (min-height: 900px) and (orientation: landscape) {
   .reviewTitle{
-    font-size: 50px;
+    font-size: 48px;
   }
   .text{
-    font-size: 40px;
+    font-size: 36px;
   }
   .reviewBy{
-    font-size: 50px;
-    top: 4rem;
+    font-size: 45px;
   }
   .quote{
-    top: 6rem;
-    height: 4%;
+    height: 2.5rem;
+    width: 2.5rem;
   }
-  .lists{
-    top: 4.5rem;
+  .foot{
+    justify-content: center;
+    margin-top: 15%;
   }
 }

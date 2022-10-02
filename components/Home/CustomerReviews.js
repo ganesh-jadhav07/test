@@ -18,18 +18,18 @@ function CustomerReviews(props) {
     setCurrentReview(count);
   };
 
-  // useEffect(() => {
-  //   const next = setInterval(() => {
-  //     if (
-  //       currentReview < (data !== null ? data.length : 0) &&
-  //       pause === false
-  //     ) {
-  //       handleNext();
-  //     }
-  //   }, 3000);
+  useEffect(() => {
+    const next = setInterval(() => {
+      if (
+        currentReview < (data !== null ? data.length : 0) &&
+        pause === false
+      ) {
+        handleNext();
+      }
+    }, 3000);
 
-  //   return () => clearInterval(next);
-  // });
+    return () => clearInterval(next);
+  });
 
   return (
     <div className={style.outerCard}>
@@ -68,30 +68,40 @@ function CustomerReviews(props) {
             </div>
           </div>
 
-          {/* <p className={style.quote}>“</p> */}
-          <img src={quotes} className={style.quote} />
-          <p className={style.reviewBy}>
-            {data === null || undefined
-              ? "Data Loading"
-              : data[currentReview].title}
-          </p>
+          {/* footer part of the screen */}
+          <div className={style.foot}>
 
-          {/* slider indicator */}
-          {data === null || undefined ? (
-            "Loading"
-          ) : (
-            <div className={`${style.lists} p-2`}>
-              {data.map((item, index) => (
-                <div key={item.id} onClick={() => setCurrentReview(index)}>
-                  {currentReview === index ? (
-                    <img src={blueDiamond} className={style.r1} />
-                  ) : (
-                    <img src={greyDiamond} className={style.r1} />
-                  )}
-                </div>
-              ))}
+            {/* quotes */}
+            <div className="flex justify-center">
+              <img src={quotes} className={style.quote} />
             </div>
-          )}
+
+            {/* review by */}
+            <div>
+              <p className={style.reviewBy}>
+                {data === null || undefined
+                  ? "Data Loading"
+                  : data[currentReview].title}
+              </p>
+            </div>
+
+            {/* slider indicator */}
+            {data === null || undefined ? (
+              "Loading"
+            ) : (
+              <div className={`${style.lists} p-2`}>
+                {data.map((item, index) => (
+                  <div key={item.id} onClick={() => setCurrentReview(index)}>
+                    {currentReview === index ? (
+                      <img src={blueDiamond} className={style.r1} />
+                    ) : (
+                      <img src={greyDiamond} className={style.r1} />
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
