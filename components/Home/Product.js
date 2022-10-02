@@ -8,21 +8,25 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 
 function Product(props) {
-  // const [width, setWidth] = useState(window.innerWidth);
-  // const updateDimensions = () => {
-  //   setWidth(window.innerWidth);
-  // };
-  // useEffect(() => {
-  //   window.addEventListener("resize", updateDimensions);
-  //   return () => window.removeEventListener("resize", updateDimensions);
-  // }, []);
+  const [width, setWidth] = useState(window.innerWidth);
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   const backgroundImage =
     props.products.page.homepage_customfields.section3Bg.sourceUrl;
 
+  const backgroundImageFlip =
+    props.products.page.homepage_customfields.section3BgFlip.sourceUrl;
+
   const products = props.products.products.nodes;
 
-  console.log(products);
+  console.log(props.products);
 
   const titleContent = props.products.page.homepage_customfields;
   console.log("Tititle Content: ", titleContent);
@@ -79,7 +83,10 @@ function Product(props) {
       <div
         className={`${styles.bodyContent}  px-6`}
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage:
+            width >= 1024
+              ? `url(${backgroundImage})`
+              : `url(${backgroundImageFlip})`,
         }}
       >
         {/* Diamond card */}
@@ -152,7 +159,9 @@ function Product(props) {
           className={`${styles.secondContent}  flex items-center justify-end `}
         >
           <div className={`${styles.secondBody}  `}>
-            {diamondLogo}
+            <span className={`${styles.firstParagraphLogo}`}>
+              {diamondLogo}
+            </span>
             <div className={`${styles.firstParagraph}`}>
               {titleContent.section3Tagline}
             </div>
