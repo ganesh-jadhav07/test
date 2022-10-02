@@ -1,6 +1,6 @@
 .bgImage {
   background-color: black;
-  padding-top: 3em;
+  padding-top: 4em;
 }
 .headerTopContent {
   height: 15vh;
@@ -49,7 +49,7 @@
   line-height: 1.2em;
   text-align: center;
   color: #ffffff;
-  margin-right: 2em;
+  margin-right: 5%;
 }
 
 .squareDiamond {
@@ -118,7 +118,7 @@
 /* Media Queries */
 @media screen and (max-width: 420px) and (orientation: portrait) {
   .bgImage {
-    padding-top: 25%;
+    padding-top: 20%;
   }
   .squareDiamond {
     width: 15.5em;
@@ -220,7 +220,7 @@
   }
 }
 
-@media screen and (min-width: 421px) and (max-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: 421px) and (max-width: 650px) and (orientation: portrait) {
   .bgImage {
     background: black;
   }
@@ -278,19 +278,19 @@
     font-size: small;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 950px) and (orientation: portrait) {
+@media screen and (min-width: 651px) and (max-width: 850px) and (orientation: portrait) {
   .bgImage {
     background: black;
   }
   .squareDiamond {
-    width: 18em;
-    height: 18em;
-  }
-  .squareDiamondBody {
+    width: 20em;
     height: 20em;
   }
+  .squareDiamondBody {
+    height: 24em;
+  }
   .diamondParagraph {
-    font-size: medium;
+    font-size: large;
     align-items: flex-start;
   }
   .headerTopContent {
@@ -302,9 +302,10 @@
   .description {
     padding: 0%;
     width: 90%;
+    font-size: x-large;
   }
   .title {
-    font-size: x-large;
+    font-size: xx-large;
   }
   .greenFolderImage {
     width: 7em;
@@ -340,39 +341,69 @@
     height: 3em;
   }
 }
-@media screen and (min-width: 951px) and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (min-width: 851px) and (max-width: 1024px) and (orientation: portrait) {
+  .bodyContent {
+    flex-direction: column;
+    height: 80%;
+  }
+  .firstContent {
+    width: 100%;
+    height: 70%;
+  }
+  .secondContent {
+    width: 100%;
+    height: 30%;
+  }
+  .headerTopContent {
+    height: 15%;
+  }
+  .title {
+    font-size: 40px;
+  }
   .titleContent {
-    width: 40em;
+    width: 100%;
   }
   .description {
     padding: 0%;
+    width: 80%;
+    font-size: x-large;
+    margin-top: 20px;
   }
   .squareDiamond {
-    width: 19em;
-    height: 19em;
+    width: 25em;
+    height: 25em;
   }
   .secondBody {
     margin-top: 0em;
     width: 11em;
+    font-size: 2em;
   }
   .squareDiamondBody {
-    height: 20em;
+    height: 27em;
+    width: 25em;
   }
   .learnMoreButton {
     font-size: medium;
+    width: 10em;
+    height: 4em;
   }
   .greenFolderImage {
-    width: 7em;
-    height: 7em;
+    width: 9em;
+    height: 9em;
   }
   .diamondParagraph {
-    font-size: medium;
+    font-size: 22px;
+    align-items: flex-start;
+  }
+  .diamondLogo {
+    font-size: larger;
   }
   .chevronIcon {
-    width: 3em;
+    width: 3.6em;
   }
 }
 
+/* For height */
 @media only screen and (min-height: 200px) and (max-height: 300px) and (orientation: landscape) {
 }
 
@@ -384,7 +415,7 @@
     image-orientation: flip;
   }
   .bgImage {
-    padding-top: 2em;
+    padding-top: 5%;
     padding-left: 3%;
   }
   .titleContent {
@@ -609,7 +640,7 @@
   }
   .secondBody {
     text-align: center;
-    width: 70%;
+    width: 64%;
     height: 52%;
     margin-right: 5%;
     display: flex;
@@ -618,6 +649,13 @@
   }
   .chevronIcon {
     width: 2.4em;
+  }
+}
+
+@media only screen and (min-height: 601px) and (max-height: 770px) and (orientation: landscape) {
+  .secondBody {
+    font-size: px;
+    width: 50%;
   }
 }
 

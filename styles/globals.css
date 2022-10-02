@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   -ms-overflow-style: none;
+  font-family: 'Inter', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -14,6 +16,7 @@
 html,
 body {
   margin: 0px;
+  font-family: 'Inter', sans-serif;
 }
 
 #crmWebToEntityForm.zcwf_lblLeft {
