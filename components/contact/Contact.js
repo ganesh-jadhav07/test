@@ -23,6 +23,7 @@ function Contact(props) {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 md:gap-10 lg:gap-10 xl:gap-10 2xl:10">
             <div>
+              {/* SECTION FOR NAME, EMAIL, MOBILE NO */}
               <input
                 type="text"
                 style={{ display: "none" }}
@@ -48,6 +49,7 @@ function Contact(props) {
                 name="returnURL"
                 value="https&#x3a;&#x2f;&#x2f;mango-water-059233300.1.azurestaticapps.net&#x2f;"
               />
+              {/* FIRST NAME */}
               <div className="grid grid-cols-1 zcwf_row">
                 <div
                   className="zcwf_col_lab"
@@ -70,6 +72,8 @@ function Contact(props) {
                   <div className="zcwf_col_help"></div>
                 </div>
               </div>
+
+              {/*LAST NAME  */}
               <div className="grid grid-cols-1 zcwf_row">
                 <div
                   className="zcwf_col_lab"
@@ -92,6 +96,8 @@ function Contact(props) {
                   <div className="zcwf_col_help"></div>
                 </div>
               </div>
+
+              {/* MOBILE NUMBER */}
               <div className="grid grid-cols-1 zcwf_row">
                 <div
                   className="zcwf_col_lab"
@@ -115,7 +121,9 @@ function Contact(props) {
             </div>
 
             <div>
+              {/* SECTION FOR EMAIL AND MESSAGE */}
               <div className="grid justify-start grid-cols-1 zcwf_row">
+                {/* EMAIL */}
                 <div
                   className="zcwf_col_lab"
                   style={{ fontSize: "14px", fontFamily: "Arial" }}
@@ -138,6 +146,8 @@ function Contact(props) {
                   <div className="zcwf_col_help"></div>
                 </div>
               </div>
+
+              {/* MESSAGE  */}
               <div className="grid grid-cols-1 zcwf_row">
                 <div
                   className="zcwf_col_lab"
@@ -155,63 +165,22 @@ function Contact(props) {
                   <div className="zcwf_col_help"></div>
                 </div>
               </div>
-
-              {/* <div className="zcwf_row">
-                  <div className="grid justify-end zcwf_privacy">
-                    <div className="dIB vat" align="right">
-                      <div className="displayPurpose f13">
-                        <label className="newCustomchkbox-md dIB w100per -mt-[8px]">
-                          <input
-                            autoComplete="off"
-                            id="privacyTool5028374000000447001"
-                            type="checkbox"
-                            name="privacyTool"
-                            required
-                          />
-                        </label>
-                        <div
-                          className="dIB zcwf_privacy_txt"
-                          style={{ fontSize: "14px", fontFamily: "Arial" }}
-                        >
-                          I agree to the Privacy Policy.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      className="text-xs text-right"
-                      style={{ fontSize: "14px", fontFamily: "Arial" }}
-                    >
-                      <a className="font-bold cursor-pointer text-sky-600">
-                        Privacy Policy
-                      </a>
-                    </div>
-                    <div
-                      id="privacyErr5028374000000447001"
-                      style={{
-                        fontSize: "12px",
-                        color: "red",
-                        paddingLeft: "5px",
-                        visibility: "hidden",
-                      }}
-                    >
-                      Please accept this
-                    </div>
-                  </div>
-
-                </div> */}
             </div>
           </div>
 
+          {/* FOOTER SECCTION - ADDRESS & PRIVACY POLICY  */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2">
-            {/* FOOTER - COL-1*/}
+            {/* COL-1*/}
             <div className="order-2 lg:order-1 xl:order-1 2xl:order-1">
+              {/* FOOTER -ADDRESS */}
               <ContactFooter contactus={props} />
             </div>
             {/* <div className="zcwf_col_lab"></div> */}
-            {/* col-2 */}
+
+            {/*col-2 */}
             <div className="grid justify-end grid-flow-col-1 -order-2 lg:order-2 xl:order-2 2xl:order-2">
               <div>
+                {/* PRIVACY POLIVY SECTION */}
                 <div className="zcwf_row">
                   <div className="grid justify-end zcwf_privacy">
                     <div className="dIB vat" align="right">
@@ -258,6 +227,7 @@ function Contact(props) {
                 </div>
               </div>
 
+              {/* SUBMIT BUTTON */}
               <div className="flex justify-end">
                 <input
                   type="submit"

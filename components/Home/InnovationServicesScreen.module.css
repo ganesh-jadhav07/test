@@ -653,7 +653,7 @@
   }
 }
 
-@media only screen and (min-height: 410px) and (orientation: landscape) {
+@media only screen and (min-height: 400px) and (orientation: landscape) {
   .backgroundContainer {
     background-color: #ffffff;
     width: 100%;
@@ -851,6 +851,67 @@
   .textContainer {
     font-weight: bold;
     font-size: xxx-large;
+    margin-top: 2%;
+    /* padding: 0.rem; */
+    color: rgb(86, 85, 85);
+  }
+
+  .textContent {  
+    font-size: 1.5rem;
+  }
+
+  .btnStyle {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 1em;
+    margin-left: 0.2em;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
+
+  .imageStyle2 {
+    margin-top: 0em;
+    margin-left: 0em;
+    width: 3.5rem;
+  }
+  .imageStyle3 {
+    /* margin-top: 0.5em; */
+    width: 2rem;
+    margin-left: 2em;
+  }
+  .imageStyle4 {
+    /* margin-top: 0.5em; */
+    margin-right: 0em;
+    width: 2rem;
+  }
+
+  .imageStyle5 {
+    margin-top: 0em;
+    margin-right: 1em;
+    width: 3.5rem;
+  }
+}
+
+@media only screen and (min-height: 100px) and (orientation: landscape) {
+  .backgroundContainer {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .gridWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    margin-top: -1%;
+    margin: 0 10%;
+    padding: 1%;
+    /* z-index: 2; */
+  }
+
+  .textContainer {
+    font-weight: bold;
+    font-size: 3.8rem;
     margin-top: 2%;
     /* padding: 0.rem; */
     color: rgb(86, 85, 85);

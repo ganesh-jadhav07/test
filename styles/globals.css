@@ -12,7 +12,9 @@
   display: none;
 }
 
-/* zoho css */
+/* below css is for zoho form css applies globally  and is system generated*/
+/* dont change its class-name to avoid any issue or problems */
+/* can change properties according to your preference */
 html,
 body {
   margin: 0px;
@@ -217,3 +219,7 @@ input{
 textarea{
   height: 7.28rem;
 }
+
+/* above css is for zoho form css applies globally and is system generated*/
+/* dont change its class-name to avoid any issue or problems */
+/* can change properties according to your preference */

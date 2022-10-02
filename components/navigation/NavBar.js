@@ -23,6 +23,7 @@ function NavBar() {
   //useSelector for accessing managing state of navigation Links
   const navdata = useSelector((state) => state.navigation.value);
 
+  //function to toggle hamburger menu and normal navigation 
   const handleNav = () => {
     setNav(!nav);
   };
@@ -52,8 +53,9 @@ function NavBar() {
       className="fixed top-0 left-0 z-10 w-full p-2 transition duration-1000 ease-in-out"
       style={{
         backgroundColor: `${route.pathname === "/Contact" ? "white" : color}`,
-        opacity: `${route.pathname === "/Contact" ? 0.9: opacity}`,
-      }}>
+        opacity: `${route.pathname === "/Contact" ? 0.9 : opacity}`,
+      }}
+    >
       {/* logo section */}
       <div className="max-w-[1240px] m-auto flex justify-between items-center text-[#999999] ml-0">
         <Link href="/">
@@ -61,7 +63,8 @@ function NavBar() {
             style={{ color: `${textColor}` }}
             className={
               "text-sm flex m-[-5] sm:text-base md:text-xl lg:text-2xl xl:3xl 2xl:text-4xl "
-            }>
+            }
+          >
             <img
               src={bplogo.src}
               alt="logo"
@@ -73,16 +76,17 @@ function NavBar() {
           </h1>
         </Link>
 
-        {/* main navigation */}
+        {/* main navigation menu */}
         <ul style={{ color: `${textColor}` }} className="hidden lg:flex">
           {navdata.map((data) => (
             <li
               key={data.title}
               className={`p-4 text-[0.5rem] hover:text-blue-700 sm:text-base md:text-lg lg:text-xl 2xl:text-xl ${
                 route.pathname === data.navigation.path
-                  ? "text-blue-700"
+                  ? "text-blue-800"
                   : "text-[#999999]"
-              }`}>
+              }`}
+            >
               <Link href={data.navigation.path}>{data.title}</Link>
             </li>
           ))}
@@ -93,7 +97,8 @@ function NavBar() {
           role="button"
           tabIndex={-1}
           onClick={handleNav}
-          className="z-10 block lg:hidden">
+          className="z-10 block lg:hidden"
+        >
           {/* Hamburger Icons */}
           {nav ? (
             <XMarkIcon className="w-7 text-[#999999]" />
@@ -106,19 +111,21 @@ function NavBar() {
         <div
           className={
             nav
-              ? "overscroll-y-none lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-screen h-screen bg-white text-center ease-in duration-500"
-              : "overscroll-y-none lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-500 "
-          }>
-          <ul>
+              ? "overscroll-y-none lg:hidden absolute top-0 left-[50%] right-[-50%] bottom-0 flex justify-center items-start w-1/2 h-screen bg-white text-center ease-in duration-500"
+              : "overscroll-y-none lg:hidden absolute top-0 left-[100%] right-0 bottom-0 flex justify-center items-start w-screen h-screen bg-white text-center ease-in duration-500 "
+          }
+        >
+          <ul className="m-10">
             {navdata.map((data) => (
               <li
                 key={data.title}
                 onClick={handleNav}
-                className={`p-4 font-bold text-2xl sm:p-1 sm:text-lg ${
+                className={`p-4 font-bold text-2xl underline underline-offset-4 m-3 hover:text-blue-700 sm:p-1 sm:text-lg ${
                   route.pathname === data.navigation.path
                     ? "text-blue-700"
                     : "text-[#999999]"
-                }`}>
+                }`}
+              >
                 <Link href={data.navigation.path}>{data.title}</Link>
               </li>
             ))}

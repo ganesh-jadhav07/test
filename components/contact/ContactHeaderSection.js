@@ -3,7 +3,7 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 import styles from "./ContactSectionOne.module.css";
 
 function ContactSectionOne(props) {
-  // console.log(props.contactus.contacts.page.contactus.contactBg.sourceUrl);
+  // contents of header fetched from backend
   const bgImage = props.contactus.contacts.page.contactus.contactBg.sourceUrl;
   const mailIcon = props.contactus.contacts.page.contactus.contactMail.sourceUrl;
   const contactTitle = props.contactus.contacts.page.contactus.contactTitle;
@@ -12,7 +12,8 @@ function ContactSectionOne(props) {
   const point2 = props.contactus.contacts.page.contactus.contactPoint2;
   const point3 = props.contactus.contacts.page.contactus.contactPoint3;
 
-  return (
+
+  const headerContent =()=>(
     // Main container
     <div className="relative w-screen bg-auto">
       {/*backgroundImageContainer */}
@@ -49,6 +50,9 @@ function ContactSectionOne(props) {
       </div>
     </div>
   );
+
+  //returning the header contents
+  return headerContent();
 }
 
 export default ContactSectionOne;
