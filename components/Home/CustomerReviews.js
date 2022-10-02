@@ -56,21 +56,16 @@ function CustomerReviews(props) {
             }}
           >
             <div className={style.text}>
-              {data === null || undefined ? (
-                "Data Loading"
-              ) : (
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: data[currentReview].content,
-                  }}
-                />
-              )}{" "}
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: data[currentReview].content,
+                }}
+              />{" "}
             </div>
           </div>
 
           {/* footer part of the screen */}
           <div className={style.foot}>
-
             {/* quotes */}
             <div className="flex justify-center">
               <img src={quotes} className={style.quote} />
@@ -78,29 +73,21 @@ function CustomerReviews(props) {
 
             {/* review by */}
             <div>
-              <p className={style.reviewBy}>
-                {data === null || undefined
-                  ? "Data Loading"
-                  : data[currentReview].title}
-              </p>
+              <p className={style.reviewBy}>{data[currentReview].title}</p>
             </div>
 
             {/* slider indicator */}
-            {data === null || undefined ? (
-              "Loading"
-            ) : (
-              <div className={`${style.lists} p-2`}>
-                {data.map((item, index) => (
-                  <div key={item.id} onClick={() => setCurrentReview(index)}>
-                    {currentReview === index ? (
-                      <img src={blueDiamond} className={style.r1} />
-                    ) : (
-                      <img src={greyDiamond} className={style.r1} />
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
+            <div className={`${style.lists} p-2`}>
+              {data.map((item, index) => (
+                <div key={item.id} onClick={() => setCurrentReview(index)}>
+                  {currentReview === index ? (
+                    <img src={blueDiamond} className={style.r1} />
+                  ) : (
+                    <img src={greyDiamond} className={style.r1} />
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

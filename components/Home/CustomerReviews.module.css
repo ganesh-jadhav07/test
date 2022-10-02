@@ -9,12 +9,10 @@
 .leftCard {
   position: relative;
   width: 100%;
-  background-color: red;
 }
 
 .rightCard {
   height: 100%;
-  background-color: yellow;
 }
 
 .textblock {
@@ -29,7 +27,6 @@
   text-align: center;
   width: 100%;
   padding: 2rem;
-  background-color: pink;
 }
 
 .img {
@@ -79,7 +76,6 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
-  grid-auto-flow: dense;
 }
 
 .r1 {
@@ -135,9 +131,7 @@
     height: 60%;
   }
 
-  .foot{
-  display: grid;
-
+  .foot {
     justify-content: center;
     margin-top: 10%;
   }
@@ -184,10 +178,8 @@
     padding: 0.5rem;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
-  display: grid;
-
     margin-top: 10%;
   }
 
@@ -220,13 +212,13 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 768px) and (max-width: 991px) {
   .outerCard {
     height: 4rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .outerCard div:nth-of-type(1) {
+  .outerCard > div:nth-of-type(1) {
     order: 2;
   }
 
@@ -238,11 +230,9 @@
     height: 2.3rem;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 10%;
-  display: grid;
-
   }
 
   .img {
@@ -294,7 +284,7 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .outerCard div:nth-of-type(1) {
+  .outerCard > div:nth-of-type(1) {
     order: 2;
   }
 
@@ -308,11 +298,9 @@
     height: 3rem;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 10%;
-  display: grid;
-
   }
 
   .textblock {
@@ -360,11 +348,11 @@
     grid-auto-rows: 450px;
   }
 
-  .outerCard div:nth-of-type(1) {
+  .outerCard > div:nth-of-type(1) {
     order: 2;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 18%;
   }
@@ -437,15 +425,13 @@
   .reviewBy {
     font-size: 19px;
   }
-  .quote{
+  .quote {
     width: 1.3rem;
     height: 1.3rem;
   }
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 25%;
-    display: grid;
-
   }
 }
 
@@ -498,7 +484,7 @@
     justify-content: center;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 10%;
   }
@@ -548,7 +534,7 @@
     margin-top: 15px;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 19%;
   }
@@ -606,10 +592,10 @@
   .reviewTitle {
     position: relative;
     font-size: 24px;
-    top: 0rem;
+    top: 1rem;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 18%;
   }
@@ -624,11 +610,59 @@
     height: 1rem;
   }
 
-  .img{
+  .img {
     margin-top: 1.5rem;
   }
-  .text{
+  .text {
     font-size: 16px;
+  }
+}
+
+@media only screen and (min-height: 500px) and (orientation: landscape) {
+  .outerCard {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+  }
+
+  .reviewCard {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .reviewTitle {
+    position: relative;
+    font-size: 24px;
+    top: 1rem;
+  }
+
+  .foot {
+    justify-content: center;
+    margin-top: 45%;
+  }
+
+  .lists {
+    position: relative;
+    justify-content: center;
+  }
+
+  .reviewBy {
+    font-size: 22px;
+  }
+
+  .quote {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .img {
+    margin-top: 1.5rem;
+  }
+  .text {
+    font-size: 18px;
   }
 }
 
@@ -678,14 +712,14 @@
 
   .quote {
     position: relative;
-   height: 1.6rem;
-   width: 1.8rem;
+    height: 1.6rem;
+    width: 1.8rem;
   }
 
-  .img{
+  .img {
     margin-top: 2.5rem;
   }
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 14%;
   }
@@ -737,34 +771,34 @@
 
   .quote {
     position: relative;
-   height: 1.6rem;
-   width: 1.8rem;
+    height: 1.6rem;
+    width: 1.8rem;
   }
 
-  .img{
+  .img {
     margin-top: 2.5rem;
   }
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 16%;
   }
 }
 
 @media only screen and (min-height: 900px) and (orientation: landscape) {
-  .reviewTitle{
+  .reviewTitle {
     font-size: 48px;
   }
-  .text{
+  .text {
     font-size: 36px;
   }
-  .reviewBy{
+  .reviewBy {
     font-size: 45px;
   }
-  .quote{
+  .quote {
     height: 2.5rem;
     width: 2.5rem;
   }
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 15%;
   }
