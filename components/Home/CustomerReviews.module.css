@@ -9,12 +9,10 @@
 .leftCard {
   position: relative;
   width: 100%;
-  background-color: red;
 }
 
 .rightCard {
   height: 100%;
-  background-color: yellow;
 }
 
 .textblock {
@@ -29,7 +27,6 @@
   text-align: center;
   width: 100%;
   padding: 2rem;
-  background-color: pink;
 }
 
 .img {
@@ -135,8 +132,8 @@
     height: 60%;
   }
 
-  .foot{
-  display: grid;
+  .foot {
+    display: grid;
 
     justify-content: center;
     margin-top: 10%;
@@ -184,9 +181,9 @@
     padding: 0.5rem;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
-  display: grid;
+    display: grid;
 
     margin-top: 10%;
   }
@@ -220,7 +217,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 768px) and (max-width: 991px) {
   .outerCard {
     height: 4rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -238,11 +235,10 @@
     height: 2.3rem;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 10%;
-  display: grid;
-
+    display: grid;
   }
 
   .img {
@@ -308,11 +304,10 @@
     height: 3rem;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 10%;
-  display: grid;
-
+    display: grid;
   }
 
   .textblock {
@@ -364,7 +359,7 @@
     order: 2;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 18%;
   }
@@ -437,15 +432,14 @@
   .reviewBy {
     font-size: 19px;
   }
-  .quote{
+  .quote {
     width: 1.3rem;
     height: 1.3rem;
   }
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 25%;
     display: grid;
-
   }
 }
 
@@ -498,7 +492,7 @@
     justify-content: center;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 10%;
   }
@@ -548,7 +542,7 @@
     margin-top: 15px;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 19%;
   }
@@ -609,7 +603,7 @@
     top: 0rem;
   }
 
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 18%;
   }
@@ -624,10 +618,10 @@
     height: 1rem;
   }
 
-  .img{
+  .img {
     margin-top: 1.5rem;
   }
-  .text{
+  .text {
     font-size: 16px;
   }
 }
@@ -678,14 +672,14 @@
 
   .quote {
     position: relative;
-   height: 1.6rem;
-   width: 1.8rem;
+    height: 1.6rem;
+    width: 1.8rem;
   }
 
-  .img{
+  .img {
     margin-top: 2.5rem;
   }
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 14%;
   }
@@ -737,34 +731,34 @@
 
   .quote {
     position: relative;
-   height: 1.6rem;
-   width: 1.8rem;
+    height: 1.6rem;
+    width: 1.8rem;
   }
 
-  .img{
+  .img {
     margin-top: 2.5rem;
   }
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 16%;
   }
 }
 
 @media only screen and (min-height: 900px) and (orientation: landscape) {
-  .reviewTitle{
+  .reviewTitle {
     font-size: 48px;
   }
-  .text{
+  .text {
     font-size: 36px;
   }
-  .reviewBy{
+  .reviewBy {
     font-size: 45px;
   }
-  .quote{
+  .quote {
     height: 2.5rem;
     width: 2.5rem;
   }
-  .foot{
+  .foot {
     justify-content: center;
     margin-top: 15%;
   }
